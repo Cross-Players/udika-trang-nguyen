@@ -1,0 +1,15 @@
+# Chạy sau Caddy có sẵn trên network "ragre_default" (VPS gdata).
+services:
+  udika:
+    build: .
+    image: udika:latest
+    container_name: udika
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    networks: [edge]
+networks:
+  edge:
+    external: true
+    name: ragre_default
