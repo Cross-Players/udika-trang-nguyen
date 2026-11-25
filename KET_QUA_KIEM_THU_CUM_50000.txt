@@ -1,0 +1,31 @@
+LẦN THỬ 50.000 KẾT NỐI (25/11/2026) – KẾT QUẢ: KHÔNG HOÀN THÀNH TRÊN MÁY THỬ
+Máy thử chỉ có 8 GB RAM cho CẢ máy chủ (3 tiến trình + 6 bộ định tuyến) LẪN 3 tiến trình phát tải. Tiến trình phát tải nhóm 2 bị hệ điều hành dừng vì hết bộ nhớ (OOM, phía công cụ thử – không phải máy chủ).
+Hai nhóm còn lại (18.000 + 14.000 = 32.000 kết nối) chạy hết 3 câu: 0 sai lệch điểm, 0 lỗi đóng kết nối, máy chủ vẫn hoạt động; ~3% bài bị từ chối vì quá giờ do 2 nhân CPU bị chia cho ~12 tiến trình (phản hồi p95 tới 4,4 giây).
+=> Không dùng lần thử này làm bằng chứng 'đạt 50.000'. Xem KET_QUA_KIEM_THU_CUM_36000.txt cho lần chạy trọn vẹn lớn nhất.
+
+== Cụm: 3 tiến trình server.js, 6 bộ định tuyến (cổng 19200,19201,19202,19203,19204,19205) · 3 tiến trình kiểm thử · tổng 50000 kết nối · máy thử 2 nhân, 7 GB RAM ==
+test/load-cluster.sh: line 17: 15644 Killed                  EXT_PORTS=$PORTS SERVER_PIDS=$SPIDS TAG="g$k-" OUT=$DIR/out$k.txt node test/load-multi.js "$g" $Q > $DIR/client$k.log 2>&1
+--- Nhóm 1 (6000,6000,6000) ---
+== Nhiều phòng đồng thời: 6000 + 6000 + 6000 = 18000 kết nối · 3 câu/phòng · 12 giây/câu · gửi vào cụm máy chủ đang chạy · máy thử 2 nhân, 8 GB RAM ==
+Ghi danh: 18000/18000 trong 77.4 giây · RAM 1574 MB
+Câu 1: 16824 bài được xác nhận · phản hồi p50 691 ms, p95 3046 ms, tối đa 4306 ms · RAM 1965 MB
+Câu 2: 17629 bài được xác nhận · phản hồi p50 154 ms, p95 4001 ms, tối đa 4634 ms · RAM 1878 MB
+Câu 3: 17905 bài được xác nhận · phản hồi p50 1273 ms, p95 4355 ms, tối đa 5334 ms · RAM 1912 MB
+Tổng: gửi 54000 bài, máy chủ xác nhận đã lưu 52358, từ chối vì quá giờ 1642 · 10642 lượt mất mạng – nối lại
+Độ chính xác: 18000/18000 người có số câu đúng khớp tuyệt đối với bài đã xác nhận · 0 sai lệch
+Đóng kết nối: 18000 đúng chuẩn · 0 lỗi
+Máy chủ vẫn hoạt động: CÓ
+--- Nhóm 2 (6000,6000,6000) ---
+cat: /tmp/tmp.sPnzKZSar2/out2.txt: No such file or directory
+--- Nhóm 3 (6000,6000,2000) ---
+== Nhiều phòng đồng thời: 6000 + 6000 + 2000 = 14000 kết nối · 3 câu/phòng · 12 giây/câu · gửi vào cụm máy chủ đang chạy · máy thử 2 nhân, 8 GB RAM ==
+Ghi danh: 14000/14000 trong 66.1 giây · RAM 1430 MB
+Câu 1: 13858 bài được xác nhận · phản hồi p50 263 ms, p95 3226 ms, tối đa 4108 ms · RAM 1747 MB
+Câu 2: 13144 bài được xác nhận · phản hồi p50 903 ms, p95 2130 ms, tối đa 3920 ms · RAM 1813 MB
+Câu 3: 13729 bài được xác nhận · phản hồi p50 290 ms, p95 1821 ms, tối đa 2898 ms · RAM 1774 MB
+Tổng: gửi 42000 bài, máy chủ xác nhận đã lưu 40731, từ chối vì quá giờ 1269 · 8456 lượt mất mạng – nối lại
+Độ chính xác: 14000/14000 người có số câu đúng khớp tuyệt đối với bài đã xác nhận · 0 sai lệch
+Đóng kết nối: 14000 đúng chuẩn · 0 lỗi
+Máy chủ vẫn hoạt động: CÓ
+RAM tổng các tiến trình máy chủ cuối bài: 1993 MB
+exit=1

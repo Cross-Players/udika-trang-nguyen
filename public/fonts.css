@@ -1,0 +1,6 @@
+/* Phông chữ tự lưu trữ, đủ bộ dấu tiếng Việt (kể cả chữ hoa có dấu chồng: Ầ Ẩ Ẫ Ấ Ậ Ề Ể Ễ Ế Ệ Ồ Ổ Ỗ Ố Ộ Ờ Ở Ỡ Ớ Ợ Ừ Ử Ữ Ứ Ự Ỳ Ỷ Ỹ Ý Ỵ Đ).
+   Không phụ thuộc Google Fonts → chạy được cả trong mạng nội bộ không có Internet, không bị lẫn phông.
+   Udika Sans = Montserrat (SIL OFL 1.1) · Udika Serif = Lora (SIL OFL 1.1) — đã cắt gọn bộ ký tự Latin + tiếng Việt. */
+@font-face{font-family:'Udika Sans';src:url('/assets/fonts/udika-sans.woff') format('woff');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Udika Serif';src:url('/assets/fonts/udika-serif.woff') format('woff');font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Udika Serif';src:url('/assets/fonts/udika-serif-italic.woff') format('woff');font-weight:400 700;font-style:italic;font-display:swap}

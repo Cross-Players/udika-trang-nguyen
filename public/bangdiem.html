@@ -1,0 +1,25 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UDIKA · Bảng điểm liên hoàn</title><link rel="stylesheet" href="/fonts.css"><link rel="stylesheet" href="/dan-gian.css"><style>
+html,body{margin:0;height:100%;background:radial-gradient(ellipse at 50% 0%,#145a46 0%,#072b21 70%);color:#f8f3ea;font-family:'Udika Sans','Be Vietnam Pro',system-ui,sans-serif;overflow:hidden}
+.wrap{height:100%;display:flex;flex-direction:column;padding:2.2vh 3vw;box-sizing:border-box}
+h1{margin:0;font:800 clamp(22px,3.6vw,64px)/1.15 'Udika Serif','Noto Serif',Georgia,serif;color:#f6d37e;text-align:center;letter-spacing:.02em;text-shadow:0 .2vw .8vw #0008}
+.sub{text-align:center;color:#e9d8b3;font-size:clamp(12px,1.3vw,24px);margin:.6vh 0 2vh}
+table{width:100%;border-collapse:separate;border-spacing:0 .9vh;font-size:clamp(14px,1.7vw,34px)}
+th{color:#e9b949;font-weight:700;text-align:right;padding:0 1vw;font-size:.7em;letter-spacing:.05em}th:nth-child(2){text-align:left}
+td{background:#0e4a39cc;padding:1.1vh 1vw;text-align:right;border-top:1px solid #e9b94944;border-bottom:1px solid #e9b94944}td:first-child{border-left:1px solid #e9b94944;border-radius:1vw 0 0 1vw;text-align:center;width:6vw;font-weight:900;color:#f6d37e;font-size:1.25em}
+td:last-child{border-right:1px solid #e9b94944;border-radius:0 1vw 1vw 0;font-weight:900;color:#fff;font-size:1.25em}td:nth-child(2){text-align:left;font-weight:800}
+tr.top1 td{background:linear-gradient(90deg,#7a5a14,#b8891f);color:#fff}tr.top2 td,tr.top3 td{background:#1d7359cc}
+.dot{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.5em;vertical-align:middle}
+.held{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;font:800 clamp(22px,4vw,70px)/1.3 'Udika Serif',Georgia,serif;color:#f6d37e}
+.foot{margin-top:auto;text-align:center;color:#c8b995;font-size:clamp(10px,1vw,18px)}
+</style></head><body><div class="wrap"><h1 id="t">BẢNG ĐIỂM LIÊN HOÀN</h1><div class="sub" id="s"></div><div id="b"></div><div class="foot" id="f"></div></div>
+<script>
+'use strict';const MA=(new URLSearchParams(location.search).get('ma')||'').toUpperCase();const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>n==null?'–':Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});let last='';
+async function tick(){try{const r=await fetch('/api/events/public/'+encodeURIComponent(MA),{cache:'no-store'});const d=await r.json();if(!r.ok)throw Error(d.error);
+ const key=JSON.stringify(d.board||d.hidden)+d.name+d.locked;if(key!==last){last=key;document.getElementById('t').textContent=d.name;
+  document.getElementById('s').textContent=d.locked?'🏆 KẾT QUẢ CHUNG CUỘC':'Bảng điểm cập nhật trực tiếp';
+  document.getElementById('b').innerHTML=d.hidden?'<div class="held">🎴 Bảng điểm đang được giữ kín<br>chờ ban tổ chức công bố</div>':
+   `<table><thead><tr><th>Hạng</th><th>Đội</th>${d.activities.map(a=>`<th>${esc(a.name)}${a.weight!==1?' ×'+a.weight:''}</th>`).join('')}<th>Tổng</th></tr></thead><tbody>${d.board.map(r=>`<tr class="top${r.rank}"><td>${r.rank}</td><td>${r.color?`<span class="dot" style="background:${esc(r.color)}"></span>`:''}${esc(r.name)}</td>${d.activities.map(a=>`<td>${fmt(r.per[a.id])}</td>`).join('')}<td>${fmt(r.total)}</td></tr>`).join('')}</tbody></table>`}
+ document.getElementById('f').textContent='Mã chương trình '+MA+' · cập nhật '+new Date().toLocaleTimeString('vi-VN')}catch(e){document.getElementById('f').textContent='⚠ '+(e.message||'Mất kết nối – đang thử lại')}}
+tick();setInterval(tick,3000);
+</script></body></html>

@@ -1,0 +1,13 @@
+[
+ {"kind":"fill","q":"🎯 Đuổi hình bắt chữ: 👨‍👦 ⛰️ – \"Công cha như …\" (điền 3 chữ)","word":"NÚI THÁI SƠN","hint":[0],"t":30,"stage":0,"note":"Mẫu: thay emoji bằng ảnh ghép của bạn (mục Ảnh câu hỏi)."},
+ {"kind":"mc","q":"🎵 Nghe nhạc đoán bài hát – MC gắn đoạn nhạc ở mục Âm thanh. Đây là bài nào?","a":["Trống cơm","Bèo dạt mây trôi","Lý cây đa","Inh lả ơi"],"c":0,"t":20,"stage":0,"note":"Mẫu: tải lên đoạn nhạc bạn có quyền sử dụng; sửa phương án đúng cho khớp."},
+ {"kind":"type","q":"🧑‍🎓 Đoán tên nhân vật: đỗ Trạng nguyên năm 1463, giỏi toán, được dân gian gọi là \"Trạng Lường\"?","acc":["Lương Thế Vinh"],"loose":true,"t":30,"stage":1},
+ {"kind":"mc","q":"🪷 Đoán thương hiệu: hãng hàng không quốc gia nào dùng biểu tượng bông sen vàng?","a":["Vietnam Airlines","Vietjet Air","Bamboo Airways","Pacific Airlines"],"c":0,"t":20,"stage":1,"note":"Mẫu: có thể đổi thành câu \"Chọn hình ảnh\" với ảnh logo bạn được phép dùng."},
+ {"kind":"mc","q":"🎬 Xem video trả lời câu hỏi – MC gắn clip ở mục Video. Trong clip có mấy người đánh trống?","a":["1","2","3","4"],"c":1,"t":20,"stage":1,"note":"Mẫu: gắn clip và sửa đáp án cho khớp nội dung clip."},
+ {"kind":"type","q":"😀 Giải mã emoji: 🐉 + 🏝️ + 🌊 → tên một vịnh nổi tiếng của Việt Nam?","acc":["Hạ Long","Vịnh Hạ Long"],"loose":true,"t":30,"stage":2},
+ {"kind":"number","q":"💰 Đoán giá sản phẩm: một chiếc bánh chưng truyền thống 1 kg giá khoảng bao nhiêu nghìn đồng?","c":120,"tol":40,"prox":true,"unit":"nghìn đồng","t":30,"stage":2,"note":"Mẫu: càng gần giá đúng càng nhiều điểm; sửa giá và sai số theo sản phẩm thật."},
+ {"kind":"mc","q":"🔍 Tìm đáp án khác biệt: đâu KHÔNG phải tên một kỳ thi thời khoa cử?","a":["Thi Hương","Thi Hội","Thi Đình","Thi Thố"],"c":3,"t":20,"stage":2},
+ {"kind":"mc","q":"🧠 Ghi nhớ hình ảnh – MC gắn ảnh và đặt \"Ẩn ảnh sau 5 giây\". Trong ảnh vừa xem có mấy con ngựa?","a":["1","2","3","4"],"c":0,"t":25,"stage":3,"note":"Mẫu: ảnh tự ẩn sau số giây đã đặt, khi công bố ảnh hiện lại."},
+ {"kind":"fill","q":"🔐 Giải mã từ khoá bí mật: nơi được coi là trường đại học đầu tiên của Việt Nam","word":"VĂN MIẾU QUỐC TỬ GIÁM","hint":[0,4,9,14],"loose":true,"t":40,"stage":3},
+ {"kind":"match","q":"🔗 Ghép Trạng nguyên với triều đại","l":["Nguyễn Hiền","Mạc Đĩnh Chi","Lương Thế Vinh"],"r":["Nhà Trần (1247)","Nhà Trần (1304)","Nhà Lê sơ (1463)"],"t":40,"stage":4}
+]

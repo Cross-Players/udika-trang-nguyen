@@ -1,0 +1,6 @@
+# Thư viện Python cho bộ kiểm thử giao diện (node test/run-all.js). Phiên bản đã dùng khi chạy bộ kiểm thử bàn giao.
+# Cài: python3 -m pip install -r requirements-test.txt && python3 -m playwright install --with-deps chromium
+playwright==1.63.0
+opencv-python-headless==5.0.0.93
+numpy==2.5.3
+websocket-client>=1.8,<2

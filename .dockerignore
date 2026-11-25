@@ -1,6 +1,8 @@
 node_modules
 data
-test
 .env
+.git
+test
 *.md
 *.txt
+ban_thiet_ke_tao_hinh.png

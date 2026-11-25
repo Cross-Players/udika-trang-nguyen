@@ -1,0 +1,2 @@
+Đặt phim vinh danh 3D dựng sẵn tại đây với tên vinh_quy.mp4 (1920x1080, 30 giây, H.264).
+Tuỳ chọn: vinh_quy.json {"nameAt":20,"nameY":40}. Xem HUONG_DAN_PHIM_VINH_DANH_3D.md.

@@ -38,18 +38,19 @@ try:
  player=ws();emit(player,{'type':'join','pin':pin,'name':'Nguyễn Thị A'});state(player)
  bank=[{'stage':0,'q':'Câu 1?','a':['A','B','C','D'],'c':0,'t':10}, {'stage':1,'q':'Câu 2?','a':['A','B','C','D'],'c':0,'t':10}]
  emit(c,{'type':'bank_set','bank':bank});state(c)
- emit(c,{'type':'start'});state(c,'running')
- emit(player,{'type':'answer','choice':0});received(player,'answered')
- emit(c,{'type':'reveal'});st=state(c,'intermission');assert st['completedStage']==0, st
+ emit(c,{'type':'start'});st=state(c,'running')
+ emit(player,{'type':'answer','choice':0,'qid':st['q']['qid'],'eid':st['eid'],'sid':'s'+st['q']['qid']});received(player,'answered')
+ emit(c,{'type':'reveal'});st=state(c,'reveal');assert st['q']['answer']==0,st  # L06: luôn hiện đáp án trước
+ emit(c,{'type':'next'});st=state(c,'intermission');assert st['completedStage']==0, st
  ledst=state(led,'intermission');assert ledst['stageLeaders'][0]['name']=='Nguyễn Thị A',ledst
  p=state(player,'intermission');assert p['my']['passedStage']['passed']
  print('PASS stage 1 celebration LED + personal message')
  emit(c,{'type':'next'});s=state(c,'ready');assert s['idx']==1,s
- emit(c,{'type':'start'});state(c,'running')
- emit(player,{'type':'answer','choice':0});received(player,'answered')
- emit(c,{'type':'reveal'});st=state(c,'finished');assert st['honors'][0]['name']=='Nguyễn Thị A',st
+ emit(c,{'type':'start'});st=state(c,'running')
+ emit(player,{'type':'answer','choice':0,'qid':st['q']['qid'],'eid':st['eid'],'sid':'s'+st['q']['qid']});received(player,'answered')
+ emit(c,{'type':'reveal'});st=state(c,'reveal');emit(c,{'type':'next'});st=state(c,'finished');assert st['honors'][0]['name']=='Nguyễn Thị A',st
  assert state(led,'finished')['honors'][0]['title']=='Trạng nguyên'
- print('PASS final honors triggered by reveal without NEXT')
+ print('PASS final honors after reveal → next (unified flow L06)')
  for x in [c,led,player]:x.close()
 finally:
  proc.terminate()

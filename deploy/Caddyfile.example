@@ -1,0 +1,18 @@
+# Caddy trước UDIKA – WebSocket giữ kết nối lâu, nén, HTTPS tự động.
+# Một máy:   reverse_proxy tới container udika:3000 (router.js bên trong chia phòng cho các nhân CPU)
+# Nhiều máy: liệt kê nhiều bộ định tuyến (router.js chạy với NODES=… giống nhau ở mọi máy) – router không giữ trạng thái nên cân bằng tải kiểu nào cũng được.
+khoabang.example.vn {
+	encode zstd gzip
+	@static path /assets/* /fonts.css /*.js /*.css
+	header @static Cache-Control "public, max-age=3600"
+	reverse_proxy udika:3000 {
+		# nhiều máy: reverse_proxy 10.0.0.21:3000 10.0.0.22:3000 10.0.0.23:3000 { lb_policy least_conn … }
+		flush_interval -1
+		transport http {
+			keepalive 120s
+			keepalive_idle_conns 4096
+		}
+		stream_timeout 24h
+		stream_close_delay 5m
+	}
+}

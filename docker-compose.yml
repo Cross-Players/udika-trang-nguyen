@@ -1,11 +1,20 @@
-# Chạy sau Caddy có sẵn trên network "ragre_default" (VPS gdata).
+# BẢN RIÊNG CHO VPS gdata (mạng "ragre_default" có Caddy sẵn). Máy chủ khác: dùng docker-compose.portable.yml
+# Chạy sau Caddy có sẵn trên network "ragre_default" (VPS gdata). Xem deploy/Caddyfile.example và KIEN_TRUC_MO_RONG_1_TRIEU.md
 services:
   udika:
     build: .
-    image: udika:latest
+    image: udika:15
     container_name: udika
     restart: unless-stopped
-    env_file: .env
+    env_file: .env            # ADMIN_PASSWORD, SESSION_SECRET (bắt buộc), DATABASE_URL (khuyến nghị), LOCAL_WORKERS…
+    environment:
+      MAX_PLAYERS: "6000"     # tối đa mỗi phòng (đã thử tải 6.000 người/phòng)
+      MAX_ROOMS: "200"
+      MAX_ONLINE: "40000"     # tổng kết nối điện thoại mỗi tiến trình; điều chỉnh theo RAM/CPU thực tế sau khi thử tải
+    ulimits:
+      nofile: { soft: 1048576, hard: 1048576 }   # mỗi người chơi giữ 1–2 kết nối mở
+    sysctls:
+      net.core.somaxconn: "65535"
     volumes:
       - ./data:/app/data
     networks: [edge]

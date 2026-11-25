@@ -1,0 +1,18 @@
+== UDIKA kiểm thử tải: 3000 sĩ tử trong 1 phòng, 3 câu · 1 tiến trình server.js · máy thử 2 nhân CPU, 8 GB RAM, Node v22.23.5 ==
+Ghi danh: 3000/3000 thành công trong 7.3 giây · RAM máy chủ 116 MB
+Màn LED thấy sĩ số: 3000
+Câu 1: đề tới 3000/3000 máy · độ trễ p50 138 ms, p95 184 ms, tối đa 190 ms
+  Nộp bài: 3000/3000 được ghi nhận · phản hồi p50 8 ms, p95 18 ms · trong 4.0 giây
+  MC thấy đã nộp: 3000/3000 · trực tuyến 3000/3000
+  Công bố: tới 3000/3000 máy · p95 187 ms · RAM 121 MB · CPU tích lũy 00:00:07
+Câu 2: đề tới 3000/3000 máy · độ trễ p50 115 ms, p95 185 ms, tối đa 191 ms
+  Nộp bài: 3000/3000 được ghi nhận · phản hồi p50 8 ms, p95 18 ms · trong 4.0 giây
+  MC thấy đã nộp: 3000/3000 · trực tuyến 3000/3000
+  Công bố: tới 3000/3000 máy · p95 166 ms · RAM 124 MB · CPU tích lũy 00:00:08
+Câu 3: đề tới 3000/3000 máy · độ trễ p50 63 ms, p95 90 ms, tối đa 92 ms
+  Nộp bài: 3000/3000 được ghi nhận · phản hồi p50 8 ms, p95 20 ms · trong 4.0 giây
+  MC thấy đã nộp: 3000/3000 · trực tuyến 3000/3000
+  Công bố: tới 3000/3000 máy · p95 307 ms · RAM 131 MB · CPU tích lũy 00:00:10
+Độ chính xác: 3000/3000 sĩ tử có số câu đúng khớp tuyệt đối với câu trả lời đã gửi · 0 sai lệch
+Đóng kết nối: 3000/3000 đóng đúng chuẩn (mã 1000) · 0 lỗi đóng
+Bảng vàng: hạng 1 Sĩ tử 629 – 3246 điểm. Máy chủ vẫn hoạt động: CÓ

@@ -1,0 +1,57 @@
+# CI: chạy toàn bộ kiểm thử ở chế độ NGHIỆM THU (không bỏ qua, không chạy lại) cho mỗi lần đẩy mã / PR.
+name: Kiem thu UDIKA
+on: [push, pull_request]
+jobs:
+  kiem-thu:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22.12.0' }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Cài thư viện Node (pg)
+        run: if [ -f package-lock.json ]; then npm ci; else npm install; fi
+      - name: Cài thư viện kiểm thử Python + Chromium
+        run: |
+          python -m pip install -r requirements-test.txt
+          python -m playwright install --with-deps chromium
+      - name: Nghiệm thu (đủ bộ, gồm tải 3.000 kết nối)
+        run: node test/run-all.js --nghiem-thu
+      - name: PostgreSQL 16 thật bằng gói pg THẬT (máy kiểm thử của nhà phát triển chỉ chạy được qua psql)
+        run: PG_REAL=1 node test/test-postgres-that.js
+      - name: Lưu kết quả
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ket-qua-nghiem-thu
+          path: |
+            KET_QUA_NGHIEM_THU.txt
+            test/last-failures.log
+  docker:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dựng ảnh Docker và kiểm tra /health
+        run: |
+          docker build -t udika:ci .
+          docker run -d --name u -p 3000:3000 -e ADMIN_PASSWORD=ci-admin-password-123 -e SESSION_SECRET=ci-session-secret-must-be-long-enough-xyz -e LOCAL_WORKERS=1 udika:ci
+          for i in $(seq 1 30); do curl -fs http://127.0.0.1:3000/health && break; sleep 1; done
+          curl -fs http://127.0.0.1:3000/api/practice | grep -q '"mau"'
+          docker logs u
+      - name: Docker + PostgreSQL (docker-compose.postgres.yml) – tắt đột ngột rồi chạy lại vẫn còn phòng
+        run: |
+          printf 'ADMIN_PASSWORD=ci-admin-password-123\nSESSION_SECRET=ci-session-secret-must-be-long-enough-xyz\nPOSTGRES_PASSWORD=ci-db-password-123\nLOCAL_WORKERS=2\n' > .env
+          mkdir -p data && sudo chown -R 1000:1000 data
+          docker compose -f docker-compose.postgres.yml up -d --build
+          for i in $(seq 1 60); do curl -fs http://127.0.0.1:3000/health && break; sleep 2; done
+          curl -fs http://127.0.0.1:3000/health | grep -q postgresql
+          C=$(mktemp); curl -fs -c $C -H 'Content-Type: application/json' -d '{"role":"admin","password":"ci-admin-password-123"}' http://127.0.0.1:3000/api/login
+          PIN=$(curl -fs -b $C -H 'Content-Type: application/json' -d '{"title":"CI Docker PG","mcUser":"mcci","password":"password-ci-0123"}' http://127.0.0.1:3000/api/rooms | sed -E 's/.*"pin":"?([0-9]{6}).*/\1/')
+          echo "phòng $PIN"; sleep 2
+          docker compose -f docker-compose.postgres.yml kill -s SIGKILL udika
+          docker compose -f docker-compose.postgres.yml up -d udika
+          for i in $(seq 1 60); do curl -fs http://127.0.0.1:3000/health && break; sleep 2; done
+          curl -fs -b $C http://127.0.0.1:3000/api/rooms | grep -q "$PIN"
+          docker compose -f docker-compose.postgres.yml logs udika | tail -50

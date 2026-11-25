@@ -58,15 +58,18 @@ try:
     # replace with one question to finish in one step
     bank=[{'stage':0,'q':'2 + 2 = ?','a':['3','4','5','6'],'c':1,'t':5}]
     emit(mca,{'type':'bank_set','bank':bank});nextmsg(mca,'state')
-    emit(mca,{'type':'start'});nextmsg(mca,'state')
+    emit(mca,{'type':'set_option','autoReveal':False});nextmsg(mca,'state')
+    emit(mca,{'type':'start'});st=nextmsg(mca,'state');QA={'qid':st['q']['qid'],'eid':st['eid']}
     qmsg=nextmsg(p1,'state');
     while qmsg['phase']!='running': qmsg=nextmsg(p1,'state')
-    emit(p1,{'type':'answer','choice':1});ans=nextmsg(p1,'answered');assert ans['answer']['correct'] is True
-    emit(p2,{'type':'answer','choice':0});ans2=nextmsg(p2,'answered');assert ans2['answer']['correct'] is False
+    emit(p1,{'type':'answer','choice':1,'sid':'a1',**QA});ans=nextmsg(p1,'answered');assert ans['answer']['saved'] is True and 'correct' not in ans['answer']  # giữ kín tới lúc công bố
+    emit(p2,{'type':'answer','choice':0,'sid':'a2',**QA});ans2=nextmsg(p2,'answered');assert ans2['answer']['saved'] is True
     p1.close();time.sleep(.3)
-    p1=ws();emit(p1,{'type':'join','pin':a['pin'],'playerId':p1id,'name':'Sĩ tử A'});assert nextmsg(p1,'joined')['playerId']==p1id;rec=nextmsg(p1,'state');assert rec['my']['score']>0 and rec['count']==2
+    p1=ws();emit(p1,{'type':'join','pin':a['pin'],'playerId':p1id,'name':'Sĩ tử A'});assert nextmsg(p1,'joined')['playerId']==p1id;rec=nextmsg(p1,'state');assert rec['my']['answer'] and rec['my']['answer']['saved'] is True  # bài đã nộp còn nguyên sau khi vào lại (điểm giữ kín tới lúc công bố)
     print('OK reconnect preserves submitted answer and score')
-    emit(mca,{'type':'reveal'});final=nextmsg(mca,'state');
+    emit(mca,{'type':'reveal'});final=nextmsg(mca,'state')
+    while final['phase']!='reveal':final=nextmsg(mca,'state')
+    emit(mca,{'type':'next'})
     while final['phase']!='finished':final=nextmsg(mca,'state')
     assert final['phase']=='finished' and final['honors'][0]['name']=='Sĩ tử A' and 'id' not in final['honors'][0]
     assert req('/api/rooms')[0]==403

@@ -1,0 +1,505 @@
+KẾT QUẢ KIỂM THỬ TỔNG HỢP – UDIKA Khoa Bảng
+Thời điểm: 2026-11-25T08:05:25.538Z · Node v22.23.5 · tổng thời gian 10.5 phút
+Quy tắc NGHIỆM THU: mỗi bộ chạy đúng MỘT lần, không chạy lại, không bỏ qua – thiếu thư viện hay thất bại đều là KHÔNG ĐẠT.
+
+[ĐẠT] Khói – khởi động bản phát hành – 1 mục PASS
+[ĐẠT] Thời gian & tính điểm – 6 mục PASS
+[ĐẠT] Câu hỏi – 8 mục PASS
+[ĐẠT] Nhập đề & báo cáo – 8 mục PASS
+[ĐẠT] Điều khiển vinh quy – 10 mục PASS
+[ĐẠT] Phim vinh danh – 6 mục PASS
+[ĐẠT] Tính năng V14 kiểu Kahoot – 20 mục PASS
+[ĐẠT] Tự công bố đáp án – 3 mục PASS
+[ĐẠT] Độ tin cậy: không mất điểm, mất mạng, kill -9 – 6 mục PASS
+[ĐẠT] V15 lõi: L01–L09, luật 4.x, dạng câu Q01–Q11 – 22 mục PASS
+[ĐẠT] Bộ định tuyến nhiều tiến trình (chia phòng, tắt đột ngột 1 nút) – 5 mục PASS
+[ĐẠT] Báo cáo kiểm định 25/11: QF01–QF05, C01–C07, chống lộ đề, chống bot – 17 mục PASS
+[ĐẠT] Rà soát thương mại: F01–F07, tổng duyệt, lịch sử, vòng đời phòng, thanh trượt, đóng gói – 12 mục PASS
+[ĐẠT] Tài khoản khách tự vận hành: gói, hạn mức, cách ly dữ liệu, hết hạn/khoá – 9 mục PASS
+[ĐẠT] V15 giao diện: dạng câu mới, ảnh, âm thanh, LED – 16 mục PASS
+[ĐẠT] Giao diện V14 (trình duyệt) – 17 mục PASS
+[ĐẠT] Mạng chập chờn trên giao diện – 7 mục PASS
+[ĐẠT] Trang chủ máy tính + điện thoại – 16 mục PASS
+[ĐẠT] Phông chữ tiếng Việt – 12 mục PASS
+[ĐẠT] QR cỡ lớn trên LED – 11 mục PASS
+[ĐẠT] Nhập ảnh có sẵn trong Word/Excel + ô chèn ảnh – 9 mục PASS
+[ĐẠT] Câu sắp xếp: kéo thả bằng chuột và ngón tay – 5 mục PASS
+[ĐẠT] Chơi thử một mình với đối thủ ảo – 9 mục PASS
+[ĐẠT] Ghi danh: duyệt tên, danh sách dự kiến, vào muộn (4.6) – 13 mục PASS
+[ĐẠT] LED phòng 1.000 người: 60 nhân vật + biển sĩ tử – 4 mục PASS
+[ĐẠT] Tông xanh ngọc, lưới ảnh 2×2, màn 320 px, mạng 3G giả lập – 6 mục PASS
+[ĐẠT] Kiểm định 7.1–7.3: âm thanh tắt tiếng không mở lượt, LED chính, mất LED – 4 mục PASS
+[ĐẠT] Kiểm định 7.3: chế độ sân khấu hiện trọn tổng kết & bảng vàng – 2 mục PASS
+[ĐẠT] Cải tiến từ phản ánh Kahoot: lý do lỡ câu, MC giữ bảng điểm, luật theo vòng, tự lưu nháp, kiểm tra trước giờ diễn – 7 mục PASS
+[ĐẠT] Cổng khách hàng /khach & cấp tài khoản khách trên /admin (trình duyệt) – 6 mục PASS
+[ĐẠT] Hành trình đầy đủ của khách: cấp tài khoản → tạo phòng → ghép LED → 3 điện thoại → vinh danh tên thật → báo cáo → tổng duyệt → lưu trữ – 11 mục PASS
+[ĐẠT] Hành trình của khách qua CỤM 3 tiến trình (router.js), phòng khách nằm ở nút khác nút 0 – 11 mục PASS
+[ĐẠT] Phim vinh danh 3D – 13 mục PASS
+[ĐẠT] Tích hợp đầy đủ (websocket-client) – 1 mục PASS – (dùng bản websocket tối giản trong test/_pyshim vì máy thiếu websocket-client)
+[ĐẠT] Lễ vinh danh (websocket-client) – 2 mục PASS – (dùng bản websocket tối giản trong test/_pyshim vì máy thiếu websocket-client)
+[ĐẠT] 10 hình thức trả lời + cơ chế điểm riêng từng câu (máy chủ): tương thích ngược, không lộ đáp án, chấm từng dạng, MC duyệt tay, câu quyết định, nhập CSV – 9 mục PASS
+[ĐẠT] 10 hình thức trả lời trên giao diện: MC soạn & xem trước, 2 điện thoại 390 px + LED, ô chữ, ghép cặp, duyệt tay, vượt hạng – 9 mục PASS
+[ĐẠT] Thanh toán tự động: VietQR + webhook ngân hàng (SePay/Casso), VNPAY, MoMo, chống trùng/thiếu tiền, đổi mật khẩu – 9 mục PASS
+[ĐẠT] Chương trình liên hoàn: nhiều hoạt động, hệ số, trọng tài, khoá điểm, nhập điểm quiz – 6 mục PASS
+[ĐẠT] Giới hạn kết nối CHUNG cả cụm (3 tiến trình, chỗ dự phòng người vào lại) – 6 mục PASS
+[ĐẠT] PostgreSQL 16 thật: tạo bảng, kill -9, CSDL sập rồi sống lại – 7 mục PASS
+[ĐẠT] Giao diện thanh toán (giải mã ảnh VietQR) + liên hoàn: /khach, /admin, /chuongtrinh, /trongtai (điện thoại), /bangdiem – 13 mục PASS
+[ĐẠT] LED tải lại trang giữa phim vinh danh → chạy tiếp đúng chỗ (phim mp4 + hoạt cảnh) – 7 mục PASS
+[ĐẠT] Chạy mạng nội bộ (LAN, không Internet) + trang tự kiểm tra máy /kiem-tra – 15 mục PASS
+[ĐẠT] Diễn tập buổi thi có sự cố (kill -9, rớt mạng, gửi trễ, bấm trùng) + đối soát từng bài – 1 mục PASS
+[ĐẠT] Tải 3.000 kết nối/1 phòng
+[ĐẠT] Tải nhiều phòng 2.000+500+500
+
+TỔNG: 47 đạt ngay · 0 đạt sau chạy lại · 0 không đạt · 0 bỏ qua
+
+CHI TIẾT CÁC MỤC PASS
+— Khói – khởi động bản phát hành
+   PASS: Admin login, room creation and role-based access
+— Thời gian & tính điểm
+   PASS đặt thời gian câu hiện tại = 45 giây
+   PASS mở câu với thời gian MC chọn = 12 giây
+   PASS cộng thêm 10 giây khi đang thi → hạn nộp 22 giây, thang điểm tốc độ giữ 12 giây (L01)
+   PASS áp dụng 30 giây cho tất cả câu (câu đang chạy giữ nguyên)
+   PASS đổi thời gian không làm mất điểm sĩ tử: 996
+   PASS chặn thời gian sai: Thời gian câu hỏi cần từ 5 đến 300 giây
+— Câu hỏi
+   PASS thêm câu vào chặng Lớp thầy đồ khi đang thi
+   PASS thêm câu vào chặng trống (Khảo hạch) đúng thứ tự
+   PASS sửa câu Thi Đình
+   PASS xóa câu Thi Hương
+   PASS chặn xóa câu đã thi: Câu này đã thi hoặc đang thi, không thể sửa/xóa
+   PASS chặn sửa câu đã thi
+   PASS điểm giữ nguyên: 997
+   PASS chạy hết đề sau khi thêm/xóa, các chặng chuyển đúng: reveal → reveal → intermission → reveal → intermission → reveal → finished
+— Nhập đề & báo cáo
+   PASS chặn người lạ nhập đề / tải báo cáo
+   PASS đọc tệp mau-cau-hoi.csv: 3 câu, chặng 0,2,3
+   PASS báo lỗi rõ với tệp .doc cũ: Tệp .doc/.xls đời cũ chưa hỗ trợ – hãy "Lưu thành" .docx hoặc .xlsx rồi tải lại
+   PASS thay bộ đề bằng 3 câu vừa nhập (trước đó 15 câu)
+   PASS thêm 3 câu vào bộ đề khi đang thi – điểm giữ nguyên 997
+   PASS câu Đúng/Sai hiển thị 2 đáp án, chặn chọn sai chỉ số: Đáp án không hợp lệ
+   PASS trả lời câu Đúng/Sai
+   PASS báo cáo Excel: 12 dòng, có thống kê từng câu
+— Điều khiển vinh quy
+   PASS màn LED nhận lệnh hoạt cảnh: replay
+   PASS màn LED nhận lệnh hoạt cảnh: pause
+   PASS màn LED nhận lệnh hoạt cảnh: resume
+   PASS màn LED nhận lệnh hoạt cảnh: speed
+   PASS màn LED nhận lệnh hoạt cảnh: honor
+   PASS màn LED nhận lệnh hoạt cảnh: sound
+   PASS màn LED nhận lệnh hoạt cảnh: volume
+   PASS chặn lệnh hoạt cảnh không hợp lệ: Lệnh hoạt cảnh không hợp lệ
+   PASS sĩ tử không điều khiển được hoạt cảnh: Bạn không có quyền điều khiển kỳ thi này
+   PASS lệnh hoạt cảnh chỉ gửi tới màn LED, không gửi tới điện thoại sĩ tử
+— Phim vinh danh
+   PASS màn LED phát hiện được phim (HEAD, video/mp4)
+   PASS tua phim (Range 206)
+   PASS chặn khoảng tua sai (416)
+   PASS không có phim thì dùng hoạt cảnh có sẵn (404)
+   PASS tệp trống múa lân phát và tua được (audio/mp4, 206)
+   PASS HEAD trang thường
+— Tính năng V14 kiểu Kahoot
+   PASS chặn câu hỏi sai cấu hình cho từng dạng (thanh trượt, sắp xếp, gõ đáp án)
+   PASS nhận đủ 6 dạng câu hỏi + video YouTube
+   PASS lọc tên phản cảm (có dấu, không dấu, viết lách) mà không chặn nhầm tên thật (Các, Lớn, Mến, Đức)
+   PASS chặn trùng tên (không phân biệt hoa thường / dấu)
+   PASS khoá phòng: không nhận người mới
+   PASS loại sĩ tử khỏi phòng + chặn tên vào lại
+   PASS khi câu còn chạy, điện thoại chỉ nhận "đã lưu", không biết đúng/sai, điểm, chuỗi
+   PASS câu gõ đáp án: chấp nhận không dấu / hoa thường / dấu câu; thưởng chuỗi +100 ở câu đúng thứ 2
+   PASS câu sắp xếp: xáo thứ tự hiển thị, chấm đúng, chặn thứ tự sai cấu trúc; chuỗi 3 → +200
+   PASS thăm dò ý kiến: 0 điểm, thống kê trực tiếp trên LED trong lúc trả lời
+   PASS thanh trượt: đúng tuyệt đối điểm cao hơn gần đúng (±5); chuỗi giữ qua câu không tính điểm
+   PASS đám mây từ: gộp từ trùng, ẩn từ phản cảm
+   PASS không trả lời câu tính điểm → mất chuỗi
+   PASS bảng xếp hạng đội tính theo điểm trung bình thành viên
+   PASS báo cáo Excel có dạng câu, đội, thưởng chuỗi, kết quả thăm dò
+   PASS kho đề: lưu, chỉ chủ sở hữu thấy, Admin chia sẻ, MC khác nạp vào phòng, không xoá được của người khác
+   PASS tải ảnh lên (kiểm tra đúng định dạng thật), phát lại ảnh, chặn tệp lạ / sai quyền / đường dẫn vượt thư mục
+   PASS tự làm bài: tự mở từng câu, chấm ngay, xem đáp án đúng, bỏ qua câu, hoàn thành 7/7, MC theo dõi tiến độ
+   PASS MC đóng bài tự làm → xướng danh Tam khôi
+   PASS khởi động lại máy chủ: giữ kho đề, chế độ, đội, danh sách chặn
+— Tự công bố đáp án
+   PASS mọi sĩ tử đã trả lời → tự công bố đáp án sau 1.6 giây (MC không bấm); điện thoại nhận đáp án đúng
+   PASS sĩ tử đã thoát không làm treo việc tự công bố
+   PASS MC tắt "tự công bố" → chờ MC bấm như cũ
+— Độ tin cậy: không mất điểm, mất mạng, kill -9
+   PASS đáp án giữ lại từ câu 1 (mã câu cũ) gửi khi đang ở câu 2 → bị từ chối, KHÔNG tính vào câu 2; gửi thiếu mã câu cũng bị từ chối
+   PASS gửi lại cùng mã lần gửi (mất xác nhận do mạng) → xác nhận lại, điểm tính 1 lần; lần gửi khác cho câu đã nộp → từ chối; mã kỳ thi cũ → từ chối
+   PASS đáp án đã báo nhận rồi tiến trình bị kill -9 sau 20 ms (ảnh chụp chưa có) → khởi động lại vẫn đủ điểm 2077 (khôi phục từ nhật ký ghi trước)
+   PASS khởi động lại: câu 3 vẫn đang mở (không bị cắt), đồng hồ được bù thời gian gián đoạn – còn 39.1 giây
+   PASS sau khởi động lại: thí sinh vào lại bằng mã cũ giữ nguyên điểm; gửi lại câu đã nhận không bị tính trùng; người mới vẫn trả lời được câu đang mở
+   PASS khi máy chủ không ghi được (đĩa lỗi) → không báo "đã nhận", không cộng điểm, điện thoại được yêu cầu gửi lại
+— V15 lõi: L01–L09, luật 4.x, dạng câu Q01–Q11
+   PASS L01: gia hạn +10s chỉ kéo dài hạn nộp – A (≈1s) 883 > B (≈2,5s, sau gia hạn) 705; C trả lời trong phần cộng thêm được mức tối thiểu 300 (trước đây B được nhiều hơn A)
+   PASS L02: "5 < 10 và 20 > 15", "<b>x</b> & \"y\"" lưu và gửi nguyên văn (hiển thị luôn escape – xem test giao diện); xác nhận nhận bài không lộ đúng/sai/điểm
+   PASS L06: câu cuối → KHOÁ & CÔNG BỐ hiện đáp án (không nhảy thẳng xướng danh) → nút "XƯỚNG DANH CHUNG CUỘC"; nút MC lấy đúng luật máy chủ (actions)
+   PASS 4.1: sau mỗi lần công bố MỌI sĩ tử có hạng riêng (Chi: hạng 3/4, đúng 0/1)
+   PASS L06: cuối chặng: công bố → TỔNG KẾT CHẶNG → câu đầu chặng sau (không bỏ qua lời chúc chặng)
+   PASS 4.4: luật "đồng hạng" → An – Đồng Trạng nguyên, Bình – Đồng Trạng nguyên; Chi (0 câu đúng) và Dũng (không trả lời) không được vinh danh dù đứng trong top 3; thời điểm ghi danh không quyết định hạng
+   PASS 4.5: "Làm lại kỳ thi" tự lưu bảng kết quả cũ vào lịch sử phòng (xem & tải CSV được) trước khi xoá điểm
+   PASS L04/L05: áp dụng bản nháp có xác nhận "bank_saved" (giao diện chỉ xoá bản nháp/bản xem trước sau xác nhận); bản nháp dựa trên phiên bản cũ bị chặn; khoá bộ đề đã duyệt
+   PASS L08: avatar bị cắt dở "👨🏻" được khôi phục thành "👨🏻‍🎓" theo danh sách cho phép; giá trị lạ → "📜"
+   PASS L09: tên =1+1, +SUM(A1), -2+3, @cmd, ' =HYPERLINK' xuất ra CSV có dấu ' phía trước – bảng tính hiển thị như chữ, không chạy công thức (báo cáo MC & xuất Admin)
+   PASS Q03/Q04: chọn nhiều – chấm theo MÃ phương án sau khi xáo (LED & điện thoại cùng thứ tự); đúng đủ tập mới có điểm, thiếu/thừa = 0; rỗng/trùng/mã lạ bị từ chối; không nộp lần hai
+   PASS chấm một phần (bật cho câu) + hệ số ×2: đủ 2/2 → +2000; 1/2 → +1000; 2 đúng 1 sai → (2−1)/2 → +1000; một phần KHÔNG tính "câu đúng"
+   PASS Q07: nhập số – "1075", "1075 năm" đúng; "1,075" (mơ hồ) và "1074+1" (biểu thức), "mười" bị từ chối để nhập lại; "12,5 kg" = 12.5; biên sai số ±0,1: 12.6 đúng, 12,61 sai; số âm đọc được
+   PASS Q06: gõ chữ – mặc định giữ dấu tiếng Việt: "  thăng   long. " đúng (chuẩn hoá khoảng trắng/hoa thường/dấu câu đầu-cuối); "Thang Long" (không dấu) và "Thăng Lông" sai trừ khi người soạn bật "chấp nhận không dấu"
+   PASS Q05: sắp xếp 4 mục – đủ & đúng thứ tự mới được điểm đầy đủ; thiếu mục / lặp mục bị từ chối; chấm một phần (khi bật): 2/4 đúng vị trí → nửa điểm
+   PASS Q11: khảo sát nhiều lựa chọn – không đổi điểm; mẫu số = số người nộp (2), "Hương" 2/2 = 100%, tổng có thể >100%; gửi lại không cộng phiếu
+   PASS phương án chỉ có ảnh (không chữ) được nhận & gửi kèm mã; câu hệ số ×0 không cộng điểm
+   PASS 4.2: LED báo trạng thái thật (sẵn sàng / tiếng bị chặn / đang tải phim 40%); lệnh có mã, MC biết gửi tới mấy LED và LED nào thực hiện được hay không
+   PASS 5.4: câu có âm thanh – phát trên LED trước (đoạn 2–9 giây), chưa nhận bài; LED báo phát xong → máy chủ mở lượt & bắt đầu đếm giờ chung (MC có nút mở ngay khi LED lỗi)
+   PASS chế độ Tự tin: đúng + "Chắc chắn" cấp 1 → +50, câu sau cấp 2 → +75; sai + "Chắc chắn" bị trừ nhưng tổng không âm (Tự tin 2125, Liều 0)
+   PASS L03: tệp CSV có câu 425 ký tự và hai phương án 328/328 ký tự → BÁO LỖI từng câu (không cắt ngắn, không biến 2 phương án thành giống nhau); "Hà Nội"/"hà  nội" bị chặn trùng; "Sĩ tử"/"Si tu" chỉ cảnh báo
+   PASS Q01/Q02: bộ đề V13 (15 câu {stage,q,a,c,t}) nhập nguyên vẹn nội dung/đáp án/chặng/thời gian, có mã câu ổn định; xuất → nhập lại giữ nguyên mọi trường
+— Bộ định tuyến nhiều tiến trình (chia phòng, tắt đột ngột 1 nút)
+   PASS 6 phòng chia đều cho 3 tiến trình (2/2/2) theo quy tắc mã % 3; Admin thấy đủ 6 phòng qua bộ định tuyến
+   PASS MC, sĩ tử ở cả 6 phòng (3 tiến trình) kết nối WebSocket qua bộ định tuyến, chơi & chấm điểm đúng nút giữ phòng
+   PASS kho đề dùng chung: lưu từ phòng ở nút 2, nạp thêm vào phòng ở nút 1 (giữ điểm)
+   PASS tài khoản khách khi chạy 3 nút: hạn mức số phòng tính trên toàn cụm; chương trình liên hoàn (nút 0) lấy điểm đội từ phòng quiz ở nút 2; chủ khách điều khiển phòng ở nút khác; MC ở nút 2 dùng kho đề riêng của khách (nút 0), khách khác không thấy; số sĩ tử theo gói và lệnh khoá có hiệu lực ở mọi nút; lưu trữ gom từ mọi nút
+   PASS một tiến trình (nút 1) bị tắt đột ngột (kill -9) → bộ định tuyến tự khởi động lại; phòng 292408 còn nguyên điểm & trạng thái; các phòng ở nút khác không bị ảnh hưởng
+— Báo cáo kiểm định 25/11: QF01–QF05, C01–C07, chống lộ đề, chống bot
+   PASS QF02: câu gõ chữ giữ dấu có nghĩa – "5"≠"-5", ký hiệu "<" nộp được và chấm đúng, "50"≠"50%"; dấu chấm cuối câu vẫn được bỏ qua
+   PASS QF02: đáp án được duyệt mà người chơi không thể nộp (chỉ gồm dấu câu bị bỏ) bị báo lỗi khi lưu đề
+   PASS QF01: câu nhập số so sánh chính xác theo thập phân – đáp án 1.000.000.000.000 sai số 0: nhập 1.000.000.000.100 bị chấm SAI; biên ±0,5 với số âm đúng; 0,3 = 0.30
+   PASS QF05: báo cáo CSV ghi thứ tự đúng của câu sắp xếp 6 mục là A→B→C→D→E→F (trước đây A→A→B→C→D)
+   PASS QF03 (giới hạn mới từ đợt 6: 6 lựa chọn / 8 mục): JSON có 7 lựa chọn, sắp xếp 9 mục, dạng "matching", media/ảnh có địa chỉ không hợp lệ → BÁO LỖI cụ thể, không tự cắt/đổi sang trắc nghiệm/bỏ media
+   PASS QF04: CSV đọc đủ cột E/F cho câu sắp xếp; ghép cặp sai dạng, dạng lạ và câu trắc nghiệm 7 lựa chọn bị báo lỗi; cột Video được nhập thành media; cột không dùng được cảnh báo trước khi Áp dụng
+   PASS C02: khi đang thi, điện thoại và LED KHÔNG thấy mức tự tin mới (cf vẫn 1), điểm đội (0) và số câu đúng của đội (0); sau công bố mới hiện
+   PASS C04: phiên mà mọi người đều sai và phiên chỉ có khảo sát vẫn được lưu lịch sử, kèm bài nộp từng câu để đối soát
+   PASS C06: khi KHOÁ bộ đề, đổi thời gian một câu / tất cả câu / mở câu kèm thời gian khác đều bị chặn; mở khoá thì đổi được và phiên bản đề tăng
+   PASS C07: MC2 xoá câu A trong lúc MC1 đang sửa câu B → MC1 lưu vẫn sửa đúng câu B, câu C nguyên vẹn; sửa trên bản đã cũ / xoá câu đã bị xoá / sửa không kèm mã câu đều bị từ chối với thông báo xung đột
+   PASS Chống lộ đề: khi câu đang chạy, điện thoại và LED KHÔNG nhận đáp án đúng, danh sách đáp án chấp nhận, giá trị số/sai số, giải thích, hay bộ đề; câu sắp xếp luôn gửi thứ tự đã xáo (6 dạng câu)
+   PASS Chống chuyền đáp án (tự làm bài): mặc định người chơi KHÔNG biết đúng/sai, điểm, đáp án đúng, bảng xếp hạng cho tới khi MC đóng bài; MC vẫn xem điểm thật
+   PASS Chống lộ đề: bộ chơi thử công khai là bộ RIÊNG (0 câu trùng bộ đề mặc định của phòng thi); MC được cảnh báo nếu bộ đề có câu trùng bộ đang công khai
+   PASS Chống bot: quá 60 người MỚI/10 giây từ cùng một địa chỉ → người tiếp theo vào hàng chờ duyệt và MC được báo; một kết nối gửi dồn dập (200 tin/giây) bị ngắt
+   PASS C03: REQUIRE_DATABASE=1/true/yes/on khi thiếu DATABASE_URL → máy chủ dừng (exit 1); giá trị lạ cũng bị từ chối, không âm thầm dùng tệp tạm
+   PASS C05: giới hạn trực tuyến áp dụng thống nhất; người MỚI chỉ vào khi còn chỗ ngoài phần dự phòng; người đã ghi danh vào lại dùng chỗ dự phòng; /health báo onlineLimit và reconnectReserve
+   PASS C01: FAIL_JOURNAL + đổi tên phòng 2 ms sau khi nộp (ảnh chụp lúc bài còn chờ) + kill -9 → bài đã bị từ chối KHÔNG xuất hiện (0 điểm, 0 bài); ca thuận: bài đã xác nhận vẫn còn sau kill -9
+— Rà soát thương mại: F01–F07, tổng duyệt, lịch sử, vòng đời phòng, thanh trượt, đóng gói
+   PASS F01: nộp bài rồi 2 ms sau MC "làm lại kỳ thi" → bài cũ bị từ chối (không báo "đã nhận"); kill -9 rồi khởi động lại → kỳ mới vẫn 0 điểm (nhật ký gắn mã kỳ thi, phát lại kiểm mã)
+   PASS F02: hai khách ở hai phòng cùng tên MC "mc" – khách 2 không thấy/đọc/xoá/nạp được đề riêng của khách 1; đổi mật khẩu MC → phiên cũ mất quyền kho đề, đăng nhập lại vẫn dùng được
+   PASS F03: kết nối chỉ xem, LED tự khai danh tính hoặc trùng id KHÔNG mở được lượt; chỉ màn LED đã được MC ghép đôi (máy chủ cấp mã + token bí mật) với đúng mã câu hiện hành mới mở
+   PASS F03: LED chính tải lại trang dùng token bí mật lấy lại quyền màn chính (không cần ghép lại)
+   PASS F04: khi KHOÁ bộ đề: thay đề qua HTTP, nạp hoặc thêm câu từ kho đề đều bị từ chối; đề, phiên bản đề, mã kỳ thi và điểm giữ nguyên
+   PASS F05: người mới vào 200 ms sau khi câu mở, chưa trả lời → câu KHÔNG bị tự công bố; khi người đó nộp thì mới tự công bố; tắt tự công bố huỷ lịch đóng đang chờ
+   PASS F07: không ghi được ảnh chụp → tạo phòng trả lỗi (không 201), /health 503 kèm lỗi; sửa đề / đổi MC không được báo "đã lưu"; ghi lại được → khoẻ lại; tệp dữ liệu hỏng được giữ thành bản sao rooms.json.corrupt-…, không bị ghi đè, /health báo lỗi
+   PASS 5.4: bật "Tổng duyệt" mở kỳ thi riêng (mã mới); tắt → kết quả tổng duyệt được lưu riêng có nhãn, thi thật bắt đầu kỳ mới từ 0 điểm
+   PASS 5.5: lịch sử của kỳ thi đóng băng đề, từng phương án, đáp án đúng, sai số và luật điểm lúc thi – đổi đề sau đó vẫn biết "A" lúc ấy là gì
+   PASS 5.6: Admin lưu trữ & xoá phòng cũ → giải phóng hạn mức tạo phòng; MC không được xoá; thông tin phòng đã xoá còn trong danh sách lưu trữ
+   PASS UI-01/UI-02: thanh trượt min 0,1 bước 0,2 cho đúng các giá trị 0,1 · 0,3 · 0,5…; đáp án ngoài lưới (sai số 0) bị chặn khi soạn; máy chủ từ chối giá trị lệch lưới; chọn 0,3 được chấm đúng; số hiện tới 9 chữ số thập phân
+   PASS Đóng gói: Dockerfile chép đủ mọi tệp máy chủ đọc lúc chạy (server.js, public, questions.json, practice_sample.json, importer.js, pay.js, events.js, router.js); Node 22.12.0 & pg ghim cứng; có requirements-test.txt, CI, docker-compose dùng cho mọi máy chủ; bộ luyện tập mẫu có mặt
+— Tài khoản khách tự vận hành: gói, hạn mức, cách ly dữ liệu, hết hạn/khoá
+   PASS Admin UDIKA cấp tài khoản khách kèm gói (số phòng, số sĩ tử/phòng, hạn dùng); tên đăng nhập không trùng; khách đăng nhập được, không xem được khách khác
+   PASS Khách tự tạo phòng + MC; máy chủ chặn vượt số phòng cùng lúc của gói (409, báo rõ); mỗi khách chỉ thấy phòng của mình
+   PASS Khách KHÔNG điều khiển, đọc đề, tải báo cáo, đổi MC hay xoá phòng của khách khác; với phòng của mình thì được
+   PASS Khách tự đổi/thu hồi MC: MC cũ bị ngắt khỏi màn điều khiển và mất quyền ngay; MC không xoá phòng, không xem danh sách phòng
+   PASS Kho đề riêng theo khách: chủ khách và MC các phòng của khách dùng chung; khách khác (kể cả MC trùng tên "mc") không thấy, không nạp được
+   PASS Số sĩ tử mỗi phòng theo gói do máy chủ chặn: gói 10 người → người thứ 11 bị từ chối với thông báo rõ
+   PASS Hết hạn: không tạo phòng / mở điều khiển mới, vẫn dọn phòng & xem lưu trữ; gia hạn là dùng lại ngay. Bị khoá: không điều khiển, vẫn tải báo cáo cũ
+   PASS UDIKA đổi mật khẩu khách → phiên cũ của khách mất hiệu lực ngay; mật khẩu mới đăng nhập được
+   PASS Khởi động lại máy chủ: tài khoản khách, gói, phòng gắn khách và lưu trữ còn nguyên; trang /khach phục vụ bình thường
+— V15 giao diện: dạng câu mới, ảnh, âm thanh, LED
+   PASS tải lên âm thanh WAV (nhận dạng theo nội dung tệp) → /media/8aee83a264a9e522334fa57c.wav; ảnh PNG cho phương án
+   PASS MC thấy màn LED đang kết nối và trạng thái thật: 🖥 Màn LED: LED JRC: ✅ sẵn sàng · 🔇 TRÌNH DUYỆT CHẶN TIẾNG – bấm vào màn LED · 🎬 chưa tải phim · · chưa ghép đôi – không tự mở lượt đặt làm màn chính
+   PASS MC bấm "đặt làm màn chính" trên giao diện → màn LED nhận token ghép đôi từ máy chủ (★ MÀN CHÍNH (đã ghép đôi) bỏ chọn màn chính)
+   PASS L02: "5 < 10 & 20 > 15" và chuỗi có thẻ HTML hiển thị NGUYÊN VĂN trên điện thoại, LED, MC – không bị xoá ký hiệu, không chạy mã chèn
+   PASS chế độ Tự tin: điện thoại có ô "💪 Chắc chắn", đúng → +50; 4.1: mỗi máy hiện dòng hạng riêng: 🏅 Bạn xếp hạng 2/2 — đúng 0/1 câu — 0 điểm
+   PASS Q03/Q04: chọn nhiều có ảnh phương án, thứ tự xáo [2, 0, 1, 3] giống nhau trên LED & điện thoại; đổi lựa chọn trước khi NỘP; chọn đủ tập đúng mới đúng
+   PASS Q07: nhập số – bàn phím số, đơn vị "kg" cạnh ô; "1,000" bị yêu cầu viết lại (ô vẫn mở để sửa), "12,5" đúng; LED công bố "12,5 kg"
+   PASS Q05: sắp xếp chỉ bằng bàn phím (mũi tên ▲▼, giữ tiêu điểm trên mục đang di chuyển) rồi NỘP → đúng
+   PASS L07/4.2: LED mở bằng chính sách tự phát thông thường → MC thấy "🔇 TRÌNH DUYỆT CHẶN TIẾNG – bấm vào màn LED" (không giả vờ đang có tiếng)
+   PASS 5.4: âm thanh phát trên LED (đoạn 0–2 giây), LED báo phát xong → máy chủ tự mở lượt trả lời, điện thoại hiện đáp án
+   PASS MC bấm "Thử tiếng LED" → nhận xác nhận từ LED: 14:56:16 📤 Lệnh "thử tiếng" đã gửi tới 1 màn LED
+   PASS ảnh câu hỏi (phát ở "LED + điện thoại") chạm để phóng to, có mô tả cho trình đọc màn hình, Esc để đóng
+   PASS 4.7: LED "chế độ sân khấu" ẩn thanh tiêu đề/cột bên, khung trình chiếu rộng 1600px; MC thấy LED đang ở chế độ sân khấu
+   PASS MC soạn câu "nhập số" và "chọn nhiều đáp án" bằng giao diện; trạng thái "✔ Đã lưu lên máy chủ"
+   PASS L05: máy chủ từ chối (bộ đề đã khoá) → bản xem trước nhập đề VẪN CÒN kèm lý do, không mất chỉnh sửa
+   PASS không lỗi JavaScript trên MC, LED, điện thoại
+— Giao diện V14 (trình duyệt)
+   PASS MC: mã QR tự tạo trong app (không dùng dịch vụ ngoài)
+   PASS MC: soạn câu thanh trượt bằng giao diện (ô nhập đổi theo dạng câu)
+   PASS MC: bật chơi theo đội (2 đội)
+   PASS LED: QR quét ra đúng link vào phòng: http://127.0.0.1:18941/join?pin=157669
+   PASS 3 điện thoại ghi danh, tự chọn đội
+   PASS tên phản cảm bị từ chối ngay trên điện thoại
+   PASS gõ đáp án: "thang long" (không dấu) được chấp nhận, điện thoại báo chuỗi 2 câu đúng: Đáp án đúng: Thăng Long / Đông Kinh · ✔ Bạn đúng · 1.092 điểm · 🔥 chuỗi 2 câu đúng +100 · 💡 Thăng Long được đổi tên thành Đông Kinh năm 1430.
+   PASS sắp xếp: đổi chỗ bằng nút ▲▼ và phím mũi tên, bấm NỘP, chấm đúng/sai
+   PASS thăm dò: LED cập nhật biểu đồ trực tiếp (2 · 67%)
+   PASS thanh trượt: kéo – chốt giá trị, LED hiện biểu đồ phân bố
+   PASS đám mây từ: gộp "Khuê Văn Các" ×2, hiện trực tiếp trên LED
+   PASS LED: bảng xếp hạng đội
+   PASS MC bấm "Mời rời + chặn tên": điện thoại bị đưa ra, không vào lại được bằng tên cũ
+   PASS kho đề: lưu bộ đề từ màn MC
+   PASS tự làm bài: bấm bắt đầu từng câu, chấm ngay "Chính xác", bỏ qua câu; MC thấy tiến độ
+   PASS MC đóng bài → xướng danh
+   PASS không có lỗi JavaScript trên MC, LED, điện thoại
+— Mạng chập chờn trên giao diện
+   PASS 4 ô đáp án 4 màu khác nhau ['rgb(192, 57, 43)', 'rgb(47, 93, 154)', 'rgb(201, 138, 18)', 'rgb(46, 122, 79)']; khi đang chạy chỉ báo "đã lưu" (giữ kín điểm); mọi người nộp xong → tự công bố sau 1.5 giây, MC không bấm
+   PASS mất mạng lúc bấm: điện thoại giữ bài, báo "đang lưu… sẽ tự gửi lại": ● Mất mạng – câu trả lời đang được giữ, sẽ gửi lại
+   PASS có mạng lại: tự nối lại, vào lại phòng rồi mới gửi lại bài – máy chủ xác nhận đã lưu
+   PASS máy chủ bị tắt đột ngột giữa câu 3: điện thoại + MC tự nối lại, câu vẫn mở, trả lời được; điểm 2014 → 3194 (không mất điểm cũ)
+   PASS mở tab thứ 2 cùng người: tab cũ hiện "đang thi ở tab khác" và DỪNG, không đẩy nhau qua lại (đã chờ 6 giây)
+   PASS bấm "Tiếp tục ở tab này" → chuyển quyền về tab cũ, tab kia tạm dừng
+   PASS không lỗi JavaScript
+— Trang chủ máy tính + điện thoại
+   PASS may_tinh 1672×941: tiêu đề, ô mã phòng, nút VÀO TRƯỜNG THI nằm trọn trong màn hình đầu, không tràn ngang
+   PASS may_tinh_1366 1366×768: tiêu đề, ô mã phòng, nút VÀO TRƯỜNG THI nằm trọn trong màn hình đầu, không tràn ngang
+   PASS dien_thoai 390×844: tiêu đề, ô mã phòng, nút VÀO TRƯỜNG THI nằm trọn trong màn hình đầu, không tràn ngang
+   PASS dien_thoai_nho 360×640: tiêu đề, ô mã phòng, nút VÀO TRƯỜNG THI nằm trọn trong màn hình đầu, không tràn ngang
+   PASS để trống → "Vui lòng nhập mã phòng…"
+   PASS chỉ nhận chữ số; mã thiếu số → "Mã phòng gồm đúng 6 chữ số – bạn mới nhập 3 số."
+   PASS phòng không tồn tại → "Không tìm thấy phòng 000001. Hãy xem lại mã trên màn hình chương trình."
+   PASS đang kết nối → nút khoá, hiện vòng xoay "ĐANG KIỂM TRA…", báo "Đang kết nối tới phòng 386724…"
+   PASS mã hợp lệ → chuyển sang bước ghi danh hiện có (mã phòng điền sẵn, hiện tên sự kiện, con trỏ ở ô họ tên) → ghi danh thành công
+   PASS mất mạng → "Không kết nối được máy chủ. Kiểm tra Wi-Fi/4G rồi bấm thử lại."
+   PASS phòng đã khoá → "MC đã khoá phòng 974697, không nhận thêm sĩ tử mới."
+   PASS người đã ghi danh mở lại trang chủ → "Chào mừng trở lại", vào thẳng phòng với điểm cũ
+   PASS MC đã đăng nhập: nút góc trên đổi thành "Phòng MC 974697" dẫn thẳng vào phòng được giao
+   PASS Admin đã đăng nhập: nút góc trên → trang Quản trị
+   PASS nút Hướng dẫn mở hộp hướng dẫn, có liên kết Màn MC / Quản trị
+   PASS không lỗi JavaScript
+— Phông chữ tiếng Việt
+   PASS có 3 phông tự lưu trữ: udika-sans.woff, udika-serif-italic.woff, udika-serif.woff
+   PASS udika-serif.woff: đủ 146 chữ cái tiếng Việt có dấu
+   PASS udika-sans.woff: đủ 146 chữ cái tiếng Việt có dấu
+   PASS udika-serif-italic.woff: đủ 146 chữ cái tiếng Việt có dấu
+   PASS 127 chữ cái có dấu dùng trong giao diện đều có trong cả hai phông
+   PASS không trang nào tải phông từ Google Fonts (chạy được trong mạng nội bộ không Internet)
+   PASS /: nạp Udika Sans/Serif, phông thân trang = "Udika Sans"
+   PASS /join: nạp Udika Sans/Serif, phông thân trang = "Udika Sans"
+   PASS /host: nạp Udika Sans/Serif, phông thân trang = "Udika Sans"
+   PASS /led: nạp Udika Sans/Serif, phông thân trang = "Udika Sans"
+   PASS /admin: nạp Udika Sans/Serif, phông thân trang = "Udika Sans"
+   PASS tiêu đề: đỉnh dấu chữ hoa (À, Ê) nằm trong vùng tô nhũ vàng (đỉnh dấu +2.8px so với mép trên)
+   KẾT QUẢ: ĐẠT
+— QR cỡ lớn trên LED
+   PASS sảnh chờ: QR chiếm 68% chiều cao màn LED (420px trên khung 1096px)
+   PASS mã phòng khổng lồ "500 180" + địa chỉ "Vào 127.0.0.1:18947/join · nhập mã phòng"
+   PASS camera đọc được QR trên ảnh chụp màn LED → http://127.0.0.1:18947/join?pin=500180
+   PASS vẫn đọc được khi ảnh thu nhỏ còn 25% (mô phỏng quét từ cuối hội trường)
+   PASS 3 sĩ tử quét mã vào phòng → LED cập nhật "3 sĩ tử đã ghi danh", tên người mới nhất đứng đầu
+   PASS MC bấm "Ẩn QR lớn trên LED" → LED trở về cảnh trường thi
+   PASS MC chọn "Tự động" → QR lớn hiện lại khi đang chờ sĩ tử
+   PASS MC mở câu hỏi → QR lớn tự ẩn, nhường màn hình cho đề thi
+   PASS đang thi, MC bấm "Chiếu QR lớn" cho người đến muộn → QR hiện và vẫn quét được
+   PASS khởi động lại máy chủ → lựa chọn QR của MC được giữ nguyên
+   PASS không lỗi JavaScript
+— Nhập ảnh có sẵn trong Word/Excel + ô chèn ảnh
+   PASS bấm khung "THÊM ẢNH CHO CÂU HỎI" → chọn tệp → ảnh hiện to ngay trong trình soạn
+   PASS KÉO THẢ ảnh vào khung → ảnh được tải lên và gắn cho câu hỏi
+   PASS DÁN ảnh (Ctrl+V) khi con trỏ đang ở ô phương án B → thành ảnh của phương án B (ảnh câu hỏi giữ nguyên)
+   PASS LƯU CÂU → câu có ảnh câu hỏi + ảnh phương án B được lưu trên máy chủ
+   PASS nhập mau-de-thi-co-anh.docx: ✔ Đọc được 4 câu từ mau-de-thi-co-anh.docx · 10 ảnh nhúng được trích ra, lưu vào máy chủ và hiện hình thu nhỏ trong bản xem trước
+   PASS nhập mau-cau-hoi-co-anh.xlsx: ✔ Đọc được 2 câu từ mau-cau-hoi-co-anh.xlsx · 5 ảnh nhúng được trích ra, lưu vào máy chủ và hiện hình thu nhỏ trong bản xem trước
+   PASS thêm vào bộ đề: 7 câu có ảnh (ảnh câu hỏi hoặc ảnh phương án)
+   PASS câu nhập từ Word: 4 phương án chỉ có ảnh hiện trên điện thoại & LED; chọn ảnh hình tròn → chấm đúng
+   PASS không lỗi JavaScript
+— Câu sắp xếp: kéo thả bằng chuột và ngón tay
+   PASS kéo thả bằng chuột (giữ ⠿) xếp đúng 4 mục
+   PASS vuốt nhanh (không chạm giữ) KHÔNG đổi thứ tự – để người chơi vẫn cuộn trang được
+   PASS kéo thả bằng NGÓN TAY (chạm giữ ~0,3 giây rồi kéo) xếp đúng 4 mục
+   PASS nộp thứ tự sau khi kéo thả → cả hai được chấm ĐÚNG
+   PASS không lỗi JavaScript
+— Chơi thử một mình với đối thủ ảo
+   PASS trang chủ có nút "Chơi thử một mình" dẫn tới /practice
+   PASS bắt buộc nhập tên
+   PASS 5 câu: phản hồi Chính xác/Chưa đúng + đáp án đúng, bảng xếp hạng 11 người có dòng "(bạn)" và đối thủ 🤖
+   PASS màn kết thúc: thứ hạng, 2/5 đúng, ôn lại 3 câu sai, ghi rõ là luyện tập
+   PASS "Làm lại câu sai" mở lượt mới chỉ gồm 3 câu sai
+   PASS hết giờ hiện "Hết giờ!" và đáp án
+   PASS bộ đề thư viện chưa bật: không xuất hiện, không tải được (không lộ đáp án)
+   PASS Admin bật "Chơi thử công khai" → bộ đề xuất hiện trong danh sách chơi thử
+   PASS không có lỗi JavaScript
+— Ghi danh: duyệt tên, danh sách dự kiến, vào muộn (4.6)
+   PASS chế độ Duyệt tên: điện thoại hiện "đang chờ MC duyệt", MC thấy 2 người chờ
+   PASS MC bấm Duyệt → điện thoại vào thẳng phòng thi, không phải nhập lại
+   PASS Từ chối + chặn tên: người đó nhận thông báo và không gửi lại được tên ấy
+   PASS theo danh sách: nhập MÃ "sv002" (không phân biệt hoa/thường) → vào ngay, tên hiển thị lấy theo danh sách
+   PASS gõ họ tên không dấu vẫn nhận ra người trong danh sách (hiển thị đúng "Phạm Đức Dũng"); người ngoài danh sách vào hàng chờ duyệt
+   PASS một dòng danh sách chỉ dùng trên một thiết bị (mã SV002 lần 2 bị từ chối)
+   PASS MC thấy 2/3 đã vào và tên người chưa vào
+   PASS mã dự thi hiện trong danh sách của MC, không xuất hiện trên LED
+   PASS Chỉ danh sách: người ngoài danh sách bị từ chối kèm hướng dẫn
+   PASS chuyển về "Mở": người đang chờ được vào luôn (có hỏi MC xác nhận)
+   PASS Không nhận vào muộn: người mới bị chặn sau khi mở câu 1, người đã ghi danh tải lại trang vẫn vào được
+   PASS báo cáo CSV có cột Mã dự thi
+   PASS khởi động lại máy chủ: luật vào muộn, danh sách dự kiến và ai đã vào vẫn còn nguyên
+— LED phòng 1.000 người: 60 nhân vật + biển sĩ tử
+   PASS 1000 người: 60 nhân vật có tên (người mới vào) + 940 bóng phía sau, mỗi người đúng 1 bóng; bộ đếm ghi rõ
+   PASS trong lúc làm câu: danh sách trên sân giữ nguyên (không lộ ai đúng/sai)
+   PASS sau khi công bố: 60 người dẫn đầu lên sân, người hạng 1 có mặt và đeo huy chương
+   PASS không có lỗi JavaScript
+— Tông xanh ngọc, lưới ảnh 2×2, màn 320 px, mạng 3G giả lập
+   PASS đầu trang MC màu xanh ngọc (15, 70, 54) (không còn nâu)
+   PASS mạng chậm giả lập (3G: trễ 400 ms, 750 kbit/s): mở trang + vào phòng trong 5.0 giây; đầu trang điện thoại xanh ngọc
+   PASS phương án bằng ảnh: lưới 2×2, mỗi ảnh rộng ≥140 px ([141, 141, 141, 141])
+   PASS mạng chậm: chạm đáp án → máy chủ xác nhận đã nhận bài
+   PASS màn 320 px (điện thoại nhỏ): trang chủ, ghi danh, chơi thử không bị tràn ngang
+   PASS màn LED: nền sơn mài xanh ngọc, khung sân thi gỗ SƠN SON viền vàng (chất liệu "Trạng nguyên dân gian" – đổi theo yêu cầu 25/11)
+— Kiểm định 7.1–7.3: âm thanh tắt tiếng không mở lượt, LED chính, mất LED
+   PASS 7.1: Chrome chặn tự phát có tiếng → LED phát tắt tiếng tới hết đoạn nhưng lượt trả lời KHÔNG mở; MC nhận cảnh báo "KHÔNG CÓ TIẾNG"; LED hiện nút bật tiếng & phát lại
+   PASS 7.1: bấm vào LED → phát lại TỪ ĐẦU có tiếng → phát xong mới mở lượt trả lời
+   PASS Màn LED chính: MC chọn LED2 làm màn chính → LED1 (màn phụ) báo phát xong KHÔNG mở lượt; chỉ khi LED2 phát xong mới mở
+   PASS Màn LED chính mất kết nối giữa lúc phát clip → MC được báo ngay "MẤT KẾT NỐI", lượt chưa mở (MC tự quyết MỞ LƯỢT NGAY)
+— Kiểm định 7.3: chế độ sân khấu hiện trọn tổng kết & bảng vàng
+   PASS 7.3: chế độ sân khấu – khối tổng kết chặng hiện trọn trong khung 1920×1080, không cần cuộn
+   PASS 7.3: kết thúc – phim vinh quy chiếm trọn khung, thanh điều khiển ẩn; MC bấm "Bật/tắt bảng vàng" (hoặc phím B) → bảng vàng Tam khôi phủ trọn khung
+— Cải tiến từ phản ánh Kahoot: lý do lỡ câu, MC giữ bảng điểm, luật theo vòng, tự lưu nháp, kiểm tra trước giờ diễn
+   PASS C: vòng "Lớp thầy đồ" đặt luật CHÍNH XÁC – trả lời sau 2 giây vẫn đủ 1.000 điểm; điện thoại hiện "Vòng này chấm theo ĐỘ CHÍNH XÁC"
+   PASS B: MC bật "tự mở bảng điểm" → sau công bố, điện thoại & LED KHÔNG nhận bảng xếp hạng/thứ hạng/điểm đội (dữ liệu giữ ở máy chủ); MC bấm "HIỆN BẢNG ĐIỂM" mới gửi
+   PASS C: vòng "Khảo hạch" đặt luật TỐC ĐỘ – trả lời sau 2 giây được 951 điểm (<1.000)
+   PASS B: kết thúc kỳ thi – bảng vàng & phim vinh quy CHƯA gửi tới LED/điện thoại cho tới khi MC bấm "XƯỚNG DANH TAM KHÔI"
+   PASS A: báo cáo ghi rõ từng người, từng câu: "có kết nối, không trả lời" / "mất kết nối lúc câu đóng" / "có gửi nhưng tới máy chủ TRỄ x giây sau hạn – không tính"
+   PASS D: soạn câu → tự lưu nháp trên máy MC; tải lại trang → "Khôi phục nháp" trả lại đúng nội dung; bấm LƯU lên máy chủ xong thì xoá nháp
+   PASS E: "Kiểm tra chương trình trước giờ diễn" liệt kê từng câu: ảnh hỏng ❌, âm thanh ✅ sẵn sàng + "phát xong CÓ TIẾNG mới mở lượt", YouTube cần Internet, tình trạng từng màn LED và phương án dự phòng
+— Cổng khách hàng /khach & cấp tài khoản khách trên /admin (trình duyệt)
+   PASS Admin cấp tài khoản khách (1 phòng, 200 sĩ tử/phòng, hạn 31/12/2099) ngay trên trang /admin
+   PASS Khách đăng nhập /khach (sai mật khẩu bị báo lỗi); thấy gói: phòng 0/1, hạn 31/12/2099
+   PASS Khách tạo phòng 720897 + MC; gói 1 phòng → tạo thêm bị máy chủ chặn, báo rõ "tối đa 1 phòng"
+   PASS Chủ khách bấm "Mở màn MC" → điều khiển được phòng của mình (không cần tài khoản MC)
+   PASS Lưu trữ & xoá: phòng chuyển sang mục Lưu trữ, hạn mức trở lại 0/1
+   PASS Trang /khach và /admin không có lỗi JavaScript
+— Hành trình đầy đủ của khách: cấp tài khoản → tạo phòng → ghép LED → 3 điện thoại → vinh danh tên thật → báo cáo → tổng duyệt → lưu trữ
+   PASS Admin cấp tài khoản khách trên /admin
+   PASS Khách tự tạo phòng 273353 + tài khoản MC trên /khach
+   PASS Màn LED mở trên máy khác được MC ghép đôi bằng nút "đặt làm màn chính"
+   PASS 3 điện thoại ghi danh qua /join
+   PASS Câu có âm thanh: LED đã ghép đôi phát xong → máy chủ tự mở lượt trả lời
+   PASS Sĩ tử trả lời trên điện thoại; công bố: điện thoại báo đúng/sai
+   PASS Xướng danh: LED vinh danh đúng tên thật người đứng đầu – Nguyễn Thị Hoa
+   PASS Khách tải báo cáo CSV của phòng mình từ /khach, có đủ tên sĩ tử
+   PASS Bật Tổng duyệt: màn MC hỏi xác nhận (Huỷ thì không đổi); đồng ý → kỳ thi mới, kết quả cũ vào lịch sử
+   PASS Lưu trữ & xoá: phòng chuyển vào Lưu trữ, tải lại được CSV kỳ thi (1 kỳ) có đề lúc thi và tên sĩ tử
+   PASS Không có lỗi JavaScript trên admin, /khach, MC, LED và 3 điện thoại
+— Hành trình của khách qua CỤM 3 tiến trình (router.js), phòng khách nằm ở nút khác nút 0
+   PASS Admin cấp tài khoản khách trên /admin
+   PASS Khách tự tạo phòng 901661 + tài khoản MC trên /khach (nút 2 của cụm 3 nút)
+   PASS Màn LED mở trên máy khác được MC ghép đôi bằng nút "đặt làm màn chính"
+   PASS 3 điện thoại ghi danh qua /join
+   PASS Câu có âm thanh: LED đã ghép đôi phát xong → máy chủ tự mở lượt trả lời
+   PASS Sĩ tử trả lời trên điện thoại; công bố: điện thoại báo đúng/sai
+   PASS Xướng danh: LED vinh danh đúng tên thật người đứng đầu – Nguyễn Thị Hoa
+   PASS Khách tải báo cáo CSV của phòng mình từ /khach, có đủ tên sĩ tử
+   PASS Bật Tổng duyệt: màn MC hỏi xác nhận (Huỷ thì không đổi); đồng ý → kỳ thi mới, kết quả cũ vào lịch sử
+   PASS Lưu trữ & xoá: phòng chuyển vào Lưu trữ, tải lại được CSV kỳ thi (1 kỳ) có đề lúc thi và tên sĩ tử
+   PASS Không có lỗi JavaScript trên admin, /khach, MC, LED và 3 điện thoại
+— Phim vinh danh 3D
+   PASS LED chuyển sang phim 3D khi có kết quả
+   PASS phim 1920×1080, 30 giây, đang phát 30
+   PASS thẻ tên lấy dữ liệu thật: Trần Bảo Ngọc
+   PASS không có thẻ âm thanh nào khác phát chồng (chỉ tiếng của phim)
+   PASS trước giây 20,3 chưa hiện thẻ tên
+   PASS MC tạm dừng 1.05
+   PASS MC tiếp tục
+   PASS MC "Vinh danh": tua tới lúc ngựa dừng, thẻ tên hiện 21.75
+   PASS âm lượng 30%
+   PASS phát lại từ đầu, chỉ 1 phim (không chồng tiếng)
+   PASS phát lại thì thẻ tên ẩn lại
+   PASS mở màn LED khi đã có kết quả: vẫn phát phim 3D + tên thật
+   PASS không lỗi JavaScript
+— Tích hợp đầy đủ (websocket-client)
+   OK admin created independent rooms 668580 355870
+   OK MC cannot access another group
+   OK two players join same room
+   OK reconnect preserves submitted answer and score
+   OK final rankings and admin operations
+   PASS
+— Lễ vinh danh (websocket-client)
+   PASS stage 1 celebration LED + personal message
+   PASS final honors after reveal → next (unified flow L06)
+— 10 hình thức trả lời + cơ chế điểm riêng từng câu (máy chủ): tương thích ngược, không lộ đáp án, chấm từng dạng, MC duyệt tay, câu quyết định, nhập CSV
+   PASS tương thích ngược: questions.json (15 câu), bộ chơi thử (12 câu) và 10 câu mẫu đủ 8 dạng cũ chuẩn hoá Y HỆT bản trước khi thêm dạng mới (so từng trường)
+   PASS kiểm đề: báo lỗi rõ cho 7 phương án, ô chữ thiếu chữ / không chừa ô / ký tự lạ, ghép cặp <3 hoặc >6 cặp, vế phải trùng, sắp xếp <3 mục; nhận đủ 12 câu 10 dạng + cơ chế riêng
+   PASS chấm đúng: 6 phương án; đúng–sai; chọn nhiều 6 phương án (một phần 50%); ô chữ có dấu / không dấu (thiếu ô bị trả lại để điền tiếp); sắp xếp 8 mục; ước lượng 1000/750/0 điểm theo độ gần; bình chọn giữ kín cả trong gói cập nhật nhỏ; ghép cặp 4/4 = 1000, 2/4 = 500, chọn trùng bị trả lại; ×3 × tối đa 2000 = 6000, không thưởng chuỗi, giữ bảng xếp hạng
+   PASS MC duyệt tay câu viết: thấy danh sách cách viết, chấp nhận "Ha Noi" → +1000 điểm cho người viết như vậy, bỏ chấp nhận → trừ lại; câu khác dạng bị từ chối; sĩ tử không tự duyệt được
+   PASS câu quyết định khi bằng điểm: hai người bằng 1000 điểm → người trả lời đúng câu quyết định xếp hạng 1, tổng điểm & số câu đúng KHÔNG đổi
+   PASS MC duyệt tay được ghi nhật ký trước khi báo: kill -9 rồi khởi động lại vẫn giữ 1000 điểm & 1 câu đúng; báo cáo CSV ghi "(MC duyệt)"
+   PASS báo cáo CSV ghi đủ dạng câu mới, đáp án (từ khoá, các cặp đúng) và luật điểm riêng từng câu
+   PASS nhập CSV: 6 phương án + hệ số ×3, đúng–sai, điền ô chữ (gợi ý vị trí 1;4), ghép cặp "trái = phải", sắp xếp 8 mục → nhập đúng và áp dụng được
+   PASS bộ 11 câu mẫu trò chơi (đuổi hình bắt chữ, nghe nhạc, đoán nhân vật, đoán thương hiệu, xem video, giải mã emoji, đoán giá, tìm khác biệt, ghi nhớ hình ảnh, giải mã từ khoá, ghép cặp) đều hợp lệ – chỉ dùng các dạng câu cốt lõi
+— 10 hình thức trả lời trên giao diện: MC soạn & xem trước, 2 điện thoại 390 px + LED, ô chữ, ghép cặp, duyệt tay, vượt hạng
+   PASS XEM TRƯỚC trước khi lưu: điện thoại hiện 11 ô (2 ô gợi ý), gõ "RẠNNUYÊN" lấp 8 ô trống; LED hiện ô chữ; bật "hiện đáp án" thấy TRẠNG NGUYÊN
+   PASS nút "🎲 Thêm câu mẫu trò chơi" thêm 11 câu mẫu vào cuối các chặng (không xoá câu cũ)
+   PASS MC soạn trên giao diện: đổi dạng câu → chỉ hiện ô nhập phù hợp; lưu đủ 10 câu (đúng–sai, 6 phương án, 3 ảnh, ô chữ có gợi ý, 4 cặp ghép, viết câu trả lời, 8 mục, ước lượng ×3 tối đa 2000 cố định, bình chọn giữ kín, câu quyết định)
+   PASS điện thoại: đúng–sai (✔/✘), 6 phương án (màu ô E/F mới, không tràn ngang 390 px), chọn hình ảnh, ô chữ: gõ thiếu chữ được nhắc ngay trên máy, gõ "RẠNGNUYÊN" → đúng, "RANGNUYEN" thiếu dấu → sai
+   PASS ghép cặp: chạm trái → phải, ghép trùng thì cặp cũ tự gỡ (chưa nộp được), sửa lại rồi nộp; 4/4 đúng = đủ điểm (theo tốc độ), 2/4 = 50%; LED công bố từng cặp kèm tỷ lệ
+   PASS viết câu trả lời: MC thấy hộp "Duyệt tay" liệt kê "Ha Noi", bấm ✔ Chấp nhận (có hỏi xác nhận) → sĩ tử được tính đúng, bảng điểm cập nhật ngay
+   PASS ước lượng ×3, cố định, tối đa 2000: đoán đúng tuyệt đối = 6000 điểm; người bị vượt / vượt lên: LED hiện ▲ ở bảng điểm, điện thoại hiện "🚀 vượt lên … hạng"
+   PASS bình chọn giữ kín: LED chỉ hiện các lựa chọn + "giữ kín", không lộ số; MC công bố → 2 phiếu · 100%; câu quyết định khi bằng điểm không cộng vào tổng
+   PASS không lỗi JavaScript trên màn MC, LED, 2 điện thoại và khung xem trước
+— Thanh toán tự động: VietQR + webhook ngân hàng (SePay/Casso), VNPAY, MoMo, chống trùng/thiếu tiền, đổi mật khẩu
+   PASS Admin đặt bảng giá gói (giá, số ngày, số phòng, sĩ tử/phòng); trang khách thấy gói đang bán và các phương thức đã cấu hình
+   PASS Khách tự đăng ký (khi UDIKA bật SELF_SIGNUP): có ngay tài khoản dùng thử 3 ngày, 1 phòng; tên đăng nhập trùng bị chặn
+   PASS Khách đặt gói → đơn UDGR7AXCT; mã VietQR đúng chuẩn EMVCo/NAPAS (ngân hàng 970436, số TK, số tiền 2.500.000, nội dung = mã đơn, CRC hợp lệ)
+   PASS Webhook ngân hàng (SePay & Casso): sai khoá bị chặn; chuyển THIẾU → chưa kích hoạt; chuyển bù cộng dồn đủ → TỰ gia hạn 30 ngày nối tiếp & nâng gói; gửi lại cùng giao dịch không gia hạn 2 lần; tiền không ghi mã đơn được lưu để Admin đối soát
+   PASS VNPAY: chuyển hướng tới cổng với chữ ký HMAC-SHA512 đúng; IPN sai chữ ký (97), sai tiền (04) bị từ chối; IPN đúng → gia hạn 30 ngày; IPN lặp → 02, không gia hạn lần 2
+   PASS MoMo: máy chủ gửi yêu cầu tạo giao dịch có chữ ký HMAC-SHA256 đúng (máy chủ MoMo giả lập kiểm tra) → chuyển tới payUrl; IPN sai chữ ký bị từ chối; IPN đúng → gia hạn; IPN lặp không gia hạn lần 2
+   PASS Admin xác nhận tay đơn khách chuyển sai nội dung (khách không tự xác nhận được); đơn đã huỷ mà vẫn nhận tiền → không tự kích hoạt, ghi lại để Admin xử lý
+   PASS Khách tự đổi mật khẩu: phải đúng mật khẩu cũ; mọi phiên cũ mất hiệu lực, phiên đang dùng được cấp lại; mật khẩu cũ không đăng nhập được nữa
+   PASS kill -9 rồi khởi động lại: đơn hàng, lịch sử thanh toán còn nguyên; giao dịch cũ gửi lại vẫn bị nhận ra là trùng
+— Chương trình liên hoàn: nhiều hoạt động, hệ số, trọng tài, khoá điểm, nhập điểm quiz
+   PASS Chủ khách tạo chương trình liên hoàn (mã BSRM3G): 3 đội, 3 hoạt động (quiz ×1, kéo co ×2, sáng tạo ×10), 2 trọng tài được giao hoạt động riêng; khách khác không thấy
+   PASS Trọng tài đăng nhập bằng mã chương trình + tên + mật khẩu; CHỈ chấm được hoạt động được giao, không vượt điểm tối đa; sửa điểm bắt buộc ghi lý do
+   PASS Lấy điểm đội từ phòng quiz (khớp tên đội): điểm đội = trung bình thành viên như bảng đội của phòng
+   PASS Bảng tổng = Σ hệ số × điểm hoạt động (sáng tạo = trung bình 2 trọng tài); dẫn đầu: Đội Phượng 1259; trang LED công khai không lộ trọng tài; "giữ kín" → LED không nhận điểm
+   PASS Khoá điểm → không ai sửa được; báo cáo CSV có bảng tổng, điểm từng trọng tài, lần sửa (80 → 85 kèm lý do), nguồn quiz và nhật ký
+   PASS kill -9 rồi khởi động lại: chương trình, điểm, trạng thái khoá còn nguyên; trang /bangdiem và /trongtai phục vụ bình thường
+— Giới hạn kết nối CHUNG cả cụm (3 tiến trình, chỗ dự phòng người vào lại)
+   PASS /health của bộ định tuyến báo tổng 5 người đang kết nối, trần chung 6, dành 1 chỗ người vào lại
+   PASS nút C còn trống (0 người) nhưng cả cụm đã 5/6 → người MỚI bị từ chối, thông báo rõ: "Máy chủ đang quá đông – chỗ còn lại dành cho người đã ghi da…"
+   PASS cụm 5/6: người mới bị chặn, người đã ghi danh mất mạng vào lại ĐƯỢC (đúng người cũ, giữ bài) – chỗ dự phòng hoạt động trên toàn cụm
+   PASS cụm 6/6 → mọi người mới đều bị chặn ở mọi nút
+   PASS khi có người rời (cụm còn 3/6) → người mới ở nút C vào được
+   PASS gửi số liệu cụm giả (không có chữ ký) thẳng vào nút → bị từ chối 403
+   KẾT QUẢ: giới hạn kết nối chung cả cụm – ĐẠT
+— PostgreSQL 16 thật: tạo bảng, kill -9, CSDL sập rồi sống lại
+   PASS PostgreSQL 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1) thật đã khởi động (initdb tạm, cổng 18970)
+   PASS server.js tự tạo bảng udika_snapshot + udika_journal trên PostgreSQL thật, /health báo postgresql sẵn sàng
+   PASS MC lưu bộ đề → chỉ báo "đã lưu" sau khi PostgreSQL ghi xong
+   PASS kill -9 rồi khởi động lại: phòng 526250, sĩ tử, điểm 1000, bộ đề, tài khoản khách đều khôi phục từ PostgreSQL
+   PASS sĩ tử vào lại đúng tài khoản sau khi máy chủ khởi động lại
+   PASS PostgreSQL sập: MC KHÔNG được báo "đã lưu" (error), /health trả 503 – Database save failed (check server logs)
+   PASS PostgreSQL sống lại → máy chủ tự lưu tiếp, /health về 200; kill -9 lần nữa vẫn giữ bộ đề mới nhất
+   KẾT QUẢ: PostgreSQL thật – ĐẠT (qua psql – tầng giao thức gói pg kiểm ở CI)
+— Giao diện thanh toán (giải mã ảnh VietQR) + liên hoàn: /khach, /admin, /chuongtrinh, /trongtai (điện thoại), /bangdiem
+   PASS Admin tạo gói 2.500.000đ/30 ngày trên giao diện; trang báo VietQR + VNPAY đang bật
+   PASS khách tự đăng ký trên /khach → vào ngay bảng điều khiển, dùng thử: Phòng đang dùng 0 / 1 Sĩ tử tối đa mỗi phòng 50 Hạn dùng 2/12/2026 Tình trạng ✅ Đang hoạt 
+   PASS đơn UDJVTXD3D: ảnh QR trên màn hình giải mã ra VietQR chuẩn EMVCo – số tiền 2.500.000, VND, mã đơn trong nội dung, đúng tài khoản Vietcombank, CRC đúng; có nút VNPAY
+   PASS ngân hàng báo có (webhook SePay) → trang khách tự đổi "✅ Đã thanh toán", gói được gia hạn: Phòng đang dùng 0 / 3 Sĩ tử tối đa mỗi phòng 500 Hạn dùng 1/1/2027 Tình trạng ✅ Đang hoạt 
+   PASS đơn UD2C6P57W: khách chuyển sai nội dung → Admin bấm "Xác nhận đã nhận tiền" trên giao diện → khách thấy đã thanh toán
+   PASS khách tự đổi mật khẩu trên /khach: mật khẩu cũ hết dùng, mật khẩu mới đăng nhập được (✅ Đã đổi mật khẩu. Các máy khác đã bị đăng xuất.)
+   PASS chủ khách dựng chương trình trên /chuongtrinh: 3 đội, 2 hoạt động chấm (hệ số 2 và 10), 1 trọng tài – mã XWE7VV
+   PASS trọng tài đăng nhập trên điện thoại (390px, không tràn ngang), chấm 2 hoạt động × 3 đội
+   PASS màn LED /bangdiem hiện đúng thứ tự xếp hạng theo điểm có hệ số: Đội Phượng > Đội Rồng > Đội Lân
+   PASS sửa điểm đã gửi mà không ghi lý do → bị từ chối, nhắc ghi lý do
+   PASS ghi lý do → sửa được; chủ khách thấy nhật ký sửa điểm (ai, lý do). Bảng tổng: 1	Đội Lân	99	8	278 | 2	Đội Phượng	95	7	260 | 3	Đội Rồng	80	9	250
+   PASS màn LED /bangdiem tự cập nhật (3 giây/lần): Team building Sao Việt Bảng điểm cập nhật trực tiếp Hạng Đội Kéo co ×2 Tiết mục sáng tạo ×10 Tổng 1 Đội Lân 99 8 278 2 Đội Phượng 95 7 260 3 Đội Rồng 
+   PASS không lỗi JavaScript trên Admin, /khach, /chuongtrinh, /trongtai, /bangdiem
+— LED tải lại trang giữa phim vinh danh → chạy tiếp đúng chỗ (phim mp4 + hoạt cảnh)
+   PASS phim mp4: tải lại trang ở giây 8.8 → chạy tiếp từ giây 9.2 (không chiếu lại từ đầu)
+   PASS MC đang tạm dừng ở giây 10.2: tải lại vẫn dừng đúng chỗ (10.2)
+   PASS MC bấm phát lại rồi màn tải lại: chạy từ đầu theo lệnh mới (0.1s), không nhảy về chỗ cũ
+   PASS hoạt cảnh: tải lại ở giây 9.0 (cảnh march) → chạy tiếp từ giây 9.6 (cảnh march), đoàn rước không quay lại vạch xuất phát
+   PASS tải lại lúc đang vinh danh: vẫn ở cảnh vinh danh, thẻ tên vẫn hiện ['honor', True, 1]
+   PASS màn lạ chưa ghép đôi gửi vị trí giả → bị bỏ qua
+   PASS không lỗi JavaScript
+— Chạy mạng nội bộ (LAN, không Internet) + trang tự kiểm tra máy /kiem-tra
+   PASS lan.js tự tạo mật khẩu Admin + khoá phiên ngẫu nhiên, lưu tệp quyền 600 (khởi động lại dùng lại, sĩ tử không bị đăng xuất)
+   PASS /api/lan-info (chế độ LAN) trả địa chỉ cho điện thoại: http://192.0.2.2:18966
+   PASS trang Admin hiện thẻ "Chạy mạng nội bộ" với địa chỉ + mã QR cho điện thoại
+   PASS màn MC mở bằng localhost → link/QR sĩ tử dùng địa chỉ LAN (http://192.0.2.2:18966/join?pin=485292)
+   PASS màn LED mở bằng localhost → mã QR in địa chỉ LAN
+   PASS trang /kiem-tra tự thử: trình duyệt, kết nối thời gian thực, độ trễ, đồng hồ, lưu tạm, màn hình {"browser": "ok", "ws": "ok", "lat": "ok", "clock": "ok", "storage": "ok", "screen": "ok", "wake": "ok", "audio": "todo", "typing": "todo"}
+   PASS thử tiếng + gõ tiếng Việt có dấu (so theo chuẩn NFC) → ✅ Máy sẵn sàng thi · đã gửi kết quả cho MC
+   PASS chữ dạng tổ hợp (NFD) vẫn được nhận là gõ đúng
+   PASS màn MC thấy tổng hợp kiểm tra máy: 1 máy
+   PASS mở trong Zalo → cảnh báo "nên mở bằng Chrome/Safari"; không nghe tiếng → MC thấy 2 máy · ⚠ 1
+   PASS MC tải bảng CSV kiểm tra máy: 2 dòng, máy có vấn đề xếp đầu
+   PASS người ngoài không tải được bảng kiểm tra máy (403)
+   PASS KHÔNG có yêu cầu nào ra Internet khi mở Admin, MC, LED, trang vào thi, trang kiểm tra (chạy được ở hội trường không Internet)
+   PASS không lỗi JavaScript
+   PASS lan.js in hướng dẫn hội trường + địa chỉ + mã QR trên màn hình dòng lệnh
+— Diễn tập buổi thi có sự cố (kill -9, rớt mạng, gửi trễ, bấm trùng) + đối soát từng bài
+   PASS diễn tập ổn định 300 sĩ tử × 12 câu có sự cố (kill -9, rớt mạng, gửi trễ, bấm trùng) – đối soát 8/8 điều kiện đạt (hạt 593703588)

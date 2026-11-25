@@ -1,1 +1,97 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UDIKA | Hành trình khoa bảng</title><link rel="stylesheet" href="/style.css"></head><body><header><div class="nav"><div class="logo"><div class="seal">魁</div><div><b>UDIKA · TRƯỜNG THI KHOA BẢNG</b><small>Thầy đồ · Khảo hạch · Thi Hương · Thi Hội · Thi Đình</small></div></div><div class="links"><a href="/admin">🔐 Admin tổng</a><a href="/host">MC / Quan trường</a><a href="/join">Sĩ tử</a></div></div></header><main class="wrap"><section class="panel" style="text-align:center;padding:55px 20px"><div class="tag">GAMESHOW KHOA CỬ VIỆT NAM</div><h1 style="font-size:clamp(30px,5vw,60px);margin:18px 0">AI LÀ TRẠNG NGUYÊN?</h1><p style="max-width:700px;margin:0 auto 24px">Một trường thi cổ trên màn LED, những sĩ tử thật trên điện thoại và bảng vàng được xướng danh sau từng câu hỏi — tất cả trong cùng một phòng thi realtime.</p><a class="button primary" href="/admin">🥁 Admin tạo khoa thi & cấp MC</a> <a class="button" href="/join">📜 Ghi danh dự thi</a><p class="meta" style="margin-top:25px">Một website · Nhiều MC · Nhiều phòng thi độc lập · Giới hạn mặc định 300 sĩ tử/phòng trong bản thử nghiệm</p></section><div class="ui-grid"><section class="screen"><h3>🏮 Trường thi xưa trên LED</h3><p>Cổng trường thi, lều chõng hai bên, lối tuần tra chính giữa, câu hỏi nổi trên chiếu đề, xướng danh bảng vàng sau mỗi lượt.</p></section><section class="screen"><h3>📱 Điện thoại của sĩ tử</h3><p>Nhập mã PIN 6 số, ghi danh, nhận đáp án A/B/C/D, bấm chọn và nhận điểm theo tốc độ. Không cần cài ứng dụng.</p></section></div></main><footer class="footer">UDIKA · Bản thử nghiệm realtime, chưa chứng nhận chịu tải 2.000 người.</footer></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b3a2d">
+<title>Ai là Trạng nguyên? | UDIKA · Trường thi Khoa Bảng</title>
+<meta name="description" content="Gameshow tri thức Việt: nhập mã phòng 6 số do MC cung cấp để vào trường thi, ghi danh và chinh phục bảng vàng.">
+<link rel="preload" as="font" type="font/woff" href="/assets/fonts/udika-sans.woff" crossorigin>
+<link rel="preload" as="font" type="font/woff" href="/assets/fonts/udika-serif.woff" crossorigin>
+<link rel="stylesheet" href="/fonts.css">
+<link rel="preload" as="image" href="/assets/home/truong-thi.webp" media="(min-width: 761px)">
+<link rel="stylesheet" href="/home.css"><link rel="stylesheet" href="/dan-gian.css">
+</head>
+<body class="home">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <symbol id="cloud" viewBox="0 0 220 70"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+   <path d="M6 52c18 0 26-10 40-10s18 10 36 10 24-14 44-14 26 14 46 14h42"/>
+   <path d="M58 42c-4-12 6-24 18-22 10 2 13 12 8 18-4 5-12 4-13-2-1-5 5-7 7-4"/>
+   <path d="M110 38c-6-16 8-32 26-30 16 2 22 18 14 28-6 8-18 7-20-2-2-7 6-10 10-6"/>
+   <path d="M168 44c-3-10 5-19 14-17 8 2 10 9 6 14-3 4-9 3-10-2"/>
+   <path d="M30 62c22 0 30-6 50-6s30 6 54 6 34-6 52-6"/></g></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="18.2" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="drum" viewBox="0 0 400 400"><g fill="none" stroke="currentColor"><circle cx="200" cy="200" r="196" stroke-width="3"/><circle cx="200" cy="200" r="182" stroke-width="1.5"/><circle cx="200" cy="200" r="150" stroke-width="1.5"/><circle cx="200" cy="200" r="142" stroke-width="1"/><circle cx="200" cy="200" r="104" stroke-width="1.5"/><circle cx="200" cy="200" r="96" stroke-width="1"/><circle cx="200" cy="200" r="62" stroke-width="1.5"/><circle cx="200" cy="200" r="166" stroke-width="6" stroke-dasharray="2 9"/><circle cx="200" cy="200" r="123" stroke-width="10" stroke-dasharray="1.5 7"/><circle cx="200" cy="200" r="79" stroke-width="7" stroke-dasharray="3 6"/></g><path fill="currentColor" d="M200.0 144.0L204.0 182.5L224.3 149.5L211.2 185.9L243.8 165.1L216.2 192.2L254.6 187.5L218.0 200.0L254.6 212.5L216.2 207.8L243.8 234.9L211.2 214.1L224.3 250.5L204.0 217.5L200.0 256.0L196.0 217.5L175.7 250.5L188.8 214.1L156.2 234.9L183.8 207.8L145.4 212.5L182.0 200.0L145.4 187.5L183.8 192.2L156.2 165.1L188.8 185.9L175.7 149.5L196.0 182.5Z"/></symbol>
+ </defs>
+</svg>
+
+<header class="h-top">
+ <a class="h-brand" href="/" aria-label="Trường thi Khoa Bảng – trang chủ">TRƯỜNG THI KHOA BẢNG</a>
+ <nav class="h-nav" aria-label="Điều hướng">
+  <button type="button" class="h-link" id="guideBtn" aria-haspopup="dialog">Hướng dẫn</button>
+  <a class="h-mc" id="mcLink" href="/host">Dành cho MC</a>
+ </nav>
+</header>
+
+<main class="h-main">
+ <section class="h-hero" aria-labelledby="heroTitle">
+  <svg class="h-drum" aria-hidden="true"><use href="#drum"/></svg>
+  <svg class="h-cloud c1" aria-hidden="true"><use href="#cloud"/></svg>
+  <div class="h-copy">
+   <p class="h-kicker">GAMESHOW TRI THỨC VIỆT</p>
+   <h1 id="heroTitle" class="h-title"><span>AI LÀ</span> <span>TRẠNG NGUYÊN?</span></h1>
+   <p class="h-sub">Vượt thử thách tri thức.<br>Chinh phục <em>bảng vàng</em>.</p>
+  </div>
+  <picture class="h-art">
+   <source media="(max-width: 760px)" srcset="/assets/home/truong-thi-640.webp">
+   <img src="/assets/home/truong-thi.webp" width="1010" height="492" alt="Minh hoạ cổng trường thi Việt Nam xưa với trống cái, biển Bảng vàng và hàng cây xanh" decoding="async">
+  </picture>
+ </section>
+
+ <section class="h-card" aria-labelledby="joinTitle">
+  <h2 id="joinTitle">Sẵn sàng vào thi?</h2>
+  <p class="h-card-sub">Nhập mã phòng do MC cung cấp.</p>
+  <form id="joinForm" novalidate>
+   <label for="pinInput" class="h-label">Mã phòng</label>
+   <input id="pinInput" name="pin" class="h-input" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="7" placeholder="Nhập mã 6 số" aria-describedby="pinMsg" spellcheck="false">
+   <div id="pinMsg" class="h-msg" role="status" aria-live="polite"></div>
+   <button type="submit" class="h-btn" id="joinBtn"><span class="h-btn-text">VÀO TRƯỜNG THI</span><svg class="h-btn-ico" aria-hidden="true"><use href="#arrow"/></svg><span class="h-spin" aria-hidden="true"></span></button>
+  </form>
+  <hr class="h-rule">
+  <p class="h-help">Chưa có mã phòng?<br>Hãy xem trên màn hình chương trình.</p>
+  <p class="h-practice"><a href="/practice" id="practiceLink">🎮 Chơi thử một mình với đối thủ ảo</a></p>
+  <p class="h-phone"><svg aria-hidden="true"><use href="#phone"/></svg>Tham gia ngay trên điện thoại</p>
+  <p class="h-conn" id="conn" aria-live="polite"><i></i><span>Đang kết nối máy chủ…</span></p>
+ </section>
+ <svg class="h-cloud c2" aria-hidden="true"><use href="#cloud"/></svg>
+</main>
+
+<footer class="h-foot">
+ <ol class="h-steps">
+  <li><b>01</b><span>Nhập mã phòng</span></li>
+  <li><b>02</b><span>Ghi danh</span></li>
+  <li><b>03</b><span>Chinh phục bảng vàng</span></li>
+ </ol>
+ <p class="h-sign">UDIKA · Kết nối bằng tri thức</p>
+ <svg class="h-cloud c3" aria-hidden="true"><use href="#cloud"/></svg>
+ <svg class="h-cloud c4" aria-hidden="true"><use href="#cloud"/></svg>
+</footer>
+
+<dialog id="guide" class="h-dialog" aria-labelledby="guideTitle">
+ <form method="dialog" class="h-dialog-in">
+  <h2 id="guideTitle">Hướng dẫn tham gia</h2>
+  <ol>
+   <li><b>Nhập mã phòng 6 số</b> đang hiện trên màn hình chương trình (hoặc quét mã QR trên màn hình).</li>
+   <li><b>Ghi danh</b> bằng họ tên thật; mỗi người dùng một thiết bị.</li>
+   <li><b>Trả lời trên điện thoại</b> khi MC mở câu – trả lời đúng và nhanh được nhiều điểm hơn. Câu trả lời chỉ được tính khi máy báo <i>“Đã lưu bài nộp”</i>.</li>
+   <li>Lỡ mất mạng? Cứ mở lại trang – bạn vào lại đúng phòng, giữ nguyên điểm.</li>
+  </ol>
+  <p class="h-dialog-meta">Dành cho ban tổ chức: <a href="/host">Màn MC</a> · <a href="/khach">Cổng khách hàng</a> · <a href="/admin">Quản trị</a></p>
+  <button class="h-btn small" value="close">ĐÃ HIỂU</button>
+ </form>
+</dialog>
+<script src="/home.js"></script>
+</body>
+</html>

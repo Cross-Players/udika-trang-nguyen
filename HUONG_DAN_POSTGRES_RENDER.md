@@ -1,3 +1,5 @@
+> **TÀI LIỆU CŨ (V3.1) – CHỈ ĐỂ THAM KHẢO.** Một số mục không còn đúng với V15 (biến môi trường, tiến trình, giới hạn). Hướng dẫn hiện hành: `README.md`, `BAN_GIAO_CHO_LAP_TRINH.md`, `docker-compose.portable.yml`.
+
 # UDIKA GAME HUB V3.1 – PostgreSQL trên Render
 
 ## Bản cập nhật này làm gì?

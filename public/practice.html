@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chơi thử một mình | UDIKA – Ai là Trạng nguyên?</title>
+<meta name="theme-color" content="#0b3a2e">
+<link rel="preload" as="font" type="font/woff" href="/assets/fonts/udika-sans.woff" crossorigin>
+<link rel="stylesheet" href="/fonts.css"><link rel="stylesheet" href="/practice.css"><link rel="stylesheet" href="/dan-gian.css">
+</head>
+<body>
+<header class="pr-head"><a class="pr-brand" href="/">🏮 UDIKA · <b>CHƠI THỬ</b></a><span class="pr-badge">LUYỆN TẬP – điểm không tính vào kỳ thi</span></header>
+<main id="app" class="pr-main">
+ <section id="setup" class="pr-card">
+  <h1>🎮 Chơi thử một mình</h1>
+  <p class="pr-lead">Thi cùng các <b>đối thủ ảo 🤖</b> để làm quen cách chơi trước khi vào phòng thi thật. Đúng/sai hiện ngay sau mỗi câu; cuối bài được <b>ôn lại câu sai</b>.</p>
+  <label>Tên của bạn<input id="pName" class="pr-input" maxlength="24" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="nickname"></label>
+  <label>Bộ đề<select id="pSet" class="pr-input"><option>Đang tải…</option></select></label>
+  <div class="pr-row">
+   <label>Đối thủ ảo<select id="pBots" class="pr-input"><option value="5">5 người</option><option value="10" selected>10 người</option><option value="20">20 người</option></select></label>
+   <label>Độ khó<select id="pLevel" class="pr-input"><option value="0.45">Dễ</option><option value="0.65" selected>Vừa</option><option value="0.85">Khó</option></select></label>
+   <label>Số câu<select id="pCount" class="pr-input"><option value="5">5 câu</option><option value="10" selected>10 câu</option><option value="0">Cả bộ</option></select></label>
+  </div>
+  <button id="pStart" class="pr-btn" type="button">BẮT ĐẦU CHƠI THỬ ▶</button>
+  <p class="pr-note" id="pMsg" role="status" aria-live="polite"></p>
+ </section>
+ <section id="play" class="pr-card hidden" aria-live="polite">
+  <div class="pr-top"><span id="qNo">Câu 1/10</span><span id="qScore">0 điểm</span><span class="pr-timer" id="qTimer" aria-label="Thời gian còn lại">20</span></div>
+  <div class="pr-progress"><div id="qBar"></div></div>
+  <h2 id="qText" tabindex="-1"></h2>
+  <div id="qMedia"></div>
+  <div id="qInput"></div>
+  <div id="qFeedback" class="hidden"></div>
+ </section>
+ <section id="end" class="pr-card hidden"></section>
+</main>
+<div id="zoom" class="pr-zoom hidden" role="dialog" aria-label="Ảnh phóng to"></div>
+<script src="/practice.js"></script>
+</body>
+</html>

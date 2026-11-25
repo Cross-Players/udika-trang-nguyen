@@ -1,0 +1,24 @@
+ĐO ĐỘ ỔN ĐỊNH – UDIKA Khoa Bảng · 2026-11-25T03:40:01.978Z · Node v22.23.5 · 13.3 phút
+Mỗi bộ lõi chạy 5 vòng, mỗi lần đúng 1 lần (không chạy lại). Lỗi "lúc được lúc không" sẽ hiện thành tỉ lệ < 5/5.
+
+[ỔN ĐỊNH] smoke-prod.js: 5/5
+[ỔN ĐỊNH] test-time-v5.js: 5/5
+[ỔN ĐỊNH] test-questions-v5.js: 5/5
+[ỔN ĐỊNH] test-import-report-v6.js: 5/5
+[ỔN ĐỊNH] test-vq-control-v8.js: 5/5
+[ỔN ĐỊNH] test-v14-features.js: 5/5
+[ỔN ĐỊNH] test-v14-auto-reveal.js: 5/5
+[CHẬP CHỜN] test-v14-reliability.js: 4/5
+   vòng 3: FAIL Error: Timeout st-eid
+[ỔN ĐỊNH] test-v15-core.js: 5/5
+[ỔN ĐỊNH] test-router.js: 5/5
+[ỔN ĐỊNH] test-audit-v15.js: 5/5
+[ỔN ĐỊNH] test-release-v15.js: 5/5
+[ỔN ĐỊNH] test-khach-v15.js: 5/5
+
+Diễn tập buổi thi có sự cố (300 sĩ tử × 12 câu, kill -9, rớt mạng, gửi trễ, bấm trùng), 3 kịch bản ngẫu nhiên khác nhau:
+[ĐẠT] hạt 8919 – Đối soát 3334 bài nộp: 3124 đã báo nhận · 209 bị từ chối/trễ · 1 chưa rõ kết quả (rớt mạng/sập lúc chờ xác nhận)
+[ĐẠT] hạt 16838 – Đối soát 3356 bài nộp: 3123 đã báo nhận · 233 bị từ chối/trễ · 0 chưa rõ kết quả (rớt mạng/sập lúc chờ xác nhận)
+[ĐẠT] hạt 24757 – Đối soát 3325 bài nộp: 3122 đã báo nhận · 203 bị từ chối/trễ · 0 chưa rõ kết quả (rớt mạng/sập lúc chờ xác nhận)
+
+TỔNG: 12/13 bộ lõi ổn định qua 5 vòng · 3/3 buổi diễn tập đạt

@@ -1,18 +1,53 @@
 {
   "name": "udika-khoa-bang-realtime",
-  "version": "3.1.0",
+  "version": "15.0.0",
   "private": true,
-  "description": "UDIKA Game Hub realtime, optional PostgreSQL with required-database safeguard and storage diagnostics",
+  "description": "UDIKA Khoa Bảng – quiz realtime kiểu Kahoot cho sự kiện Việt Nam: nhiều dạng câu, LED sân khấu, vinh danh, chia phòng nhiều tiến trình/nhiều máy",
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
     "test": "node test/smoke-prod.js",
-    "test:integration": "python test/test_integration.py"
+    "test:integration": "python test/test_integration.py",
+    "test:time": "node test/test-time-v5.js",
+    "test:questions": "node test/test-questions-v5.js",
+    "test:import": "node test/test-import-report-v6.js",
+    "test:load": "node test/load-test.js 2000 3",
+    "test:vq": "node test/test-vq-control-v8.js",
+    "test:vinhdanh3d": "python3 test/test_vinhdanh_3d_v13.py",
+    "test:video": "node test/test-video-v10.js",
+    "test:v14": "node test/test-v14-features.js",
+    "test:reliability": "node test/test-v14-reliability.js",
+    "test:autoreveal": "node test/test-v14-auto-reveal.js",
+    "test:ui": "python3 test/test_v14_ui.py",
+    "test:load3000": "node test/load-test.js 3000 3",
+    "test:all": "node test/run-all.js",
+    "test:all:nhanh": "node test/run-all.js --nhanh",
+    "test:fonts": "python3 test/test_fonts.py",
+    "test:ledqr": "python3 test/test_led_qr.py",
+    "test:home": "python3 test/test_home_ui.py",
+    "start:cluster": "node router.js",
+    "test:v15": "node test/test-v15-core.js",
+    "test:v15ui": "python3 test/test_v15_ui.py",
+    "test:router": "node test/test-router.js",
+    "test:load6000": "OUT=KET_QUA_KIEM_THU_6000.txt node test/load-test.js 6000 3",
+    "test:loadrouter": "ROUTER_WORKERS=2 ROUTERS=2 OUT=KET_QUA_KIEM_THU_ROUTER_18000.txt node test/load-multi.js 6000,6000,3000,2000,1000 3",
+    "test:release": "node test/test-release-v15.js",
+    "test:khach": "node test/test-khach-v15.js",
+    "test:nghiemthu": "node test/run-all.js --nghiem-thu",
+    "test:ondinh": "node test/do-on-dinh.js 5 3",
+    "test:dientap": "node test/test-dien-tap-on-dinh.js 300",
+    "lan": "node lan.js",
+    "test:thanhtoan": "node test/test-thanh-toan.js",
+    "test:lienhoan": "node test/test-lien-hoan.js",
+    "test:cum": "node test/test-gioi-han-cum.js",
+    "test:ledresume": "python3 test/test_led_resume_v15.py",
+    "test:dangcau": "node test/test-dang-cau-moi.js",
+    "test:dangcauui": "python3 test/test_dang_cau_moi_ui.py"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "dependencies": {
-    "pg": "^8.16.3"
+    "pg": "8.16.3"
   }
 }

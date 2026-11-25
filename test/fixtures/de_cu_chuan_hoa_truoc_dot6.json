@@ -1,0 +1,513 @@
+{
+ "questions": [
+  {
+   "stage": 0,
+   "kind": "mc",
+   "q": "Khi bắt đầu một bài học, điều quan trọng nhất là gì?",
+   "a": [
+    "Chăm chú lắng nghe",
+    "Nói chuyện riêng",
+    "Rời khỏi lớp",
+    "Làm việc khác"
+   ],
+   "c": 0,
+   "t": 15
+  },
+  {
+   "stage": 0,
+   "kind": "mc",
+   "q": "Trong bộ đồ dùng của thầy đồ xưa, nghiên mực dùng để làm gì?",
+   "a": [
+    "Đựng nước uống",
+    "Mài mực viết chữ",
+    "Đựng hạt giống",
+    "Đốt hương"
+   ],
+   "c": 1,
+   "t": 20
+  },
+  {
+   "stage": 0,
+   "kind": "mc",
+   "q": "Từ nào đồng nghĩa gần nhất với “hiếu học”?",
+   "a": [
+    "Lười nhác",
+    "Ham học hỏi",
+    "Bất cẩn",
+    "Nóng vội"
+   ],
+   "c": 1,
+   "t": 15
+  },
+  {
+   "stage": 1,
+   "kind": "mc",
+   "q": "Dãy số 2, 4, 8, 16, ... có số tiếp theo là bao nhiêu?",
+   "a": [
+    "18",
+    "24",
+    "32",
+    "36"
+   ],
+   "c": 2,
+   "t": 15
+  },
+  {
+   "stage": 1,
+   "kind": "mc",
+   "q": "Nếu hôm nay là thứ Hai, 10 ngày sau là thứ mấy?",
+   "a": [
+    "Thứ Ba",
+    "Thứ Tư",
+    "Thứ Năm",
+    "Thứ Sáu"
+   ],
+   "c": 2,
+   "t": 20
+  },
+  {
+   "stage": 1,
+   "kind": "mc",
+   "q": "Chọn từ viết đúng chính tả.",
+   "a": [
+    "Sĩ tử",
+    "Sỹ tữ",
+    "Sĩ tữ",
+    "Sỹ tử"
+   ],
+   "c": 0,
+   "t": 10
+  },
+  {
+   "stage": 2,
+   "kind": "mc",
+   "q": "Kỳ thi nào trong khoa cử phong kiến được tổ chức tại các trường thi địa phương?",
+   "a": [
+    "Thi Đình",
+    "Thi Hương",
+    "Thi Hội",
+    "Thi vấn đáp"
+   ],
+   "c": 1,
+   "t": 20
+  },
+  {
+   "stage": 2,
+   "kind": "mc",
+   "q": "Người đỗ đầu kỳ thi Hương thường được gọi là gì?",
+   "a": [
+    "Hội nguyên",
+    "Trạng nguyên",
+    "Giải nguyên",
+    "Thám hoa"
+   ],
+   "c": 2,
+   "t": 20
+  },
+  {
+   "stage": 2,
+   "kind": "mc",
+   "q": "Vật dụng thường gắn với sĩ tử đến trường thi xưa là gì?",
+   "a": [
+    "Lều chõng",
+    "Máy tính",
+    "Bảng điện tử",
+    "Loa phát thanh"
+   ],
+   "c": 0,
+   "t": 15
+  },
+  {
+   "stage": 3,
+   "kind": "mc",
+   "q": "Kỳ thi Hội trong khoa cử truyền thống thường diễn ra tại đâu?",
+   "a": [
+    "Kinh đô",
+    "Mỗi làng xã",
+    "Từng gia đình",
+    "Trên thuyền"
+   ],
+   "c": 0,
+   "t": 20
+  },
+  {
+   "stage": 3,
+   "kind": "mc",
+   "q": "Người đỗ đầu kỳ thi Hội được gọi là gì?",
+   "a": [
+    "Giải nguyên",
+    "Hội nguyên",
+    "Thám hoa",
+    "Tú tài"
+   ],
+   "c": 1,
+   "t": 15
+  },
+  {
+   "stage": 3,
+   "kind": "mc",
+   "q": "Nếu một câu hỏi 30 giây, trả lời đúng sau 6 giây thì còn bao nhiêu giây?",
+   "a": [
+    "18",
+    "20",
+    "24",
+    "26"
+   ],
+   "c": 2,
+   "t": 30
+  },
+  {
+   "stage": 4,
+   "kind": "mc",
+   "q": "Trong hệ thống Tam khôi thời Lê, danh hiệu nào đứng đầu?",
+   "a": [
+    "Bảng nhãn",
+    "Trạng nguyên",
+    "Thám hoa",
+    "Hoàng giáp"
+   ],
+   "c": 1,
+   "t": 20
+  },
+  {
+   "stage": 4,
+   "kind": "mc",
+   "q": "Đứng thứ hai trong Tam khôi là danh hiệu nào?",
+   "a": [
+    "Bảng nhãn",
+    "Giải nguyên",
+    "Hội nguyên",
+    "Sinh đồ"
+   ],
+   "c": 0,
+   "t": 15
+  },
+  {
+   "stage": 4,
+   "kind": "mc",
+   "q": "Danh hiệu nào dành cho người đứng thứ ba trong Tam khôi?",
+   "a": [
+    "Tú tài",
+    "Cử nhân",
+    "Thám hoa",
+    "Hương cống"
+   ],
+   "c": 2,
+   "t": 15
+  }
+ ],
+ "practice": [
+  {
+   "stage": 0,
+   "kind": "mc",
+   "q": "Khoa thi Nho học đầu tiên của nước ta được tổ chức năm nào?",
+   "a": [
+    "1070",
+    "1075",
+    "1076",
+    "1247"
+   ],
+   "c": 1,
+   "t": 20,
+   "note": "Năm 1075, đời vua Lý Nhân Tông, mở khoa thi Minh kinh bác học; Lê Văn Thịnh đỗ đầu."
+  },
+  {
+   "stage": 0,
+   "kind": "mc",
+   "q": "Văn Miếu ở Thăng Long được xây dựng năm nào?",
+   "a": [
+    "1070",
+    "1075",
+    "1076",
+    "1484"
+   ],
+   "c": 0,
+   "t": 20,
+   "note": "Văn Miếu được xây năm 1070, đời vua Lý Thánh Tông."
+  },
+  {
+   "stage": 1,
+   "kind": "mc",
+   "q": "Quốc Tử Giám – được coi là trường đại học đầu tiên của nước ta – được lập năm nào?",
+   "a": [
+    "1070",
+    "1076",
+    "1253",
+    "1442"
+   ],
+   "c": 1,
+   "t": 20,
+   "note": "Quốc Tử Giám được lập năm 1076, đời vua Lý Nhân Tông."
+  },
+  {
+   "stage": 1,
+   "kind": "order",
+   "q": "Xếp các kỳ thi theo đúng trình tự sĩ tử phải trải qua",
+   "a": [
+    "Thi Hương",
+    "Thi Hội",
+    "Thi Đình"
+   ],
+   "c": null,
+   "t": 25,
+   "note": "Đỗ thi Hương mới được dự thi Hội; đỗ thi Hội mới vào thi Đình."
+  },
+  {
+   "stage": 2,
+   "kind": "mc",
+   "q": "Người đỗ đầu kỳ thi Hương được gọi là gì?",
+   "a": [
+    "Hội nguyên",
+    "Giải nguyên",
+    "Đình nguyên",
+    "Trạng nguyên"
+   ],
+   "c": 1,
+   "t": 20,
+   "note": "Đỗ đầu thi Hương là Giải nguyên; đỗ đầu thi Hội là Hội nguyên."
+  },
+  {
+   "stage": 2,
+   "kind": "multi",
+   "q": "Những danh hiệu nào thuộc nhóm Tam khôi?",
+   "a": [
+    "Trạng nguyên",
+    "Bảng nhãn",
+    "Thám hoa",
+    "Hoàng giáp"
+   ],
+   "c": null,
+   "t": 25,
+   "cs": [
+    0,
+    1,
+    2
+   ],
+   "note": "Tam khôi là ba người đỗ đầu thi Đình: Trạng nguyên, Bảng nhãn, Thám hoa."
+  },
+  {
+   "stage": 3,
+   "kind": "order",
+   "q": "Xếp các danh hiệu tiến sĩ từ cao xuống thấp",
+   "a": [
+    "Trạng nguyên",
+    "Bảng nhãn",
+    "Thám hoa",
+    "Hoàng giáp"
+   ],
+   "c": null,
+   "t": 30,
+   "note": "Đệ nhất giáp gồm Tam khôi: Trạng nguyên, Bảng nhãn, Thám hoa. Hoàng giáp là danh hiệu của người đỗ Đệ nhị giáp tiến sĩ xuất thân, xếp sau Tam khôi."
+  },
+  {
+   "stage": 3,
+   "kind": "number",
+   "q": "Năm nào vua Lê Thánh Tông cho dựng tấm bia tiến sĩ đầu tiên ở Văn Miếu?",
+   "a": [],
+   "c": 1484,
+   "t": 25,
+   "tol": 0,
+   "unit": "",
+   "note": "Năm 1484 vua Lê Thánh Tông cho dựng bia tiến sĩ, bắt đầu từ khoa thi năm 1442."
+  },
+  {
+   "stage": 3,
+   "kind": "number",
+   "q": "Hiện nay Văn Miếu – Quốc Tử Giám còn bao nhiêu tấm bia tiến sĩ?",
+   "a": [],
+   "c": 82,
+   "t": 25,
+   "tol": 0,
+   "unit": "bia",
+   "note": "82 bia tiến sĩ, được UNESCO ghi danh là Di sản tư liệu thế giới năm 2010."
+  },
+  {
+   "stage": 4,
+   "kind": "type",
+   "q": "Kỳ thi do nhà vua trực tiếp ra đề và xếp hạng các tiến sĩ gọi là thi gì?",
+   "a": [],
+   "c": null,
+   "t": 25,
+   "acc": [
+    "Thi Đình",
+    "Đình thí"
+   ],
+   "loose": false,
+   "note": "Thi Đình (Đình thí) tổ chức ở sân điện của nhà vua."
+  },
+  {
+   "stage": 4,
+   "kind": "mc",
+   "q": "Ai được sử sách ghi là Trạng nguyên nhỏ tuổi nhất, đỗ năm 13 tuổi?",
+   "a": [
+    "Mạc Đĩnh Chi",
+    "Nguyễn Hiền",
+    "Lương Thế Vinh",
+    "Nguyễn Bỉnh Khiêm"
+   ],
+   "c": 1,
+   "t": 20,
+   "note": "Nguyễn Hiền đỗ Trạng nguyên khoa năm 1247, đời Trần Thái Tông, khi 13 tuổi."
+  },
+  {
+   "stage": 4,
+   "kind": "mc",
+   "q": "Khoa thi Hội cuối cùng của chế độ khoa cử Nho học ở nước ta diễn ra năm nào?",
+   "a": [
+    "1884",
+    "1905",
+    "1915",
+    "1919"
+   ],
+   "c": 3,
+   "t": 20,
+   "note": "Năm 1919, đời vua Khải Định, khoa thi Hội cuối cùng được tổ chức tại Huế."
+  }
+ ],
+ "synthetic": [
+  {
+   "stage": 0,
+   "kind": "mc",
+   "q": "Đúng hay sai?",
+   "a": [
+    "Đúng",
+    "Sai"
+   ],
+   "c": 1,
+   "t": 10
+  },
+  {
+   "stage": 1,
+   "kind": "mc",
+   "q": "Bốn lựa chọn 🐉",
+   "a": [
+    "A 😀",
+    "B",
+    "C",
+    "D"
+   ],
+   "c": 3,
+   "t": 20,
+   "shuffle": true,
+   "pts": 2,
+   "note": "giải thích"
+  },
+  {
+   "stage": 1,
+   "kind": "multi",
+   "q": "Chọn nhiều",
+   "a": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "c": null,
+   "t": 20,
+   "cs": [
+    0,
+    2
+   ],
+   "partial": true
+  },
+  {
+   "stage": 2,
+   "kind": "type",
+   "q": "Gõ",
+   "a": [],
+   "c": null,
+   "t": 20,
+   "acc": [
+    "Hà Nội",
+    "Ha Noi"
+   ],
+   "loose": true,
+   "punct": true,
+   "pts": 0
+  },
+  {
+   "stage": 2,
+   "kind": "number",
+   "q": "Số",
+   "a": [],
+   "c": 1075,
+   "t": 20,
+   "tol": 5,
+   "unit": "năm"
+  },
+  {
+   "stage": 3,
+   "kind": "order",
+   "q": "Xếp",
+   "a": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+   ],
+   "c": null,
+   "t": 30,
+   "partial": true
+  },
+  {
+   "stage": 0,
+   "kind": "poll",
+   "q": "Khảo sát",
+   "a": [
+    "x",
+    "y",
+    "z"
+   ],
+   "c": null,
+   "t": 15,
+   "pmulti": true
+  },
+  {
+   "stage": 4,
+   "kind": "slider",
+   "q": "Trượt",
+   "a": [],
+   "c": 50,
+   "t": 20,
+   "min": 0,
+   "max": 100,
+   "step": 5,
+   "tol": 10,
+   "unit": "%"
+  },
+  {
+   "stage": 0,
+   "kind": "cloud",
+   "q": "Mây",
+   "a": [],
+   "c": null,
+   "t": 20
+  },
+  {
+   "stage": 0,
+   "kind": "mc",
+   "q": "Ảnh",
+   "a": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "c": 0,
+   "t": 20,
+   "ai": [
+    "https://example.com/1.png",
+    "https://example.com/2.png",
+    "https://example.com/3.png",
+    "https://example.com/4.png"
+   ],
+   "media": {
+    "kind": "image",
+    "src": "https://example.com/q.png",
+    "where": "both"
+   }
+  }
+ ]
+}

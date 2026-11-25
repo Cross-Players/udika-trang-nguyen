@@ -1,0 +1,10 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UDIKA · Trọng tài chấm điểm</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/quanly.css"><link rel="stylesheet" href="/dan-gian.css"></head><body>
+<header><div class="nav"><div class="logo"><div class="seal" title="Khoa Bảng">KB</div><div><b>UDIKA · TRỌNG TÀI</b><small>Chấm điểm hoạt động được giao</small></div></div></div></header>
+<main class="admin-shell" style="max-width:720px">
+ <div class="admin-card" id="loginView"><div class="admin-title">⚖️ ĐĂNG NHẬP TRỌNG TÀI</div><p class="dim">Ban tổ chức gửi cho bạn mã chương trình, tên đăng nhập và mật khẩu.</p>
+  <label>Mã chương trình<input class="input" id="code" maxlength="6" style="text-transform:uppercase" autocomplete="off"></label><label>Tên đăng nhập<input class="input" id="user" autocomplete="username"></label><label>Mật khẩu<input class="input" type="password" id="pass" autocomplete="current-password"></label>
+  <button class="btn primary" id="go">ĐĂNG NHẬP</button><p class="notice bad hidden" id="loginErr"></p></div>
+ <div id="work" class="hidden"><div class="admin-title" id="hello"></div><div class="dim" id="evName"></div><p class="notice hidden" id="msg"></p>
+  <div class="admin-card"><label>Hoạt động<select class="input" id="act"></select></label><p class="dim" id="actNote"></p><div class="grid-score" id="teams"></div></div>
+  <button class="btn secondary" id="out">Đăng xuất</button></div>
+</main><script src="/trongtai.js"></script></body></html>

@@ -1,3 +1,5 @@
 node_modules/
 data/
 .env
+*.log
+!test/_pgshim/node_modules/

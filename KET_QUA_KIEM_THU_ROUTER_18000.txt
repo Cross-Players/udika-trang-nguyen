@@ -1,0 +1,9 @@
+== Nhiều phòng đồng thời: 6000 + 6000 + 3000 + 2000 + 1000 = 18000 kết nối · 3 câu/phòng · 12 giây/câu · 2 tiến trình server.js sau 2 bộ định tuyến · máy thử 2 nhân, 8 GB RAM ==
+Ghi danh: 18000/18000 trong 20.6 giây · RAM 586 MB
+Câu 1: 18000 bài được xác nhận · phản hồi p50 10 ms, p95 49 ms, tối đa 279 ms · RAM 762 MB
+Câu 2: 18000 bài được xác nhận · phản hồi p50 12 ms, p95 75 ms, tối đa 295 ms · RAM 829 MB
+Câu 3: 18000 bài được xác nhận · phản hồi p50 15 ms, p95 170 ms, tối đa 434 ms · RAM 868 MB
+Tổng: gửi 54000 bài, máy chủ xác nhận đã lưu 54000, từ chối vì quá giờ 0 · 10662 lượt mất mạng – nối lại
+Độ chính xác: 18000/18000 người có số câu đúng khớp tuyệt đối với bài đã xác nhận · 0 sai lệch
+Đóng kết nối: 18000 đúng chuẩn · 0 lỗi
+Máy chủ vẫn hoạt động: CÓ

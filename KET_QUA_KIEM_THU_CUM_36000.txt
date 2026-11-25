@@ -1,0 +1,23 @@
+== Cụm: 3 tiến trình server.js, 4 bộ định tuyến (cổng 19200,19201,19202,19203) · 2 tiến trình kiểm thử · tổng 36000 kết nối · máy thử 2 nhân, 7 GB RAM ==
+--- Nhóm 1 (6000,6000,6000) ---
+== Nhiều phòng đồng thời: 6000 + 6000 + 6000 = 18000 kết nối · 3 câu/phòng · 12 giây/câu · gửi vào cụm máy chủ đang chạy · máy thử 2 nhân, 8 GB RAM ==
+Ghi danh: 18000/18000 trong 47.5 giây · RAM 1091 MB
+Câu 1: 18000 bài được xác nhận · phản hồi p50 359 ms, p95 1693 ms, tối đa 2220 ms · RAM 1394 MB
+Câu 2: 18000 bài được xác nhận · phản hồi p50 252 ms, p95 656 ms, tối đa 1045 ms · RAM 1558 MB
+Câu 3: 18000 bài được xác nhận · phản hồi p50 171 ms, p95 847 ms, tối đa 1219 ms · RAM 1675 MB
+Tổng: gửi 54000 bài, máy chủ xác nhận đã lưu 54000, từ chối vì quá giờ 0 · 10897 lượt mất mạng – nối lại
+Độ chính xác: 18000/18000 người có số câu đúng khớp tuyệt đối với bài đã xác nhận · 0 sai lệch
+Đóng kết nối: 18000 đúng chuẩn · 0 lỗi
+Máy chủ vẫn hoạt động: CÓ
+--- Nhóm 2 (6000,6000,6000) ---
+== Nhiều phòng đồng thời: 6000 + 6000 + 6000 = 18000 kết nối · 3 câu/phòng · 12 giây/câu · gửi vào cụm máy chủ đang chạy · máy thử 2 nhân, 8 GB RAM ==
+Ghi danh: 18000/18000 trong 45.7 giây · RAM 1060 MB
+Câu 1: 18000 bài được xác nhận · phản hồi p50 161 ms, p95 668 ms, tối đa 834 ms · RAM 1373 MB
+Câu 2: 18000 bài được xác nhận · phản hồi p50 281 ms, p95 649 ms, tối đa 1116 ms · RAM 1543 MB
+Câu 3: 18000 bài được xác nhận · phản hồi p50 172 ms, p95 723 ms, tối đa 1174 ms · RAM 1642 MB
+Tổng: gửi 54000 bài, máy chủ xác nhận đã lưu 54000, từ chối vì quá giờ 0 · 10782 lượt mất mạng – nối lại
+Độ chính xác: 18000/18000 người có số câu đúng khớp tuyệt đối với bài đã xác nhận · 0 sai lệch
+Đóng kết nối: 18000 đúng chuẩn · 0 lỗi
+Máy chủ vẫn hoạt động: CÓ
+RAM tổng các tiến trình máy chủ cuối bài: 1713 MB
+exit=0

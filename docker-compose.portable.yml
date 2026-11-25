@@ -1,0 +1,38 @@
+# Bản docker-compose DÙNG CHO MỌI MÁY CHỦ (không phụ thuộc mạng riêng của VPS gdata).
+# Caddy cấp HTTPS tự động (Let's Encrypt) cho tên miền của bạn.
+#  1) Trỏ tên miền (bản ghi A) về IP máy chủ; mở cổng 80 và 443.
+#  2) Tạo tệp .env cạnh tệp này:
+#       DOMAIN=thi.tenmien-cua-ban.vn
+#       ADMIN_PASSWORD=<mật khẩu Admin dài, ngẫu nhiên>
+#       SESSION_SECRET=<chuỗi ngẫu nhiên ≥ 32 ký tự>
+#       DATABASE_URL=postgres://...   (khuyến nghị cho thương mại; bỏ trống = lưu tệp trong ./data)
+#  3) Thư mục dữ liệu phải thuộc người dùng "node" (uid 1000) trong container:
+#       mkdir -p data && sudo chown -R 1000:1000 data
+#  4) docker compose -f docker-compose.portable.yml up -d --build
+#  Sao lưu: sao chép thư mục ./data (rooms.json, rooms.json.journal, media/) hoặc sao lưu cơ sở dữ liệu.
+services:
+  udika:
+    build: .
+    image: udika:15
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MAX_PLAYERS: "6000"
+      MAX_ROOMS: "200"
+      MAX_ONLINE: "40000"
+    ulimits:
+      nofile: { soft: 1048576, hard: 1048576 }
+    volumes:
+      - ./data:/app/data
+    expose: ["3000"]
+  caddy:
+    image: caddy:2.8-alpine
+    restart: unless-stopped
+    depends_on: [udika]
+    ports: ["80:80", "443:443"]
+    env_file: .env
+    command: sh -c 'printf "%s {\n  encode gzip\n  reverse_proxy udika:3000\n}\n" "$$DOMAIN" > /etc/caddy/Caddyfile && caddy run --config /etc/caddy/Caddyfile --adapter caddyfile'
+    volumes:
+      - caddy_data:/data
+volumes:
+  caddy_data:

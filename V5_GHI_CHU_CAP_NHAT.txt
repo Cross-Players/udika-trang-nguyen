@@ -1,0 +1,279 @@
+UDIKA – KHOA BẢNG V5 | BẢN NÂNG CẤP MÀN LED CHÍNH
+
+1. Vẽ lại toàn bộ cảnh trường thi: sân lát đá phối cảnh, nhà tả hữu mái ngói cong, cây cổ thụ,
+   đèn lồng, cờ đuôi nheo, cột đá; mỗi chặng thi có tông màu trời riêng.
+2. Bảng câu hỏi chuyển lên CHÍNH GIỮA PHÍA TRÊN, thiết kế như bảng vàng có mái đình,
+   tên chặng trên biển hiệu, đồng hồ dạng ấn son. Không còn che sĩ tử.
+3. Mỗi sĩ tử ngồi trong một lều chõng đan tre, có BẢNG TÊN ngay trên đầu.
+   Tự xếp dãy theo số người (1–60 người hiển thị), dãy trước to, dãy sau nhỏ dần.
+4. Khi công bố đáp án: đáp án đúng nổi màu xanh, đáp án sai mờ đi;
+   3 sĩ tử dẫn đầu có bảng tên vàng/bạc kèm huy chương.
+5. Sửa lỗi màn Chúc mừng chặng: chữ "undefined" và dòng chữ bị dựng dọc khi chưa có điểm.
+6. Server, Admin, MC, người chơi, dữ liệu: giữ nguyên, không thay đổi.
+
+File thay đổi: public/led.html, public/led.js, public/scene.js, public/style.css
+Triển khai như các bản trước (tải nội dung thư mục lên GitHub, Render tự deploy).
+
+BỔ SUNG V5.1 – VINH QUY BÁI TỔ & ÂM THANH
+7. Màn vinh danh Trạng nguyên vẽ theo phong cách tranh Đông Hồ "Vinh quy bái tổ" (榮歸拜祖),
+   hiện ngay trên màn LED chính: cờ, biển Tiến sĩ (進士), quan Trạng cưỡi ngựa, lọng, tàn.
+   Bảng tên Trạng nguyên ở trên đầu quan Trạng. Đoàn rước đi vào, người bước đi, ngựa phi,
+   cờ bay, lọng lắc, pháo dây nổ, hoa giấy rơi. Nút "Đốt pháo lại" để phát lại.
+8. Âm thanh (tổng hợp trong trình duyệt, không cần file):
+   - Mở câu hỏi: 3 tiếng trống "tùng tùng tùng" + tiếng cắc
+   - 5 giây cuối: tiếng mõ đếm ngược; hết giờ: tiếng chiêng
+   - Công bố đáp án: chuỗi chuông ngân
+   - Chúc mừng chặng: hồi trống dồn + chiêng
+   - Vinh danh Trạng nguyên: pháo nổ đì đùng + trống hội (đã bỏ tiếng reo hò ở V5.5)
+9. Trình duyệt chỉ cho phát âm thanh sau một lần bấm: ở màn LED bấm nút
+   "🔇 Bấm để bật âm thanh" (góc trên trái) một lần trước khi bắt đầu. Bấm lại để tắt/bật.
+File mới: public/vinhquy.js, public/sound.js
+
+BỔ SUNG V5.2 – CHỮ VIỆT, TỰ CHỈNH THỜI GIAN, NÂNG CẤP ĐỒ HỌA
+10. Bỏ chữ Hán trên tranh vinh danh, thay bằng tiếng Việt:
+    cờ "VINH QUY", biển "CHÚC MỪNG TRẠNG NGUYÊN", tàn "BÁI TỔ",
+    tiêu đề "VINH QUY BÁI TỔ · CHÚC MỪNG TRẠNG NGUYÊN".
+11. MC tự chỉnh thời gian ngay trên màn điều khiển (không cần sửa bộ đề, KHÔNG mất điểm):
+    - Ô "Thời gian câu này" + nút nhanh 10/15/20/30/45/60/90 giây
+    - "Áp dụng cho câu này" / "Áp dụng cho TẤT CẢ câu"
+    - Khi đang thi: "+10 giây", "+30 giây"
+    - Thời gian cho phép 5–300 giây (trước đây 5–120).
+12. Đồ họa chi tiết hơn: tranh Đông Hồ có hoa văn viền áo, nếp áo, khuôn mặt có mày mắt,
+    nón chóp lính, ngựa có lông bờm, chuông, yên thêu mây, cuốn thư tên Trạng nguyên,
+    mây cuộn, cỏ hoa, vân giấy dó. Màn trường thi: tán cây nhiều lớp, mái ngói,
+    cửa bức bàn, thảm đỏ, mây trôi; lều chõng đan tre mịn, sĩ tử cầm bút có nghiên mực.
+13. Font chuẩn tiếng Việt: Be Vietnam Pro (chữ thường) + Noto Serif (tiêu đề),
+    thay thế Georgia để dấu tiếng Việt hiển thị chuẩn trên mọi máy.
+Kiểm thử mới: npm run test:time
+
+BỔ SUNG V5.3 – TRANG PHỤC VIỆT & TIỂU CẢNH TỪNG KỲ THI
+14. Nhân vật tranh vinh danh mặc đúng trang phục Việt:
+    - Lính lệ: nón dấu sơn đen chóp đồng + quả tua đỏ, áo nậu có "dấu" tròn trước ngực,
+      vạt cài chéo khuy đồng, thắt lưng bao buông hai mối, quần ống rộng, xà cạp quấn chân,
+      giày mõm nhái mũi cong.
+    - Người che lọng: khăn xếp chữ nhân.
+    - Quan Trạng: mũ cánh chuồn viền vàng, áo thụng tay rộng thêu mây, bổ tử thêu hạc,
+      đai ngọc, vạt thêu sóng nước, đi hia; tay cầm quạt vẫy chào.
+    - Cử động: bước chân, nghiêng đầu, tua nón lắc, mối thắt lưng bay, quạt phe phẩy,
+      ngựa phi – gật đầu – vẫy tai – quất đuôi, cánh mũ rung, cờ/lọng/tàn đung đưa.
+15. Tiểu cảnh mỗi kỳ thi khác nhau, càng về sau càng trang nghiêm:
+    - Lớp thầy đồ: nhà tranh "Trường làng", lũy tre đung đưa, cây chuối, chum nước,
+      đống rơm, rào tre, gà mổ thóc, sân đất.
+    - Khảo hạch: đình làng mái đao cong, cây đa rễ phụ, giếng làng, cờ ngũ sắc, sân gạch.
+    - Thi Hương: trường thi – nhà tả hữu, đèn lồng, cờ đuôi nheo, cột đá, thảm đỏ.
+    - Thi Hội: Văn Miếu – Quốc Tử Giám: nhà bia tiến sĩ trên lưng rùa, cây đại hoa trắng,
+      chậu sen, tường gạch, thảm đỏ.
+    - Thi Đình: Hoàng cung – mái ngói hoàng lưu ly hai tầng, lưỡng long chầu nguyệt,
+      cột son quấn rồng vàng, tường thành, cờ hoàng gia, lính ngự lâm cầm giáo,
+      đỉnh đồng tỏa khói hương, hạc đồng, chậu cây thế men lam, thềm đá, thảm vàng,
+      hào quang tỏa sáng.
+    - Khung bảng câu hỏi cũng đổi màu theo kỳ: gỗ mộc → gỗ lim → son đỏ → son thếp vàng → vàng hoàng gia.
+
+BỔ SUNG V5.4 – THÊM/BỚT CÂU HỎI & BỐI CẢNH ĐÚNG SỬ LIỆU
+16. MC thêm / sửa / xóa từng câu hỏi theo từng chặng ngay trong lúc thi, KHÔNG mất điểm:
+    - Ngân hàng câu hỏi chia theo 5 chặng, mỗi chặng có số câu và nút "➕ Thêm câu".
+    - Câu đã thi hoặc đang thi có biểu tượng 🔒, không sửa/xóa được (để điểm luôn đúng).
+    - Nhập/xuất cả bộ đề JSON vẫn giữ (nhập bộ đề mới thì đặt lại điểm).
+17. Bối cảnh các vòng thi sửa theo sử liệu khoa cử thời Hậu Lê:
+    - Lớp thầy đồ: thầy ngồi xếp bằng trên phản, có án thư; học trò ngồi chiếu, viết trên án thư thấp.
+    - Khảo hạch: quan huyện khảo hạch tại huyện đường (thời Lê – Trịnh); học trò ngồi chiếu.
+    - Thi Hương: trường thi dựng tạm bằng tre nứa trên ruộng đã gặt; rào tre kín bao ngoài,
+      rào nứa thưa ngăn các vi, lối đi chữ thập, chòi canh, đuốc lớn ở cửa; sĩ tử ngồi lều, chõng.
+    - Thi Hội: ở kinh đô Thăng Long, trường thi như thi Hương nhưng lớn hơn (thêm chòi canh, lính canh).
+    - Thi Đình: sân rồng trước điện Kính Thiên – hai tầng mái đao cong, ngói vàng (hoàng lưu ly)
+      và xanh (thanh lưu ly), đầu rồng ở đầu bờ nóc, thềm bậc đá chạm rồng, lan can quanh sân,
+      quân lính cầm cờ, hai đại thần ngồi ghế có lọng, bàn để quyển–bút–nghiên;
+      cống sĩ ngồi lều gọng tre căng vải (theo ghi chép của Samuel Baron).
+18. Loại bỏ yếu tố Trung Hoa và chi tiết không có tư liệu: chữ Hán "魁" ở logo (đổi thành "KB"),
+    đèn lồng đỏ tròn, lưỡng long chầu nguyệt, đỉnh đồng, hạc đồng, chậu cây thế, thảm vàng,
+    biển chữ trên mái nhà; trong tranh vinh danh bỏ quạt, bổ tử và hoa văn tự thêm;
+    xóa cụm ký tự lỗi giống chữ Hán ở góc ảnh nền vinh_danh_bg.webp.
+Kiểm thử mới: npm run test:questions
+
+BỔ SUNG V5.5 – TRANH VINH DANH VUI MỪNG
+19. Bỏ tiếng reo hò khi vinh danh (giữ tiếng pháo và trống hội).
+20. Mọi nhân vật trong tranh đều cử động và vui mừng: mày nhướng, mắt cười, miệng cười tươi
+    (cười rung), chớp mắt; lính nhún nhảy theo nhịp khi rước cờ/biển/lọng/tàn;
+    quan Trạng một tay cầm cương, một tay giơ lên vẫy chào; ngựa phi, gật đầu, vẫy đuôi.
+21. Sửa lỗi nhân vật đứng yên trên máy Windows/Mac đang tắt hiệu ứng chuyển động
+    (chế độ "giảm chuyển động"): tranh vinh danh nay luôn chuyển động.
+
+BỔ SUNG V5.6 – BÀ CON CỔ VŨ
+22. Tranh vinh danh có đông bà con đứng phía sau đoàn rước cổ vũ (không phát tiếng):
+    phụ nữ áo tứ thân – yếm đỏ – khăn mỏ quạ – thắt lưng màu; đàn ông áo nâu khăn xếp;
+    cụ già râu bạc chống gậy; trẻ con để chỏm. Mọi người giơ tay hò reo, nhún nhảy.
+
+==================== V6 ====================
+23. ỔN ĐỊNH & QUY MÔ – đã kiểm thử tải thật (xem KET_QUA_KIEM_THU_TAI.txt, chạy lại: npm run test:load):
+    - 2.000 sĩ tử/phòng: 2.000/2.000 ghi danh trong 1,3 giây; đề tới mọi máy p95 ≈ 0,15 giây;
+      2.000/2.000 bài nộp được ghi nhận; RAM máy chủ ≈ 130 MB.
+    - 3.000 sĩ tử/phòng: đề tới mọi máy p95 ≈ 0,23 giây, RAM ≈ 145 MB.
+    - Cải tiến: mỗi lần phát trạng thái chỉ mã hóa dữ liệu chung 1 lần; xếp hạng dùng bảng tra;
+      cập nhật sĩ số/số bài nộp chỉ gửi MC + màn LED, tối đa 2–3 lần/giây; lưu dữ liệu không dồn ứ.
+    - Giới hạn mặc định mỗi phòng: 3.000 người (đổi bằng biến MAX_PLAYERS).
+    - LƯU Ý: kiểm thử chạy trên 1 máy chủ, mạng nội bộ. Với sự kiện 2.000 người nên dùng gói Render
+      trả phí (Starter trở lên, không dùng Free), bật DATABASE_URL, và tổ chức buổi chạy thử trước.
+24. DẠNG CÂU HỎI: câu 2, 3 hoặc 4 đáp án; câu Đúng/Sai (nút chọn nhanh trên màn MC).
+25. BÁO CÁO KẾT QUẢ: nút "📊 Tải báo cáo kết quả (Excel)" – xếp hạng, điểm, từng câu từng người
+    (chọn gì, đúng/sai, điểm, thời gian) và thống kê tỷ lệ đúng từng câu.
+26. NHẬP ĐỀ TỪ WORD / EXCEL (màn MC → Ngân hàng câu hỏi):
+    - Nhận .docx, .xlsx, .csv, .txt. Word: "Câu 1: …", "A. …", "Đáp án: B" hoặc tô đậm/gạch chân/
+      dấu * / "(đúng)" ở đáp án đúng; có thể dùng bảng. Excel: Câu hỏi | A | B | C | D | Đáp án | Thời gian | Chặng.
+    - Câu chưa ghi chặng: máy tự chấm độ khó (độ dài, số liệu/năm, câu phủ định "KHÔNG", câu hỏi
+      "vì sao"…) rồi chia đều vào 5 chặng từ dễ đến khó. Câu chưa ghi thời gian: tự đặt 10–60 giây.
+    - Xem trước, sửa chặng/thời gian từng câu, rồi chọn "Thêm vào bộ đề (giữ điểm)" hoặc
+      "Thay toàn bộ (đặt lại điểm)". Câu thiếu đáp án đúng được báo rõ, không bị đưa vào.
+    - Có tệp mẫu: /mau-cau-hoi.csv (Excel) và /mau-de-thi.docx (Word). Bộ đề tối đa 300 câu.
+27. VINH DANH: gần 100 bà con trong 4 hàng – phụ nữ áo tứ thân, yếm đỏ, khăn mỏ quạ hoặc nón quai thao;
+    chức sắc làng áo the thâm khăn xếp; đàn ông áo nâu; cụ già chống gậy; trẻ con để chỏm;
+    người đánh trống đeo. Ai cũng giơ tay hò reo, nhún nhảy; người đánh trống gõ trống.
+28. Màn vinh danh chỉnh khớp tranh Đông Hồ gốc: mũ chóp vàng nhạt (cờ, tàn), mũ vàng hai chỏm (biển),
+    búi tóc buộc dây (lọng), quần phồng bó ống, bỏ xà cạp và dấu ngực, áo quan Trạng có lớp lót trắng.
+    Đặc điểm từng nhân vật ghi trong DAC_DIEM_NHAN_VAT_VINH_QUY.txt.
+29. Màn vinh danh dùng CHÍNH NÉT VẼ tranh Đông Hồ "Vinh quy bái tổ": tách từng nhân vật khỏi nền giấy
+    (bỏ chữ Hán, phủ chữ Việt), cho cờ phất, biển–lọng–tàn đung đưa, người và ngựa nhún theo bước.
+    Bà con ~220 người vẽ theo nét Đông Hồ, đứng tại chỗ vỗ tay.
+30. Lính tranh Đông Hồ được "ghim" thành mẫu lính chung (public/assets/dongho/linh_*.webp) và dùng ở
+    mọi cảnh có lính trên màn LED (Khảo hạch, Thi Hương, Thi Hội, Thi Đình).
+
+=== V7 – NHÂN VẬT 3D + PHONG CẢNH LÀNG QUÊ (màn Vinh quy bái tổ) ===
+31. Nhân vật 3D (public/vq3d.js): bộ dựng hình WebGL tự viết, KHÔNG cần thư viện ngoài, không tải gì từ Internet.
+    - Đoàn rước giữ đúng trang phục đã ghim theo tranh Đông Hồ: lính cầm cờ "VINH QUY", lính cầm biển "TRẠNG NGUYÊN",
+      quan Trạng đội mũ cánh chuồn cưỡi ngựa đỏ son đuôi trắng, người che lọng vàng, lính cầm tàn "BÁI TỔ".
+    - Cử động mượt: bước chân, nhún người, quay đầu, dải thắt lưng bay, cờ gợn sóng, lọng xoay nhẹ, tua lọng đung đưa,
+      ngựa phi nước kiệu (4 chân gập khớp gối, cổ gật, đuôi phẩy), quan Trạng vẫy tay, cánh chuồn rung.
+    - Khoảng 150 bà con đứng tại chỗ vỗ tay (tay vỗ tính trên card đồ hoạ nên rất nhẹ), dạt hai bên đường làng.
+    - Biển tên Trạng nguyên tự bám theo đầu quan Trạng mỗi khung hình → không bao giờ che hay cắt mũ, mặt.
+    - Máy yếu: tự hạ độ phân giải sau ~1,5 giây nếu khung hình chậm. Máy không có WebGL: tự dùng lại bản tranh 2D.
+32. Phong cảnh làng quê Bắc Bộ phía sau (vinhquy.js → vqVillage): núi xa, đồng lúa, lũy tre làng, mái đình,
+    cây đa rễ phụ, hàng cau, nhà tranh vách đất, cò trắng bay; cổng làng dựng 3D ở cuối đường làng.
+    Tre, cau, tán đa đung đưa nhẹ; cò vỗ cánh. Không chữ Hán, không hoạ tiết ngoại lai.
+33. V7.1 – Nâng cấp mỹ thuật màn vinh danh:
+    - Ánh nắng chiều ấm + ĐỔ BÓNG THẬT (shadow map) theo hướng nắng; sương xa nhẹ cho chiều sâu. Máy yếu tự hạ độ phân giải rồi tắt bóng.
+    - Nhân vật chính tỉ lệ người thật (~6 đầu): áo cổ giao, vạt áo bay theo bước, thắt lưng bao thắt nút, quần lụa, xà cạp,
+      giày vải, tay áo thụng có khuỷu tay; mặt có lòng trắng mắt, lông mày, mũi, miệng cười, má hồng.
+    - Ngựa đỏ son vạm vỡ: bắp vai, mông, cổ cong có bờm bay, dây cương vàng, chùm tua đỏ ở hàm và ức, chăn yên xanh viền vàng
+      có tua đỏ, bàn đạp; đi nước kiệu bốn nhịp, gật đầu theo bước. Quan Trạng: áo bào xanh cổ giao vàng, đai, hia, vẫy tay cao.
+    - ~160 bà con nhiều tư thế: vỗ tay trước ngực, vỗ tay quá đầu, vẫy tay, giơ hai tay reo mừng, bố cõng con trên vai;
+      nhún nhảy, đung đưa; mắt cười/mắt tròn, miệng cười; áo tứ thân, yếm, khăn mỏ quạ, nón quai thao, nón lá, khăn xếp, khăn vấn.
+    - Bối cảnh 3D: đình làng (nền đá, hàng cột, mái ngói bốn mái), cây đa, hàng cau, khóm tre đung đưa, cây chuối tiền cảnh,
+      cờ đuôi nheo bay, đường làng đất nện viền cỏ, cỏ hoa dại; nền xa: núi, đồng lúa, lũy tre, nhà tranh, cò bay.
+34. V7.2 – Sửa lỗi nhân vật mất hình trên màn vinh danh khi cảnh được dựng lại lần thứ hai (bấm "Đốt pháo lại" hoặc màn LED
+    nhận dữ liệu mới): lính chỉ còn vạt áo, ngựa chỉ còn móng, quan mất đầu, biển chữ biến mất. Nguyên nhân: khối hình dùng chung
+    còn giữ bộ nhớ đồ hoạ của lần dựng trước. Nay mỗi lần dựng có bộ nhớ riêng, và lần dựng cũ được giải phóng hẳn.
+35. V7.3 – Thiết kế lại hai cụm lính cầm cờ hai bên bảng câu hỏi (Khảo hạch, Thi Hương, Thi Hội, Thi Đình):
+    - Vẽ vector SVG theo lớp (scene.js → scGuard/scGuardPair), thay hoàn toàn hình cắt từ tranh: đầu, thân, tay, chân rõ ràng,
+      tỉ lệ ~5,5 đầu; áo cổ giao viền hoa văn chấm, thắt lưng có tua, quần lụa, xà cạp, giày vải; nón chóp / khăn đỏ chít búi tóc.
+    - Hai bàn tay nắm thật vào cán (nắm tay vẽ đè lên cán, có ngón); cờ hiệu răng cưa thêu hoa sen, cờ đuôi nheo; cờ bay
+      trên đầu và ra phía ngoài, không che người, không che bảng câu hỏi và đồng hồ.
+    - Mỗi bên một cụm: lính cờ đuôi nheo (ngoài) + lính cờ hiệu (trong), đối xứng, cùng kích thước; đứng trên mép sân,
+      không bị cắt chân; dời chòi canh, đuốc, lan can, mây để có khoảng trống.
+    - Chuyển động mượt bằng SVG gốc: vải cờ uốn sóng liên tục, tua đầu cán và tua nón đung đưa, dải lưng bay,
+      người thở nhẹ (tay trượt dọc cán nên không bao giờ rời cán), đầu gật khẽ.
+36. V8 – HOẠT CẢNH RƯỚC TRẠNG NGUYÊN THEO TRANH DÂN GIAN (thay cảnh 3D):
+    - Bỏ phong cách 3D. Vẽ lại toàn bộ đoàn rước bằng SVG vector theo tinh thần tranh Đông Hồ "Vinh quy bái tổ": nét mực chắc,
+      mảng màu phẳng sạch, cách điệu dân gian (public/vinhquy_folk.js). Đoàn đi sang trái như tranh gốc:
+      lính cầm cờ VINH QUY → người cầm biển TRẠNG NGUYÊN → người dắt ngựa → Trạng nguyên cưỡi ngựa (trung tâm)
+      + người che lọng nghiêng cán che trên đầu quan → lính cầm tàn BÁI TỔ. Bà con đứng bên kia đường, không che đoàn.
+    - Mỗi bộ phận là một khớp riêng; bộ chạy hoạt cảnh (VQAnim) điều khiển từng khớp theo khung hình (requestAnimationFrame):
+      • Lính: hai chân bước luân phiên, thân nhún, vai xoay nhẹ, đầu gật, dải lưng và tua nón bay, hai tay luôn nắm cán.
+      • Cờ uốn sóng liên tục; biển và tàn lắc nhẹ theo bước, chữ vẫn rõ; lọng dao động nhẹ, tua lọng đung đưa.
+      • Ngựa đi bốn nhịp (sau trái, trước trái, sau phải, trước phải), gập gối khi nhấc chân, cổ gật theo bước,
+        bờm, đuôi, tua đỏ chuyển động; khi đứng: gật đầu, phẩy đuôi, vểnh tai.
+      • Trạng nguyên nhún theo ngựa, quay đầu chào hai bên, giơ tay chào khi vinh danh rồi hạ xuống; cánh chuồn rung.
+      • Bà con: vỗ tay, giơ hai tay reo mừng, vẫy tay, quay đầu nhìn theo Trạng nguyên, nhún theo nhịp, chớp mắt;
+        mỗi người lệch nhịp riêng; vỗ tay nhanh hơn khi vinh danh.
+      • Nhịp bước tính theo quãng đường đã đi nên chân không trượt; khi dừng, bước chân tắt dần về tư thế đứng.
+    - Diễn biến: trống hội, đoàn vào sân → tiến chậm qua sân đình → giảm tốc, dừng → vinh danh (bảng tên, pháo, giấy hoa,
+      Trạng giơ tay chào) → duy trì (mọi nhân vật vẫn cử động; Trạng chào lại định kỳ).
+    - Điều khiển: thanh điều khiển trên màn LED (hiện khi rê chuột) và khung "HOẠT CẢNH RƯỚC TRẠNG NGUYÊN" trên màn MC:
+      bắt đầu/phát lại, tạm dừng, tiếp tục, chuyển sang vinh danh, bật/tắt âm thanh LED, tốc độ 0.5×/1×/1.5×.
+      Máy chủ có lệnh mới "vq" chỉ chuyển tới màn LED (sĩ tử không gửi được). Kiểm thử: npm run test:vq.
+37. V9 – VẼ LẠI TẠO HÌNH NHÂN VẬT ĐOÀN RƯỚC (public/vinhquy_folk.js):
+    - Mỗi nhân vật được thiết kế ở khổ lớn rồi thu nhỏ: người cao 300 đơn vị (≈6–6,5 đầu), ngựa vai 205. Bám tranh gốc:
+      áo ngắn ngang đùi viền hoa văn, cổ giao, thắt lưng bao thắt nút; quần ống túm phồng, xà cạp, giày vải;
+      mặt trái xoan, mắt hạnh, lông mày cong, mũi nghiêng, môi đỏ, má hồng; cờ "VINH QUY" viền răng cưa đen như ngọn lửa.
+    - Phân biệt vai: lính (áo viền, xà cạp, nón chóp tua đỏ), người cầm biển (khăn vàng), người che lọng (búi tóc khăn đỏ),
+      người hầu dắt ngựa (áo nâu, khăn đen, không xà cạp), Trạng nguyên (mũ cánh chuồn, áo bào xanh lót vàng, đai khóa vàng, hia).
+    - Ngựa vẽ lại: cổ cong cao, bờm dựng nhọn như tranh, đầu thanh có dây cương vàng và tua đỏ, ngực sâu, mông tròn,
+      chân dài 2 đốt (đùi – ống) có khớp gối/khoeo, cổ chân trắng, móng đen; chăn yên vàng viền đỏ tua đỏ.
+    - Chuyển động bằng động học ngược: bàn chân người và móng ngựa đặt cố định trên đất khi chạm (60–62% chu kỳ),
+      nhấc lên theo đường cong; gối, khoeo tự gập → không trượt chân. Ngựa đi bốn nhịp; người cưỡi nhún trễ nửa nhịp.
+    - Trạng nguyên quay đầu khi đi, khi vinh danh giơ tay chào cao về phía trước (không che mặt) rồi hạ tay; chào lại định kỳ.
+    - Bản thiết kế tạo hình: ban_thiet_ke_tao_hinh.png (kèm gói bàn giao).
+38. V10 – CLIP VINH DANH 30 GIÂY + KHẢ NĂNG PHÁT PHIM 3D DỰNG SẴN:
+    - Hoạt cảnh có sẵn chạy theo kịch bản 30 giây: 0–5s toàn cảnh làng (cờ hội, bà con chờ đón, trống hội) → 5–20s đoàn rước
+      vào sân, máy quay lia theo ngựa, Trạng nguyên giơ tay chào giữa đường → ~20s dừng giữa sân, Trạng quay mặt nhìn thẳng
+      khán giả, bảng "VINH QUY BÁI TỔ · CHÚC MỪNG TRẠNG NGUYÊN · [tên] · [điểm]" hiện từ dữ liệu thật, pháo, giấy màu
+      → 26–30s máy quay đẩy cận Trạng nguyên (mặt nằm dưới bảng tên) → sau đó lùi về trung cảnh và duy trì.
+      Thêm: mặt nhìn thẳng của Trạng (mắt nâu, cười, chớp mắt), ánh nắng ấm + viền tối nhẹ, cờ hội trong làng.
+      LƯU Ý: đây là hoạt hình 2D vector (SVG) có máy quay và ánh sáng mô phỏng, KHÔNG phải hoạt hình 3D.
+    - Phát phim 3D dựng sẵn: đặt public/assets/vinhquy/vinh_quy.mp4 → màn LED tự phát hiện và phát phim thay hoạt cảnh,
+      lớp tên/điểm động chèn lên phim từ giây 20 (chỉnh bằng vinh_quy.json). Các nút MC điều khiển phim: phát lại,
+      tạm dừng, tiếp tục, tua tới vinh danh, bật/tắt tiếng, tốc độ. Máy chủ phục vụ video có tua (Range) và HEAD.
+      Kiểm thử: npm run test:video. Hướng dẫn sản xuất phim: HUONG_DAN_PHIM_VINH_DANH_3D.md.
+39. V11 – Sửa bố cục, nhân vật và thêm âm thanh lễ hội cho cảnh vinh danh:
+    - Bố cục 3 lớp rõ ràng: hậu cảnh (đình, cây đa, tre, cờ hội) – trung cảnh (bà con 2 hàng so le, mỗi người cách nhau đủ
+      để thấy rõ đầu và thân trên; trống hội, chiêng treo giá gỗ) – tiền cảnh (đoàn rước). Bà con được xếp chừa khoảng trống
+      đúng chỗ cờ, biển, tàn, lọng và đầu ngựa khi đoàn dừng → không còn người bị đạo cụ che mặt lúc vinh danh.
+    - Bảng tên nhỏ gọn hơn, nằm trên vòm trời; khi vinh danh máy quay giữ toàn cảnh nên bảng không đè lên đầu người, lọng;
+      cận cảnh cuối vừa phải (không cắt đầu, mất cờ).
+    - Đạo cụ hạ thấp cân đối (cờ, biển, tàn, lọng); Trạng nguyên: áo bào hoa văn kim tuyến, quầng sáng vàng khi vinh danh.
+    - ÂM THANH LỄ HỘI (tổng hợp trực tiếp, không cần tệp): trống cái, trống con, thanh la, chiêng, não bạt, sáo trúc,
+      vỗ tay, tiếng reo đám đông, pháo. Đồng bộ theo diễn biến (lưới 1/8 nhịp):
+      mở màn chiêng + trống dồn → điệu trống rước (trống – trống con – thanh la – não bạt) + giai điệu sáo ngũ cung
+      khi đoàn tiến → khi công bố: trống dồn, chiêng, não bạt, reo hò, vỗ tay rộn, pháo → giữ khung hình: điệu trống nhỏ
+      lại, sáo xen kẽ, vỗ tay thưa, chiêng điểm. Tạm dừng thì im, phát lại thì trống mở màn lại, tắt tiếng bằng nút Âm thanh.
+    - SỬA LỖI: các bản trước tiếng trống/pháo của cảnh vinh danh không phát trên màn LED (bộ âm thanh không gắn vào window).
+40. V12 – Sửa tận gốc lỗi rời đầu/rời tay + âm thanh trống múa lân:
+    - NGUYÊN NHÂN (đã đo trên trình duyệt): bộ chạy lưu "tư thế gốc" của mỗi khớp bằng cách đọc thuộc tính transform lúc
+      khởi tạo. Khi hoạt cảnh được khởi tạo lại trên cùng hình vẽ (nút Phát lại, MC bấm phát lại, xuất clip) nó đọc nhầm tư thế
+      đang xoay dở làm gốc → mỗi khung chồng 2 phép xoay, phép thứ hai quay quanh gốc tọa độ ở bàn chân (0,0) thay vì quanh cổ/vai
+      → đầu, tay văng khỏi thân (lệch tới ~58 đơn vị). SỬA: lưu tư thế gốc cố định một lần (data-base) từ hình vẽ ban đầu.
+    - KIỂM THỬ: bài kiểm tra khớp tự động (mỗi khung đo điểm cổ/vai/mắt sau khi xoay có trùng điểm khớp ở bộ phận cha; đo chuỗi
+      đùi→cẳng chân→bàn chân và chân ngựa): 120 khung × 3 lần phát lại: 0 lỗi (lệch 0,00; IK ≤ 0,013 đơn vị).
+      Kiểm tra ngược: tái tạo điều kiện lỗi cũ → bài kiểm tra báo lệch 58 đơn vị (bắt đúng lỗi).
+      Đoạn thử riêng 12 mẫu người dân × 4 động tác, 150 khung: 0 lỗi; vỗ tay: hai bàn tay chạm (hở 0) rồi tách ~14 px.
+    - Người dân: 4 kiểu nét mặt (cười híp, reo há miệng, mỉm cười hiền, ngạc nhiên vui); vỗ tay có nhịp chạm – tách rõ.
+    - Bố cục: bỏ khung trang trí dày, dây pháo và dòng chữ lặp ở đầu/cuối; cảnh chiếm ~93% bề ngang; một bảng tên duy nhất;
+      bỏ cú phóng cận cuối (từng cắt chân người, chân ngựa, người cầm cờ) – giữ toàn cảnh.
+    - ÂM THANH: bỏ toàn bộ tiếng tổng hợp của cảnh vinh danh (kể cả tiếng pháo khi chuyển sang pha vinh danh). Chỉ dùng bản thu
+      "Đánh Trống Múa Lân" do khách cung cấp: public/assets/vinhquy/trong_mua_lan.m4a (30 giây, nối tại phách trống, crossfade
+      50 ms, không kéo giãn, chuẩn hoá -16 LUFS, đỉnh ≤ -1,5 dBTP, giảm dần 1,8 s cuối; đoạn cao trào 18,4–22,3 s rơi vào lúc vinh danh).
+      Tạm dừng/tiếp tục/phát lại/tốc độ/tắt tiếng điều khiển cả hình và tiếng; phát lại dùng lại 1 thẻ audio nên không chồng tiếng;
+      MC "Vinh danh" sớm thì tua tới đoạn cao trào; thanh âm lượng trên màn LED và màn MC (lệnh "volume").
+41. V13 – Phim vinh danh 3D thật (thay cho hoạt cảnh 2D khi có phim):
+    - public/assets/vinhquy/vinh_quy.mp4: 1920×1080, 30 khung/giây, 30 giây, âm thanh chỉ là bản thu "Đánh Trống Múa Lân".
+      vinh_quy.json {"nameAt":20.3,"nameY":22}: thẻ tên (tên, điểm, số câu đúng của người đứng đầu – dữ liệu thật) hiện lúc ngựa dừng.
+    - Nhân vật 3D có khung xương + trọng số (glTF): Trạng nguyên (mũ cánh chuồn, áo bào xanh cổ chữ V viền vàng lót trắng, đai đỏ
+      khảm vàng, hia), ngựa hồng (bờm sẫm, đuôi trắng, cổ chân trắng, vải yên vàng viền đỏ, yên vàng, dàm vàng, ngù đỏ), 2 lính cầm cờ
+      VINH QUY, 2 người khiêng biển TRẠNG NGUYÊN, 2 người cầm tàn, người cầm lọng che Trạng, người dắt ngựa, người đánh trống cái,
+      26 dân làng (4 kiểu áo tứ thân, nam khăn xếp/nón lá, cụ già râu bạc, trẻ em) – đứng tại chỗ vỗ tay, quay đầu dõi theo đoàn.
+    - Cảnh 3D: đình làng (nền đá, cột gỗ, mái ngói cong đầu đao), sân gạch, đường đất, cây đa, khóm tre, cau, nhà tranh, đống rơm,
+      dây cờ ngũ sắc, cột cờ đuôi nheo; trời và núi xa là phông vẽ. Không chữ Hán, không hoạ tiết rồng/Trung Hoa.
+    - Chuyển động: người đi bằng IK chân (bàn chân không trượt khi chạm đất), tay cầm cán cờ/tàn/biển/lọng bằng IK nắm;
+      ngựa đi 4 nhịp (móng chạm đất cố định, cẳng gập khi nhấc, đầu gật, đuôi đung đưa); cờ bay bằng 6 xương;
+      người đánh trống gõ đúng các tiếng trống dò được từ bản thu; Trạng cười, vẫy tay, quay về khán giả, cuối cùng hạ tay, gật đầu.
+    - Kịch bản: 0–5 s làng chờ (toàn cảnh) · 5–12 s đoàn rước vào · 12–20 s qua sân, Trạng vẫy chào · 20–26 s dừng, quay 3/4 về khán giả,
+      hiện thẻ tên · 26–30 s đẩy vào cận cảnh. Đo bằng phép chiếu: từ 20 s, đỉnh mũ Trạng luôn thấp hơn 30% khung → thẻ tên không che mặt.
+    - SỬA LỖI: lệnh âm lượng của MC trước đây không tác dụng khi đang phát phim (chỉ áp cho hoạt cảnh) → nay áp cho phim.
+      Màn LED mở sau khi đã có kết quả: trước đây vẫn hiện hoạt cảnh 2D vì dò phim xong muộn → nay tự chuyển sang phim.
+    - KIỂM THỬ (đã chạy): test/test_vinhdanh_3d_v13.py (Chrome thật + máy chủ thật): phim 1920×1080 30 s phát khi có kết quả; tên thật;
+      không phát chồng âm thanh; thẻ tên ẩn trước 20,3 s; MC tạm dừng/tiếp tục/vinh danh (tua tới 20,3 s, thẻ hiện)/âm lượng/phát lại
+      (về 0, chỉ 1 phim, thẻ ẩn lại); mở LED muộn vẫn ra phim; không lỗi JavaScript. smoke-prod, test-vq-control-v8, test-video-v10 đạt.
+    - GIỚI HẠN (nói rõ): mô hình tạo bằng hàm khoảng cách + marching cubes (không dùng Blender); bàn tay không có xương ngón (nắm sẵn
+      hoặc xoè sẵn); skinning tuyến tính; vải áo, lọng, tàn không mô phỏng vật lý (đi theo xương); dựng bằng WebGL phần mềm trên CPU:
+      có bóng đổ mặt trời, không có chiếu sáng toàn cục/nhoè chuyển động/độ sâu trường ảnh; khử răng cưa bằng dựng 1,5× rồi thu nhỏ;
+      người ở xa dùng mô hình ít chi tiết; ngựa xoay tại chỗ 2,4 s nên móng hơi trượt lúc xoay; trời/núi xa là ảnh vẽ phẳng.
+42. V14 – Tính năng như Kahoot + sửa lỗi nhận/lưu bài (xem BAO_CAO_NGHIEM_THU_V14.md, HUONG_DAN_TINH_NANG_V14.md):
+    - Dạng câu: gõ câu trả lời, sắp xếp thứ tự, thăm dò, thanh trượt, đám mây từ (cùng trắc nghiệm, Đúng/Sai). Ô đáp án có màu + hình.
+    - Ảnh/video trong câu (tải lên hoặc link https/YouTube); chơi theo đội (điểm TB); tự làm bài có hạn nộp; thưởng chuỗi;
+      mời rời / chặn tên / khoá phòng / tự lọc tên phản cảm; kho đề dùng lại + Admin chia sẻ; QR tự tạo (không cần Internet);
+      tự công bố đáp án khi mọi người đã nộp.
+    - SỬA LỖI A: tin trả lời có mã kỳ thi + mã câu + mã lần gửi; bài thuộc câu/kỳ thi đã đóng bị từ chối rõ ràng.
+    - SỬA LỖI B: chỉ báo "đã lưu bài nộp" sau khi ghi bền vào nhật ký ghi trước (fsync / PostgreSQL); khởi động lại phát lại nhật ký.
+    - Máy chủ khởi động lại giữa câu: câu tiếp tục, bù thời gian gián đoạn. Giữ kín đúng/sai/điểm khi câu còn chạy.
+    - Kết nối: nối lại có khoảng chờ tăng dần + ngẫu nhiên; 2 tab không đẩy nhau; ping 15 s; đóng WebSocket đúng chuẩn;
+      giới hạn phòng (MAX_PLAYERS) tách giới hạn toàn máy chủ (MAX_ONLINE); MC nhận gói số liệu nhỏ thay vì cả danh sách.
+    - ĐO (1 máy, 2 nhân): 3 phòng 2.000+500+500, nộp dồn sát giờ, 1.753 lượt rớt mạng – vào lại: 9.000/9.000 bài lưu,
+      0 sai lệch số câu đúng, 3.000/3.000 đóng kết nối đúng chuẩn. Chưa nghiệm thu trên máy chủ/DB/Wi-Fi thật.

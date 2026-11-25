@@ -1,0 +1,9 @@
+== Nhiều phòng đồng thời: 6000 + 2000 + 1000 = 9000 kết nối · 3 câu/phòng · 12 giây/câu · 2 tiến trình server.js sau 1 bộ định tuyến · máy thử 2 nhân, 8 GB RAM ==
+Ghi danh: 9000/9000 trong 13.3 giây · RAM 393 MB
+Câu 1: 9000 bài được xác nhận · phản hồi p50 9 ms, p95 37 ms, tối đa 192 ms · RAM 497 MB
+Câu 2: 9000 bài được xác nhận · phản hồi p50 10 ms, p95 59 ms, tối đa 242 ms · RAM 549 MB
+Câu 3: 9000 bài được xác nhận · phản hồi p50 9 ms, p95 54 ms, tối đa 316 ms · RAM 560 MB
+Tổng: gửi 27000 bài, máy chủ xác nhận đã lưu 27000, từ chối vì quá giờ 0 · 5468 lượt mất mạng – nối lại
+Độ chính xác: 9000/9000 người có số câu đúng khớp tuyệt đối với bài đã xác nhận · 0 sai lệch
+Đóng kết nối: 9000 đúng chuẩn · 0 lỗi
+Máy chủ vẫn hoạt động: CÓ

@@ -1,0 +1,75 @@
+ĐẶC ĐIỂM NHÂN VẬT – MÀN VINH DANH "VINH QUY BÁI TỔ"
+(Ghi theo tranh dân gian Đông Hồ "Vinh quy bái tổ" – đối chiếu 2 bản tranh khách hàng cung cấp.
+Dùng làm chuẩn khi chỉnh sửa màn vinh danh. Chữ Hán trên tranh gốc được thay bằng chữ Việt theo yêu cầu.)
+
+BỐ CỤC (từ trái sang phải, đoàn rước đi về bên trái – đầu ngựa quay trái)
+ 1. Người cầm cờ  2. Người cầm biển  3. Quan Trạng cưỡi ngựa  4. Người che lọng  5. Người cầm tàn
+ Nền giấy dó trắng ngà, khung viền đen; giữa dưới chân ngựa có ụ đất đỏ, vài khóm cây cỏ xanh.
+ Màu tranh: đỏ son, vàng, xanh lục, hồng, xám, đen – nét viền đen đậm, mảng màu phẳng.
+
+1. NGƯỜI CẦM CỜ (ngoài cùng bên trái)
+ - Áo: vàng, ngắn ngang đùi, viền đỏ/nâu, thắt lưng đỏ.
+ - Quần: xanh lục, ống phồng, bó ở cổ chân. Giày đen.
+ - Đầu: mũ chóp nhỏ màu vàng nhạt có vành.
+ - Tư thế: hai tay giơ cao cán cờ.
+ - Cờ: nền hồng, viền xanh lục và vàng, mép trên và mép phải có tua lửa màu đen,
+   góc trên có dải lụa vàng bay. (Bản UDIKA: chữ "VINH QUY".)
+
+2. NGƯỜI CẦM BIỂN
+ - Áo: xanh lục, viền vàng, đai lưng vàng buông mối.
+ - Quần: hồng, ống phồng bó cổ chân. Giày đen.
+ - Đầu: mũ vàng có hai chỏm, tóc/dải mũ xõa hai bên má.
+ - Tư thế: tay cầm cán biển giơ cao trước người, mặt tròn, tươi cười.
+ - Biển: khung đỏ, lòng vàng/trắng, có mũ biển nhỏ phía trên. (Tranh gốc: hai chữ "Tiến sĩ";
+   bản UDIKA: "CHÚC MỪNG TRẠNG NGUYÊN".)
+
+3. QUAN TRẠNG CƯỠI NGỰA (giữa tranh)
+ - Mũ: mũ đen có vành, hai cánh ngang (mũ cánh chuồn).
+ - Áo: xanh lục, cổ áo vàng hình chữ V, ống tay viền vàng; dưới vạt có lớp áo lót trắng.
+ - Tư thế: ngồi trên yên vàng, tay cầm cương. (Bản UDIKA thêm: một tay vẫy chào – cử động.)
+ - Bảng tên: tên Trạng nguyên hiển thị trên cuốn thư phía trên đầu (yêu cầu của UDIKA).
+ - Ngựa: màu đỏ son/nâu đỏ, đầu quay trái, cổ cong, một chân trước co lên khi bước;
+   dây cương, yên và đai yên màu vàng; đuôi trắng có sọc nét đen.
+
+4. NGƯỜI CHE LỌNG
+ - Áo: đỏ son, dài ngang đùi, thắt lưng vàng buông hai mối dài.
+ - Quần: xám, ống phồng bó cổ chân. Giày đen.
+ - Đầu: không đội mũ – búi tóc đen trên đỉnh đầu, buộc dây.
+ - Tư thế: hai tay giơ cao cán lọng.
+ - Lọng: tán tròn vàng, đỉnh có núm, hai bên rủ hai quả tua đỏ (hình quả ớt).
+
+5. NGƯỜI CẦM TÀN (ngoài cùng bên phải)
+ - Áo: xanh lục, viền đỏ.
+ - Quần: vàng, ống phồng bó cổ chân. Giày đen.
+ - Đầu: mũ chóp nhỏ màu vàng nhạt có vành (như người cầm cờ).
+ - Tư thế: hai tay ôm cán tàn trước ngực.
+ - Tàn: hình trụ, đỉnh có núm; dải đỏ ở trên, giữa xanh lục, dưới là tua vàng dài;
+   hai dải lụa hồng rủ hai bên. (Bản UDIKA: chữ "BÁI TỔ".)
+
+HÌNH NHÂN VẬT ĐÃ GHIM (dùng chung toàn hệ thống) – thư mục public/assets/dongho/
+ Tách trực tiếp từ tranh Đông Hồ "Vinh quy bái tổ" (nền giấy đã bỏ, chữ Hán đã xóa/che):
+ - linh_co.webp   : LÍNH CẦM CỜ (áo vàng, quần xanh lục, mũ chóp vàng nhạt) – mẫu lính chính
+ - linh_tan.webp  : LÍNH CẦM TÀN (áo xanh lục, quần vàng, mũ chóp vàng nhạt) – mẫu lính chính
+ - linh_long.webp : NGƯỜI CHE LỌNG (áo đỏ son, quần xám, búi tóc)
+ - Mảnh rời để cử động trong màn vinh danh: co, linh1, bien, linh2, ngua (quan Trạng + ngựa),
+   long, linh4, tan, linh5, dat (ụ đất). Vị trí từng mảnh trong meta.json.
+ Nơi đang dùng lính tranh Đông Hồ:
+ - Màn vinh danh "Vinh quy bái tổ" (toàn bộ đoàn rước).
+ - Màn LED các kỳ: Khảo hạch (huyện đường), Thi Hương, Thi Hội (trường thi), Thi Đình (sân rồng –
+   quân lính cầm cờ theo nghi thức). Hàm dùng chung: scSoldier(x, y, chiều cao, 'linh_co'|'linh_tan'|'linh_long', lật).
+
+PHẦN THÊM CỦA UDIKA (không có trong tranh gốc – để màn hình sinh động)
+ - Bà con làng xã đứng phía sau (khoảng 220 người, 7 hàng) vẽ theo nét tranh Đông Hồ
+   (đầu nhỏ, mặt tròn trắng, nét viền đen, màu phẳng): phụ nữ áo tứ thân, yếm đỏ, khăn mỏ quạ
+   hoặc nón quai thao; chức sắc áo the thâm khăn xếp; đàn ông áo nâu búi tóc; cụ già râu bạc;
+   trẻ con để chỏm. Tất cả ĐỨNG TẠI CHỖ VỖ TAY.
+ - Pháo dây hai bên khung tranh nổ, hoa giấy rơi; tiếng pháo nổ và trống hội
+   (tiếng reo hò đã bỏ theo yêu cầu).
+ - Cử động (trên chính hình tranh): người khiêng nhún theo bước đi; ngựa và quan Trạng nhún
+   nghiêng theo nước kiệu; cờ phất; biển, lọng, tàn đung đưa; bà con vỗ tay.
+
+=== BẢN 3D (V7) – public/vq3d.js ===
+Các nhân vật trên được dựng lại bằng khối 3D tô màu phẳng, viền mực như nét khắc gỗ, giữ nguyên bảng màu và trang phục ở trên.
+Hàm dựng: makeWalker({tunic,pants,trim,belt,hat}) – người đi bộ cầm cán; mũ: nonchop (chóp vàng nhạt), muhaitai (mũ vàng hai chỏm),
+bui (búi tóc buộc khăn đỏ), canhchuon (mũ cánh chuồn quan Trạng); makeHorse(), makeRider(); bà con: moquat, khan, quaithao, chom.
+Bật cảnh: VQ3D.start(canvas,{onAnchor(fx,fy){...}}) – trả về {stop}. Màn LED gọi qua mountVinhQuy3D(#vinhQuy).

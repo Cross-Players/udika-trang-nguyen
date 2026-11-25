@@ -1,0 +1,160 @@
+[
+ {
+  "stage": 0,
+  "kind": "mc",
+  "q": "Khoa thi Nho học đầu tiên của nước ta được tổ chức năm nào?",
+  "a": [
+   "1070",
+   "1075",
+   "1076",
+   "1247"
+  ],
+  "c": 1,
+  "t": 20,
+  "note": "Năm 1075, đời vua Lý Nhân Tông, mở khoa thi Minh kinh bác học; Lê Văn Thịnh đỗ đầu."
+ },
+ {
+  "stage": 0,
+  "kind": "mc",
+  "q": "Văn Miếu ở Thăng Long được xây dựng năm nào?",
+  "a": [
+   "1070",
+   "1075",
+   "1076",
+   "1484"
+  ],
+  "c": 0,
+  "t": 20,
+  "note": "Văn Miếu được xây năm 1070, đời vua Lý Thánh Tông."
+ },
+ {
+  "stage": 1,
+  "kind": "mc",
+  "q": "Quốc Tử Giám – được coi là trường đại học đầu tiên của nước ta – được lập năm nào?",
+  "a": [
+   "1070",
+   "1076",
+   "1253",
+   "1442"
+  ],
+  "c": 1,
+  "t": 20,
+  "note": "Quốc Tử Giám được lập năm 1076, đời vua Lý Nhân Tông."
+ },
+ {
+  "stage": 1,
+  "kind": "order",
+  "q": "Xếp các kỳ thi theo đúng trình tự sĩ tử phải trải qua",
+  "a": [
+   "Thi Hương",
+   "Thi Hội",
+   "Thi Đình"
+  ],
+  "t": 25,
+  "note": "Đỗ thi Hương mới được dự thi Hội; đỗ thi Hội mới vào thi Đình."
+ },
+ {
+  "stage": 2,
+  "kind": "mc",
+  "q": "Người đỗ đầu kỳ thi Hương được gọi là gì?",
+  "a": [
+   "Hội nguyên",
+   "Giải nguyên",
+   "Đình nguyên",
+   "Trạng nguyên"
+  ],
+  "c": 1,
+  "t": 20,
+  "note": "Đỗ đầu thi Hương là Giải nguyên; đỗ đầu thi Hội là Hội nguyên."
+ },
+ {
+  "stage": 2,
+  "kind": "multi",
+  "q": "Những danh hiệu nào thuộc nhóm Tam khôi?",
+  "a": [
+   "Trạng nguyên",
+   "Bảng nhãn",
+   "Thám hoa",
+   "Hoàng giáp"
+  ],
+  "cs": [
+   0,
+   1,
+   2
+  ],
+  "t": 25,
+  "note": "Tam khôi là ba người đỗ đầu thi Đình: Trạng nguyên, Bảng nhãn, Thám hoa."
+ },
+ {
+  "stage": 3,
+  "kind": "order",
+  "q": "Xếp các danh hiệu tiến sĩ từ cao xuống thấp",
+  "a": [
+   "Trạng nguyên",
+   "Bảng nhãn",
+   "Thám hoa",
+   "Hoàng giáp"
+  ],
+  "t": 30,
+  "note": "Đệ nhất giáp gồm Tam khôi: Trạng nguyên, Bảng nhãn, Thám hoa. Hoàng giáp là danh hiệu của người đỗ Đệ nhị giáp tiến sĩ xuất thân, xếp sau Tam khôi."
+ },
+ {
+  "stage": 3,
+  "kind": "number",
+  "q": "Năm nào vua Lê Thánh Tông cho dựng tấm bia tiến sĩ đầu tiên ở Văn Miếu?",
+  "c": 1484,
+  "tol": 0,
+  "unit": "",
+  "t": 25,
+  "note": "Năm 1484 vua Lê Thánh Tông cho dựng bia tiến sĩ, bắt đầu từ khoa thi năm 1442."
+ },
+ {
+  "stage": 3,
+  "kind": "number",
+  "q": "Hiện nay Văn Miếu – Quốc Tử Giám còn bao nhiêu tấm bia tiến sĩ?",
+  "c": 82,
+  "tol": 0,
+  "unit": "bia",
+  "t": 25,
+  "note": "82 bia tiến sĩ, được UNESCO ghi danh là Di sản tư liệu thế giới năm 2010."
+ },
+ {
+  "stage": 4,
+  "kind": "type",
+  "q": "Kỳ thi do nhà vua trực tiếp ra đề và xếp hạng các tiến sĩ gọi là thi gì?",
+  "acc": [
+   "Thi Đình",
+   "Đình thí"
+  ],
+  "t": 25,
+  "note": "Thi Đình (Đình thí) tổ chức ở sân điện của nhà vua."
+ },
+ {
+  "stage": 4,
+  "kind": "mc",
+  "q": "Ai được sử sách ghi là Trạng nguyên nhỏ tuổi nhất, đỗ năm 13 tuổi?",
+  "a": [
+   "Mạc Đĩnh Chi",
+   "Nguyễn Hiền",
+   "Lương Thế Vinh",
+   "Nguyễn Bỉnh Khiêm"
+  ],
+  "c": 1,
+  "t": 20,
+  "note": "Nguyễn Hiền đỗ Trạng nguyên khoa năm 1247, đời Trần Thái Tông, khi 13 tuổi."
+ },
+ {
+  "stage": 4,
+  "kind": "mc",
+  "q": "Khoa thi Hội cuối cùng của chế độ khoa cử Nho học ở nước ta diễn ra năm nào?",
+  "a": [
+   "1884",
+   "1905",
+   "1915",
+   "1919"
+  ],
+  "c": 3,
+  "t": 20,
+  "note": "Năm 1919, đời vua Khải Định, khoa thi Hội cuối cùng được tổ chức tại Huế."
+ }
+]

@@ -1,0 +1,18 @@
+== UDIKA kiểm thử tải: 6000 sĩ tử trong 1 phòng, 3 câu · 1 tiến trình server.js · máy thử 2 nhân CPU, 8 GB RAM, Node v22.23.5 ==
+Ghi danh: 6000/6000 thành công trong 25.2 giây · RAM máy chủ 137 MB
+Màn LED thấy sĩ số: 6000
+Câu 1: đề tới 6000/6000 máy · độ trễ p50 164 ms, p95 222 ms, tối đa 226 ms
+  Nộp bài: 6000/6000 được ghi nhận · phản hồi p50 7 ms, p95 17 ms · trong 4.0 giây
+  MC thấy đã nộp: 6000/6000 · trực tuyến 6000/6000
+  Công bố: tới 6000/6000 máy · p95 315 ms · RAM 142 MB · CPU tích lũy 00:00:25
+Câu 2: đề tới 6000/6000 máy · độ trễ p50 117 ms, p95 173 ms, tối đa 178 ms
+  Nộp bài: 6000/6000 được ghi nhận · phản hồi p50 8 ms, p95 17 ms · trong 4.0 giây
+  MC thấy đã nộp: 6000/6000 · trực tuyến 6000/6000
+  Công bố: tới 6000/6000 máy · p95 376 ms · RAM 164 MB · CPU tích lũy 00:00:26
+Câu 3: đề tới 6000/6000 máy · độ trễ p50 142 ms, p95 216 ms, tối đa 222 ms
+  Nộp bài: 6000/6000 được ghi nhận · phản hồi p50 8 ms, p95 35 ms · trong 4.0 giây
+  MC thấy đã nộp: 6000/6000 · trực tuyến 6000/6000
+  Công bố: tới 6000/6000 máy · p95 220 ms · RAM 182 MB · CPU tích lũy 00:00:28
+Độ chính xác: 6000/6000 sĩ tử có số câu đúng khớp tuyệt đối với câu trả lời đã gửi · 0 sai lệch
+Đóng kết nối: 6000/6000 đóng đúng chuẩn (mã 1000) · 0 lỗi đóng
+Bảng vàng: hạng 1 Sĩ tử 759 – 3255 điểm. Máy chủ vẫn hoạt động: CÓ

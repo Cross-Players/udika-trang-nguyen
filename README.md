@@ -1,76 +1,131 @@
-# UDIKA GAME HUB – KHOA BẢNG REALTIME V3
+# UDIKA KHOA BẢNG – “AI LÀ TRẠNG NGUYÊN?” · V15
 
-**Bản cập nhật cho dự án `udikavietnam-code/trangnguyenudika` trên Render.**
+Gameshow tri thức thời gian thực cho sự kiện, trường học và team building. Phong cách tương tự Kahoot, sân khấu theo chủ đề khoa cử Việt Nam.
 
-Hệ thống hiện gồm: `/admin` (Admin UDIKA), `/host` (MC được phân quyền), `/join` (sĩ tử), `/led` (trường thi & bảng vàng). Không sử dụng mã PIN dành cho người chơi để cấp quyền MC.
+| Trang | Dành cho |
+|---|---|
+| `/` | Trang chủ: nhập mã phòng 6 số → ghi danh |
+| `/join?pin=…` | Sĩ tử trả lời trên điện thoại |
+| `/host?pin=…` | MC điều khiển (đăng nhập bằng mã phòng + tài khoản MC) |
+| `/led?pin=…` | Màn LED / máy chiếu (`?clean=1` để vào thẳng chế độ sân khấu, `&label=LED trái` để đặt tên) |
+| `/admin` | Admin UDIKA: tạo phòng, cấp MC, kho đề, tải báo cáo |
 
-## Chức năng đã triển khai trong gói V3
+## Có gì trong V15
 
-- Một website, nhiều phòng thi độc lập; mỗi phòng có bộ đề, số điểm và MC riêng.
-- Admin dùng mật khẩu tổng; tạo phòng, cấp tài khoản MC và thay đổi MC phụ trách.
-- MC đăng nhập bằng **PIN phòng + tên tài khoản + mật khẩu**, máy chủ kiểm tra quyền ở mọi lệnh điều khiển.
-- MC mở câu, kết thúc, xướng bảng vàng và sang câu tiếp; chỉnh câu hỏi, đáp án, thời gian 5–120 giây.
-- Người chơi vào bằng link/PIN, trả lời và được chấm điểm bằng thời gian máy chủ; câu đã nộp không được nộp lại.
-- Khôi phục trên **cùng thiết bị và cùng trình duyệt**, nhờ mã phiên lưu tại localStorage (dùng lại link chứa PIN); giữ đáp án, điểm và trạng thái. **Chưa có luồng khôi phục xác thực khi chuyển sang thiết bị khác.**
-- Chuyển chặng tự động khi hết một nhóm câu; màn LED và điện thoại hiển thị thông báo chúc mừng phù hợp kết quả.
-- Khi hết kỳ thi, LED phong danh Trạng nguyên/Bảng nhãn/Thám hoa kèm tên người chơi thật và minh họa mũ, áo cổ phong cách điệu.
-- Admin xem số người, trạng thái mỗi phòng, đổi tài khoản MC và tải kết quả CSV.
-- Có thể lưu bền vững vào PostgreSQL nếu cấu hình `DATABASE_URL`; nếu không có, dùng file JSON cục bộ **không bền vững trên Render Free**.
-- Có bảo vệ cookie phiên HttpOnly/SameSite, kiểm tra Origin, giới hạn đăng nhập, và mã PIN không mang quyền quản trị.
+- **Bán cho khách tự vận hành.**
+  - UDIKA cấp tài khoản khách ở `/admin`, kèm gói: số phòng cùng lúc, số sĩ tử mỗi phòng, hạn dùng.
+  - Khách tự tạo phòng, cấp và thu hồi MC, dùng kho đề riêng, tải báo cáo, lưu trữ phòng ở `/khach`.
+  - Máy chủ kiểm mọi hạn mức; dữ liệu giữa các khách tách biệt.
+  - Hướng dẫn cho khách: `HUONG_DAN_KHACH_TU_VAN_HANH.md`.
+  - **Thanh toán tự động**: khách chọn gói → mã **VietQR** (chuyển khoản; SePay/Casso báo có → tự gia hạn), hoặc **VNPAY**, **MoMo**. Admin xác nhận tay khi khách chuyển sai nội dung. Khách **tự đăng ký** (dùng thử) và **tự đổi mật khẩu**.
+- **Chương trình liên hoàn** (team building nhiều hoạt động): đội, hoạt động có hệ số, **trọng tài chấm trên điện thoại** (`/trongtai`), sửa điểm phải ghi lý do, khoá điểm, nhập điểm đội từ phòng quiz, **bảng tổng trên LED** (`/bangdiem?ma=…`), báo cáo CSV.
+- **Chạy mạng nội bộ (LAN)** không cần Internet: `npm run lan`. **Trang tự kiểm tra máy** `/kiem-tra` (mạng, độ trễ, âm thanh, gõ tiếng Việt, trình duyệt trong Zalo/Facebook) – kết quả về màn MC.
+- **Màn LED tải lại trang giữa phim vinh danh thì chạy tiếp đúng chỗ**, không chiếu lại từ đầu.
 
-## QUAN TRỌNG: Không phải bản đã được chứng nhận 2.000 người
+- **Giao diện "Trạng nguyên dân gian"** (`public/dan-gian.css`): nền sơn mài + mặt trống đồng chìm, khung gỗ sơn son thếp vàng, diềm răng cưa, thẻ giấy dó, nút vàng lá, ô đáp án kiểu tranh khắc gỗ – giữ nguyên bố cục và thao tác.
+- **10 hình thức trả lời** (đợt 6, xem `HUONG_DAN_HINH_THUC_TRA_LOI.md`): thêm **Điền ô chữ**, **Ghép cặp**, **Đúng – Sai**, **Chọn hình ảnh** riêng; trắc nghiệm tới 6 phương án, sắp xếp tới 8 mục; ước lượng **càng gần càng nhiều điểm**; bình chọn **giữ kín tới khi MC công bố**; **MC duyệt tay** câu viết; cơ chế điểm **riêng từng câu** (×3, điểm tối đa, tốc độ / cố định, không thưởng chuỗi, **câu quyết định khi bằng điểm**, giữ bảng xếp hạng, hiệu ứng **vượt hạng**); **👁 Xem trước** câu hỏi trên điện thoại & LED trước khi lưu; 11 câu mẫu trò chơi. Bộ đề cũ không đổi.
+- **Dạng câu hỏi**
+  - Trắc nghiệm một đáp án, gồm Đúng/Sai.
+  - **Chọn nhiều đáp án**, có nút Nộp. Chấm "đủ và đúng tập", hoặc bật chấm một phần.
+  - Gõ đáp án chữ: mặc định giữ dấu tiếng Việt; tuỳ chọn không dấu, hoa/thường, dấu câu.
+  - **Nhập số**: có đơn vị và sai số; chuỗi mơ hồ như `1,000` bị từ chối.
+  - Sắp xếp 3–6 mục bằng nút ▲▼, bàn phím, hoặc **kéo thả bằng chuột / ngón tay**.
+  - Khảo sát một hoặc nhiều lựa chọn; thanh trượt; đám mây từ.
+- **Media**
+  - Ảnh câu hỏi (chạm để phóng to), **phương án là ảnh** (lưới 2×2 trên điện thoại).
+  - Khung **chèn ảnh** ngay dưới câu hỏi: chọn tệp, kéo thả, dán Ctrl+V.
+  - **Nhập luôn ảnh có sẵn trong Word/Excel** (có tệp mẫu).
+  - Video MP4/WEBM, YouTube, **âm thanh MP3/M4A/OGG/WAV**.
+  - Chọn đoạn phát và nơi phát (chỉ LED, hoặc LED + điện thoại).
+  - Mặc định **phát xong trên LED mới mở lượt trả lời**.
+- **Luật điểm** (công bố trước khi thi)
+  - Chế độ Tốc độ hoặc **Chính xác**; chế độ **Tự tin** (cược ±50/75/100); hệ số ×0, ×1, ×2.
+  - Thưởng chuỗi; luật đồng hạng; điều kiện được vinh danh.
+- **Vận hành**
+  - Một luồng thống nhất: Mở câu → (phát clip) → Khoá & công bố → Tổng kết chặng / Xướng danh → Câu tiếp.
+  - Gia hạn không làm đổi thang điểm.
+  - Mỗi sĩ tử thấy hạng riêng. Lịch sử kỳ thi được lưu trước khi đặt lại.
+  - Bản nháp đề có kiểm tra phiên bản; khoá bộ đề đã duyệt; nút kiểm tra đề trước khi chạy.
+  - **Ghi danh có kiểm soát**: duyệt tên, danh sách dự kiến (mã dự thi + họ tên), chỉ nhận người trong danh sách, không nhận người vào muộn.
+  - **Chơi thử một mình với đối thủ ảo** (`/practice`) – điểm không tính vào kỳ thi.
+- **Màn LED**
+  - Báo cho MC trạng thái thật: có tiếng hay bị trình duyệt chặn, phim đã tải bao nhiêu %. Từng lệnh được LED xác nhận.
+  - Tải sẵn phim, thử tiếng, tổng duyệt vinh danh với tên mẫu.
+  - Chế độ sân khấu; QR cỡ lớn khi chờ sĩ tử.
+  - Phòng đông: 60 sĩ tử có tên ở sân trước (người mới vào / người dẫn đầu) + "biển sĩ tử" mỗi người một bóng phía sau.
+- **Giao diện** điện thoại, MC, LED cùng tông xanh ngọc – ngà – vàng với trang chủ.
+- **Không mất bài**
+  - Đáp án được ghi nhật ký trước khi báo "đã nhận"; mỗi bài gắn mã câu và mã kỳ thi.
+  - Gửi lại không bị tính trùng.
+  - Khởi động lại máy chủ vẫn giữ câu đang mở và bù thời gian.
+- **Chống lộ đề & công bằng**
+  - Điện thoại/LED không nhận đáp án trước khi công bố; bài tự làm giữ kín kết quả tới khi đóng bài; chống bot ghi danh dồn dập.
+  - MC tự mở bảng điểm và xướng danh; luật điểm theo từng vòng; báo cáo ghi rõ lý do lỡ câu (không trả lời / mất kết nối / gửi trễ).
+- **Quy mô**
+  - Mỗi phòng tối đa **6.000** người.
+  - `router.js` chia phòng cho nhiều tiến trình hoặc nhiều máy để mở rộng ngang. Xem `KIEN_TRUC_MO_RONG_1_TRIEU.md`.
+- **Font** tự lưu trữ, đủ dấu tiếng Việt (Montserrat, Lora); không phụ thuộc Google Fonts.
 
-Gói này là **production-oriented pilot**, triển khai được lên web và có kiểm thử chức năng. Mặc định `MAX_PLAYERS=300`, `MAX_ROOMS=30`. Các bài thử đã xác minh hai phòng độc lập và hai sĩ tử; **chưa có load test 2.000 người, chưa có nhiều máy chủ/Redis adapter, chưa có giám sát tải hoặc bằng chứng SLA**. Không sử dụng để trao giải lớn trước khi bổ sung giám sát, cơ chế phân định đồng hạng, thử tải và vận hành dự phòng.
+## Triển khai trên VPS (Docker + Caddy)
 
-## Triển khai Render an toàn
+```bash
+cp .env.example .env          # đặt ADMIN_PASSWORD (≥12 ký tự), SESSION_SECRET (≥24 ký tự), DATABASE_URL (khuyến nghị)
+sudo cp deploy/sysctl-udika.conf /etc/sysctl.d/99-udika.conf && sudo sysctl --system
+docker compose -f docker-compose.portable.yml up -d --build  # máy chủ bất kỳ: Caddy tự cấp HTTPS (xem đầu tệp)
+# docker compose up -d --build   # chỉ dùng trên VPS gdata (mạng ragre_default có sẵn Caddy)
+curl -s https://<tên-miền>/health
+```
 
-1. **Sao lưu** mã nguồn/ kết quả và chụp lại cấu hình website hiện tại. Nên deploy thử vào Web Service mới thay vì ghi đè website khách đang dùng.
-2. Giải nén gói ZIP và đưa các file **bên trong** `UDIKA_KHOA_BANG_REALTIME` vào đúng thư mục `UDIKA_KHOA_BANG_REALTIME/` của repo GitHub. `server.js`, `package.json`, `questions.json`, `public/` phải cùng tầng trong thư mục này.
-3. Render Web Service Node, Branch `main`, Root Directory `UDIKA_KHOA_BANG_REALTIME`, Build `npm install`, Start `npm start`, Region Singapore.
-4. Vào Render → **Environment** và tạo các biến **bắt buộc**:
-   - `ADMIN_PASSWORD` = mật khẩu mạnh tự đặt, **ít nhất 12 ký tự**; không dùng tên công ty hay giá trị trong tài liệu.
-   - `SESSION_SECRET` = chuỗi ngẫu nhiên, **ít nhất 24 ký tự**, không được chia sẻ hoặc đưa vào GitHub.
-5. Nên tạo Render PostgreSQL, đặt `DATABASE_URL` là **Internal Database URL**. Không dán URL có thông tin kết nối lên GitHub/ChatGPT; nhập trực tiếp trong Render Environment. Nếu Render yêu cầu SSL dùng `DATABASE_SSL=require` (chỉ cho kết nối yêu cầu SSL).
-6. Tùy thử tải có thể đặt `MAX_PLAYERS=300`, `MAX_ROOMS=30`; **không tăng lên 2000** để coi như đã kiểm thử.
-7. Deploy, kiểm tra `https://<domain>/health`, `/admin`, `/host`, `/join`, `/led`.
-8. Vào `/admin` đăng nhập bằng `ADMIN_PASSWORD`, tạo sự kiện và tài khoản MC. Gửi MC mã phòng + tên tài khoản + mật khẩu bằng kênh riêng; người chơi chỉ nhận link `/join?pin=XXXXXX`. MC mở `/host?pin=XXXXXX`, màn LED mở `/led?pin=XXXXXX`.
-9. **Trên Render Free**, khi máy chủ ngủ/khởi động lại, PostgreSQL giữ điểm; nếu không có `DATABASE_URL` dữ liệu có nguy cơ mất. Dù có PostgreSQL, mỗi room đang lưu snapshot; bản này chỉ nên thử với nhóm nhỏ.
+Cấu hình Caddy mẫu nằm ở `deploy/Caddyfile.example`. Caddy phải giữ được WebSocket lâu: xem `stream_timeout`.
 
-### Lưu ý cập nhật từ bản cũ
+### Biến môi trường
 
-- Quy trình tạo phòng trước đây nằm trong MC bằng `hostKey`; nay **Admin phải tạo phòng rồi cấp quyền MC**.
-- Nếu phòng cũ được phục hồi từ dữ liệu, Admin cần cấp lại MC trên trang `/admin`.
-- Việc thay đổi `SESSION_SECRET` làm phiên đăng nhập MC/Admin hết hạn; **không làm mất điểm nếu dữ liệu đã được lưu bền vững**.
-- Khởi động máy chủ từ V3 khi thiếu hai biến bắt buộc sẽ báo lỗi có chủ đích để tránh để lộ chức năng quản trị.
+| Biến | Ý nghĩa | Mặc định |
+|---|---|---|
+| `ADMIN_PASSWORD`, `SESSION_SECRET` | **Bắt buộc** | – |
+| `DATABASE_URL` (`DATABASE_SSL=require`) | PostgreSQL: lưu bền ảnh chụp và nhật ký ghi trước | file JSON |
+| `REQUIRE_DATABASE=1` | Không cho chạy nếu thiếu PostgreSQL (nhận 1/true/yes/on; giá trị lạ bị từ chối) | tắt |
+| `LOCAL_WORKERS` | Số tiến trình `server.js` do `router.js` khởi chạy | số nhân CPU |
+| `NODES` | Danh sách nút khi chạy nhiều máy, ví dụ `http://10.0.0.11:4000,…` | – |
+| `MAX_PLAYERS` / `MAX_ROOMS` / `MAX_ONLINE` | Giới hạn mỗi phòng / số phòng / số điện thoại mỗi tiến trình | 6000 / 30 / 15000 |
+| `RECONNECT_RESERVE` | Số chỗ trong `MAX_ONLINE` dành riêng cho người đã ghi danh vào lại (người mới chỉ vào tới `MAX_ONLINE − RECONNECT_RESERVE`) | 5% của `MAX_ONLINE` |
+| `BOT_JOINS` | Chống bot: số người MỚI tối đa / 10 giây / một địa chỉ mạng / một phòng trước khi chuyển sang chờ duyệt | 60 |
+| `DATA_FILE`, `MEDIA_DIR` | Nơi lưu dữ liệu và ảnh/âm thanh tải lên | `data/` |
+| `TRUST_PROXY=0` | Tắt việc đọc IP thật từ `X-Forwarded-For` | bật khi kết nối đến từ địa chỉ nội bộ |
+| `CLUSTER_MAX_ONLINE` / `CLUSTER_RESERVE` | (đặt cho `router.js`) Trần số điện thoại **chung cả cụm** / chỗ dành người vào lại. Bộ định tuyến báo số liệu cho từng nút 2 giây/lần (có chữ ký); mất tin quá 15 giây thì nút quay về giới hạn riêng `MAX_ONLINE` | tắt / 5% |
+| `SELF_SIGNUP=1`, `TRIAL_DAYS` | Khách tự đăng ký trên `/khach` và được dùng thử | tắt / 7 |
+| `PUBLIC_URL` | Địa chỉ công khai (https://…) để cổng thanh toán gọi lại | theo yêu cầu |
+| `PAY_BANK_BIN`, `PAY_ACCOUNT_NO`, `PAY_ACCOUNT_NAME`, `PAY_BANK_NAME` | Tài khoản nhận tiền → in mã **VietQR** cho từng đơn | tắt |
+| `PAY_WEBHOOK_KEY` | Khoá webhook báo có của **SePay** (`Authorization: Apikey …`) hoặc **Casso** (`secure-token`) → tự gia hạn gói | tắt |
+| `VNPAY_TMN_CODE`, `VNPAY_HASH_SECRET`, `VNPAY_URL` | Cổng **VNPAY** 2.1.0 (IPN: `/api/pay/vnpay/ipn`) | tắt |
+| `MOMO_PARTNER_CODE`, `MOMO_ACCESS_KEY`, `MOMO_SECRET_KEY`, `MOMO_ENDPOINT` | Cổng **MoMo** v2 (IPN: `/api/pay/momo/ipn`) | tắt |
+| `LAN_MODE=1`, `LAN_PUBLIC_PORT` | Chế độ mạng nội bộ (tự đặt khi chạy `npm run lan`) | tắt |
 
-## Hướng dẫn trò chơi 5 chặng
+Khoá thanh toán chỉ đặt bằng biến môi trường – không bao giờ ghi trong mã nguồn.
 
-Lớp thầy đồ → Khảo hạch → Thi Hương → Thi Hội → Thi Đình. Khi qua chặng, máy chủ phát trạng thái `intermission`; màn LED hiển thị lời chúc và MC nhấn “Mở câu hỏi” để sang chặng mới.
+### Chạy mạng nội bộ tại hội trường (không cần Internet)
 
-- **Hoàn thành chặng**: tham gia hết số câu của chặng.
-- **Thi đỗ chặng**: đúng ít nhất 50% số câu trong chặng. Đây là quy tắc hiện tại của pilot; sau này cần chuyển thành một tùy chọn Admin.
-- Kết thúc cuối: hạng 1 Trạng nguyên, hạng 2 Bảng nhãn, hạng 3 Thám hoa. **Bản này chưa tự phân định các kết quả hòa tuyệt đối bằng câu hỏi phụ**.
+```bash
+npm run lan     # in địa chỉ LAN + mã QR ngay trên màn hình; tự tạo mật khẩu Admin lần đầu (data/lan-secrets.json)
+```
+Máy chủ, máy MC, máy chiếu LED và điện thoại vào **cùng một Wi-Fi**. Bộ phát phải tắt "cách ly máy khách"; tường lửa cho phép cổng 3000.
+Màn MC/LED mở bằng `localhost` vẫn in QR theo địa chỉ LAN. Chỉ câu hỏi dùng link YouTube/ảnh trên mạng mới cần Internet.
 
-## Bảo mật và khôi phục
+### Docker + PostgreSQL cùng một máy
 
-- Password MC được băm `scrypt` và có salt; Admin password đọc từ biến môi trường.
-- Cookie phiên ký HMAC, HttpOnly và SameSite Strict, hiệu lực tối đa 12 giờ.
-- `playerId` thực tế là mã khôi phục bí mật; máy chủ không gửi mã này trong danh sách bảng vàng công khai.
-- Khi người chơi mở lại `/join?pin=...` trên trình duyệt cũ, hệ thống tìm playerId trong localStorage, khôi phục đáp án và điểm.
-- **Đổi máy/đổi trình duyệt** cần chức năng xác thực khôi phục riêng ở phiên bản sau.
+`docker compose -f docker-compose.postgres.yml up -d --build` (xem chú thích đầu tệp). CI dựng ảnh này, tắt đột ngột container rồi kiểm phòng còn nguyên.
+
+Chạy không cần Docker: `npm install && npm start` (một tiến trình) hoặc `npm run start:cluster` (nhiều tiến trình).
 
 ## Kiểm thử
 
-- `node --check server.js` và `node --check public/*.js` kiểm tra cú pháp.
-- `node test/smoke-prod.js` là thử nghiệm HTTP API tích hợp cơ bản, cần Node 20+.
-- `python test/test_integration.py` thử nghiệm nhiều phòng, phân quyền MC, WebSocket, ghi điểm, thoát/vào lại và xướng danh; cần Python + `websocket-client` trên máy chạy kiểm thử.
-- Để triển khai quy mô lớn: thử tải theo đợt 100 → 300 → 500 → 1.000 → 2.000 kết nối, tập trung nộp đáp án trong 1–3 giây cuối; theo dõi P95/P99, error rate, CPU, RAM, kết quả không trùng lặp; kiểm thử restart và failover.
+```bash
+npm run test:all:nhanh   # 45 bộ chức năng/giao diện; bộ nào thất bại tự chạy lại và được ghi "chập chờn" nếu chỉ đạt sau khi chạy lại
+npm run test:nghiemthu   # NGHIỆM THU: đủ 47 bộ (gồm hành trình khách 1 tiến trình & cụm 3 tiến trình, thanh toán, liên hoàn, PostgreSQL thật, LAN, diễn tập có sự cố, 2 bộ tải), mỗi bộ chạy đúng 1 lần, thiếu thư viện = KHÔNG ĐẠT → KET_QUA_NGHIEM_THU.txt
+npm run test:all         # thêm bài tải 3.000 người/phòng và nhiều phòng
+npm run test:ondinh      # đo độ ổn định: 18 bộ lõi × 5 vòng + 3 buổi diễn tập có sự cố (kill -9, rớt mạng, gửi trễ) đối soát từng bài
+npm run test:load6000    # 6.000 người trong 1 phòng
+npm run test:loadrouter  # 18.000 kết nối, 5 phòng, qua 2 bộ định tuyến và 2 tiến trình
+```
 
-## Tính năng cần phát triển thêm trước thương mại lớn
-
-- Tách dữ liệu phòng/sĩ tử/đáp án thành các bảng DB, transaction ghi đáp án, idempotency key và hàng đợi; phiên bản hiện tại dùng snapshot.
-- Redis pub/sub và nhiều realtime instance, điều phối sticky session nếu cần.
-- Phân quyền MC theo nhiều phòng, quản lý MC có thể chuyển quyền an toàn; nhật ký thao tác được lưu bền vững.
-- Câu hỏi phụ phân định đồng hạng, quy định xử lý khiếu nại chính thức.
-- Thu hồi phiên theo server và cơ chế xác minh khi đổi thiết bị.
-- Bộ hoạt cảnh cổ phục được nhà nghiên cứu kiểm chứng lịch sử trước khi hoàn thiện bản 3D/2D cuối.
+Kết quả nằm trong các tệp `KET_QUA_KIEM_THU_*.txt`. Báo cáo nghiệm thu: `BAO_CAO_NGHIEM_THU_V15.md`. Hướng dẫn MC: `HUONG_DAN_TINH_NANG_V15.md`. Thử thực địa với điện thoại thật: `KIEM_THU_THUC_DIA_DIEN_THOAI.md`. Đối chiếu báo cáo kiểm định độc lập: mục 6c của báo cáo nghiệm thu, nhật ký trước/sau trong `bang_chung_kiem_dinh/`. Đề xuất gói dịch vụ & hỗ trợ: `DE_XUAT_GOI_DICH_VU_VA_HO_TRO.md`.

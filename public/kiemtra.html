@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kiểm tra máy trước giờ thi – UDIKA Khoa Bảng</title><link rel="stylesheet" href="/fonts.css"><link rel="stylesheet" href="/dan-gian.css">
+<style>
+:root{--bg:#072b21;--card:#0e4a39;--line:#e9b94955;--gold:#f6d37e;--ivory:#f8f3ea;--ok:#2fbf71;--warn:#f0b429;--fail:#e5534b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ivory);font-family:'Udika Sans','Be Vietnam Pro',system-ui,sans-serif;line-height:1.45}
+main{max-width:620px;margin:0 auto;padding:16px 14px 40px}h1{color:var(--gold);font-size:1.35rem;margin:6px 0 4px}p.dim{opacity:.8;margin:0 0 12px;font-size:.95rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:10px 0}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid #ffffff14}.item:first-child{border-top:0}
+.ic{width:28px;height:28px;flex:0 0 28px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:#ffffff22}
+.ic.ok{background:var(--ok)}.ic.warn{background:var(--warn);color:#222}.ic.fail{background:var(--fail)}.ic.run{animation:p 1s infinite}@keyframes p{50%{opacity:.4}}
+.item b{display:block}.item small{opacity:.85}
+input{width:100%;font:inherit;font-size:1.05rem;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fff;color:#13261f}
+button{font:inherit;font-weight:700;padding:10px 14px;border-radius:10px;border:0;background:var(--gold);color:#13261f;cursor:pointer}button.sec{background:#ffffff22;color:var(--ivory)}
+#verdict{font-size:1.15rem;font-weight:800;padding:12px 14px;border-radius:12px;margin:12px 0}#verdict.ok{background:var(--ok)}#verdict.warn{background:var(--warn);color:#222}#verdict.fail{background:var(--fail)}
+label{display:block;margin:6px 0 4px;font-size:.92rem;opacity:.9}.target{font-size:1.1rem;color:var(--gold);font-weight:700}
+a{color:var(--gold)}
+</style></head><body><main>
+<h1>🩺 Kiểm tra máy trước giờ thi</h1>
+<p class="dim">Mất khoảng 30 giây. Trang thử kết nối tới máy chủ, độ trễ mạng, âm thanh, gõ tiếng Việt và trình duyệt. Kết quả được gửi cho MC (nếu có mã phòng) để biết trước máy nào cần xử lý.</p>
+<div class="card"><div class="row" style="align-items:flex-end"><div style="flex:1 1 140px"><label for="pin">Mã phòng (6 số, nếu MC đã cho)</label><input id="pin" inputmode="numeric" maxlength="6" placeholder="vd 123456"></div>
+<div style="flex:2 1 200px"><label for="name">Tên của bạn (để MC nhận ra)</label><input id="name" maxlength="28" placeholder="vd Nguyễn Văn An"></div></div></div>
+<div id="verdict" class="warn">Đang kiểm tra…</div>
+<div class="card" id="list"></div>
+<div class="card"><b>🔊 Thử âm thanh</b><p class="dim" style="margin:4px 0 8px">Bật âm lượng điện thoại, tắt chế độ im lặng rồi bấm nút.</p>
+<div class="row"><button id="beep">▶ Phát tiếng thử</button><span id="heard" hidden><button id="yes">Tôi nghe thấy</button> <button id="no" class="sec">Không nghe thấy</button></span></div></div>
+<div class="card"><b>⌨️ Thử gõ tiếng Việt</b><p class="dim" style="margin:4px 0 8px">Gõ lại đúng dòng: <span class="target" id="target">Trạng nguyên Lương Thế Vinh</span></p>
+<input id="typing" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ ở đây…"><div class="row" style="margin-top:8px"><small id="typeNote" class="dim"></small><button id="typeOk" class="sec">Xong</button></div></div>
+<div class="card row"><button id="again" class="sec">↻ Kiểm tra lại</button><a id="toJoin" href="/join">Vào phòng thi →</a></div>
+</main><script src="/kiemtra.js"></script></body></html>

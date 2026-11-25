@@ -1,0 +1,45 @@
+# UDIKA + PostgreSQL 16 trên CÙNG một máy chủ (không cần dịch vụ CSDL thuê ngoài).
+#  1) Tạo tệp .env cạnh tệp này:
+#       ADMIN_PASSWORD=<mật khẩu Admin dài, ngẫu nhiên>
+#       SESSION_SECRET=<chuỗi ngẫu nhiên ≥ 32 ký tự>
+#       POSTGRES_PASSWORD=<mật khẩu CSDL ngẫu nhiên>
+#     (thanh toán: thêm PAY_*, VNPAY_*, MOMO_*, PUBLIC_URL – xem HUONG_DAN_KHACH_TU_VAN_HANH.md mục Thanh toán)
+#  2) docker compose -f docker-compose.postgres.yml up -d --build
+#  3) Mở http://<máy chủ>:3000/admin  (đặt sau Caddy/HTTPS khi dùng thật – xem docker-compose.portable.yml)
+#  Sao lưu CSDL: docker compose -f docker-compose.postgres.yml exec db pg_dump -U udika udika > sao_luu_$(date +%F).sql
+#  REQUIRE_DATABASE=1: CSDL không kết nối được thì máy chủ KHÔNG chạy (không lặng lẽ lưu vào tệp tạm rồi mất dữ liệu).
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: udika
+      POSTGRES_DB: udika
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Đặt POSTGRES_PASSWORD trong .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U udika -d udika"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  udika:
+    build: .
+    image: udika:15
+    restart: unless-stopped
+    depends_on:
+      db: { condition: service_healthy }
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://udika:${POSTGRES_PASSWORD}@db:5432/udika
+      REQUIRE_DATABASE: "1"
+      MAX_PLAYERS: "6000"
+      MAX_ROOMS: "200"
+      MAX_ONLINE: "40000"
+    ulimits:
+      nofile: { soft: 1048576, hard: 1048576 }
+    volumes:
+      - ./data:/app/data        # ảnh/âm thanh tải lên (media) vẫn nằm ở thư mục này
+    ports: ["3000:3000"]
+volumes:
+  pgdata:

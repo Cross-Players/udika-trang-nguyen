@@ -1,0 +1,76 @@
+/* ===== UDIKA – CHẤT LIỆU "TRẠNG NGUYÊN DÂN GIAN" =====
+   Chỉ đổi CHẤT LIỆU, giữ nguyên bố cục, vị trí nút và luồng thao tác:
+   – nền sơn mài xanh lục điểm bụi vàng + mặt trống đồng chìm (hoạ tiết Đông Sơn vẽ mới bằng hình học),
+   – khung gỗ sơn son thếp vàng, diềm răng cưa – vòng tròn chấm giữa,
+   – thẻ nội dung bằng giấy dó, góc khung thếp vàng; chữ tiêu đề thếp vàng.
+   Không dùng chữ Hán, không dùng hình ảnh có bản quyền. Tắt được bằng cách bỏ dòng <link> tới tệp này. */
+:root{
+ --son:#7a2318;--son-2:#5c1a12;--son-3:#9e3424;   /* sơn son (đỏ son) */
+ --vang-la:linear-gradient(180deg,#fff1bf 0%,#f3cf72 38%,#d9a53c 62%,#a8741f 100%); /* thếp vàng */
+ --giay:#f3e6c6;--giay-2:#ead9b0;--muc:#2a1a0e;     /* giấy dó, mực */
+ --dg-diem:url(/assets/dangian/diem.svg);--dg-giay:url(/assets/dangian/giay-do.svg);--dg-bui:url(/assets/dangian/son-mai.svg);--dg-trong:url(/assets/dangian/trong-dong.svg);
+ --dg-goc:url(/assets/dangian/goc-tl.svg) top 6px left 6px/30px no-repeat,url(/assets/dangian/goc-tr.svg) top 6px right 6px/30px no-repeat,url(/assets/dangian/goc-bl.svg) bottom 6px left 6px/30px no-repeat,url(/assets/dangian/goc-br.svg) bottom 6px right 6px/30px no-repeat;
+}
+/* ---------- nền: sơn mài xanh lục, bụi vàng, mặt trống đồng chìm ---------- */
+body{background-color:#0a3a2d;background-image:var(--dg-bui),radial-gradient(ellipse 90% 60% at 50% -10%,#1d6b53 0%,transparent 60%),radial-gradient(circle at 50% 120%,#03160f 0%,transparent 55%),linear-gradient(180deg,#0c4334,#0a3a2d 45%,#061f18);background-attachment:fixed}
+body::before{content:"";position:fixed;z-index:-1;pointer-events:none;left:50%;top:50%;width:min(1100px,150vmax);aspect-ratio:1;transform:translate(-50%,-50%);background:var(--dg-trong) center/contain no-repeat;opacity:.055}
+/* ---------- thanh trên cùng: xà gỗ sơn son, diềm hoa văn ---------- */
+header{background-image:var(--dg-diem),linear-gradient(180deg,#0f4636,#0a3529)!important;background-repeat:repeat-x,no-repeat!important;background-position:bottom left,0 0!important;background-size:auto 14px,auto!important;border-bottom:0!important;padding-bottom:14px}
+.seal{background:radial-gradient(circle at 35% 30%,#a8392a,var(--son) 60%,#4a120c)!important;border:2px solid #f0c968!important;color:#ffe9a8!important;box-shadow:0 0 0 3px var(--son-2),0 0 0 4.5px #d9a53c,0 6px 14px #0007!important;text-shadow:0 1px 0 #3a0d08}
+.logo b{background:var(--vang-la);-webkit-background-clip:text;background-clip:text;color:transparent!important;text-shadow:none;filter:drop-shadow(0 1px 0 #3a1a08)}
+/* ---------- chữ tiêu đề thếp vàng trên nền tối ---------- */
+h1,.phone h2,.panel h2,.panel h3,.admin-title{font-family:'Udika Serif','Lora',Georgia,serif}
+.phone>h2,.panel h2,.panel h3,.admin-title,.admin-card>h2,.admin-card .row>h2{background:var(--vang-la);-webkit-background-clip:text;background-clip:text;color:transparent!important;filter:drop-shadow(0 1px 0 #2a1205) drop-shadow(0 0 8px #e9b94933);letter-spacing:.02em}
+/* ---------- khung gỗ sơn son thếp vàng cho khối tối ---------- */
+.panel,.admin-card,.screen{border:3px solid var(--son)!important;box-shadow:inset 0 0 0 1.5px #d9a53c,inset 0 0 0 5px var(--son-2),0 10px 26px #0007!important;background-image:var(--dg-goc),var(--dg-bui),linear-gradient(170deg,#104a39,#0a3529)!important}
+.callout,.status{border:1px solid #c99a4a88!important;background-image:linear-gradient(170deg,#0f4536,#0b3a2d)!important}
+/* ---------- giấy dó cho thẻ sáng (câu hỏi trên điện thoại, ô ghi danh…) ---------- */
+.paper,.join-wait{background-color:var(--giay)!important;background-image:var(--dg-goc),var(--dg-giay),linear-gradient(180deg,#f7ecd2,#efdfb9)!important;color:var(--muc)!important;border:2px solid #b8862f!important;box-shadow:inset 0 0 0 4px var(--giay),inset 0 0 0 5px #c9a14a88,0 12px 28px #0006!important}
+.paper h3,.paper label{color:#5c1a12}
+.paper .meta,.paper .smallnote{color:#5b4632!important}
+.paper .input,.input{background:#fffaf0;border-color:#cbb48a}
+/* ---------- nhãn kiểu con dấu son ---------- */
+.tag{background:radial-gradient(circle at 30% 30%,#b8412f,var(--son) 70%)!important;color:#ffe7a8!important;border:1px solid #e9b949!important;font-family:'Udika Serif','Lora',Georgia,serif;letter-spacing:.06em;box-shadow:0 0 0 2px var(--son-2),0 2px 6px #0006}
+/* ---------- nút: vàng lá cho nút chính, gỗ sơn son viền vàng cho nút thường ---------- */
+.btn.primary,.button.primary,.btn.chip.on{background:var(--vang-la)!important;color:#3a1408!important;border:1px solid #8a5a17!important;box-shadow:inset 0 1px 0 #fff6d0,inset 0 -2px 0 #a8741f,0 3px 0 #5c3a0e,0 6px 14px #0005!important;text-shadow:0 1px 0 #ffeeb0}
+.btn.primary:active,.button.primary:active{transform:translateY(2px);box-shadow:inset 0 1px 0 #fff6d0,0 1px 0 #5c3a0e!important}
+.links a,.button:not(.primary),.btn:not(.primary):not(.red):not(.chip){border:1px solid #d9a53c!important;background:linear-gradient(180deg,#8e2d20,#5c1a12)!important;color:#ffeccb!important;box-shadow:inset 0 1px 0 #c0564288,0 3px 10px #0005}
+.btn.red{background:linear-gradient(180deg,#2a1510,#120806)!important;border:1px solid #c4503f!important;color:#ffb9a8!important}
+/* ---------- đồng hồ: mặt trống đồng ---------- */
+.clock{background:radial-gradient(circle,#0b3a2d 52%,transparent 53%),var(--dg-trong) center/112% no-repeat,radial-gradient(circle,#0e4a39,#06261d)!important;border:3px solid #e9b949!important;box-shadow:0 0 0 4px var(--son),0 0 0 6px #d9a53c,0 8px 20px #0008!important;text-shadow:0 2px 0 #000a}
+/* ---------- ô đáp án: tranh in khắc gỗ (viền mực, hạt giấy, ấn nổi) – giữ nguyên màu nhận diện từng ô ---------- */
+.choice.tile{background-image:var(--dg-giay);background-blend-mode:multiply;border:2px solid #2a160c!important;box-shadow:inset 0 0 0 2px #ffffff26,0 4px 0 #0006,0 8px 14px #0004!important}
+.choice.tile .shape{background:#fff3d6!important;color:#2a160c!important;border:1.5px solid #2a160c;border-radius:50%}
+.choice.tile.correct{box-shadow:0 0 0 4px #e9b949,0 0 0 7px var(--son),0 8px 18px #0006!important}
+/* ---------- bảng vàng ---------- */
+.rank{background-image:linear-gradient(90deg,#123f31,#0d362a)!important;border:1px solid #c99a4a99!important;box-shadow:inset 3px 0 0 var(--son)}
+.rank .pts{background:var(--vang-la);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.rank .no{filter:drop-shadow(0 1px 1px #0008)}
+/* ---------- điện thoại & thanh tiến trình ---------- */
+@media(min-width:521px){.phone{border:3px solid var(--son)!important;box-shadow:inset 0 0 0 1.5px #d9a53c,0 24px 60px #0008!important}}
+.self-progress>div{background:var(--vang-la)!important}
+.fill-cell{background-image:var(--dg-giay);border-color:#8a5a17}
+.fill-cell.hint{background:var(--vang-la)!important}
+.match-item{background-color:var(--giay);background-image:var(--dg-giay)}
+/* ---------- màn LED: khung gỗ sơn son thếp vàng quanh sân khấu (tranh bên trong giữ nguyên) ---------- */
+.led-scene{border:10px solid var(--son)!important;box-shadow:inset 0 0 0 3px #e9b949,0 0 0 3px #d9a53c,0 0 0 9px var(--son-2),0 24px 50px #0009!important}
+.sound-btn,.crowd-count{border-color:#e9b949!important}
+/* ---------- trang quản lý (khách, chương trình, trọng tài) ---------- */
+.admin-table th{color:#f3cf72}
+@media (prefers-reduced-motion:reduce){body{background-attachment:scroll}}
+@media print{body::before{display:none}}
+/* ---------- trang chủ: thẻ vào thi bằng giấy dó trong khung gỗ sơn son; nút MC kiểu gỗ son ---------- */
+body.home .h-card{background-color:var(--giay)!important;background-image:var(--dg-goc),var(--dg-giay),linear-gradient(180deg,#f7ecd2,#efdfb9)!important;border:3px solid var(--son)!important;box-shadow:inset 0 0 0 1.5px #d9a53c,inset 0 0 0 6px var(--giay),inset 0 0 0 7px #c9a14a88,0 24px 60px #0008!important}
+body.home .h-card h2{font-family:'Udika Serif','Lora',Georgia,serif;color:var(--son)!important;letter-spacing:0}
+body.home .h-card .h-card-sub{color:#5b4632}
+body.home .h-btn{background:var(--vang-la)!important;color:#3a1408!important;border:1px solid #8a5a17;box-shadow:inset 0 1px 0 #fff6d0,inset 0 -2px 0 #a8741f,0 4px 0 #5c3a0e,0 10px 20px #0005!important}
+body.home .h-mc{border-color:#d9a53c;background:linear-gradient(180deg,#8e2d20,#5c1a12);color:#ffeccb}
+body.home .h-mc:hover{background:linear-gradient(180deg,#a8392a,#6e2218);color:#fff}
+body.home .h-rule{background:linear-gradient(90deg,transparent,#c9a14a,transparent)}
+body.home .h-practice{border-color:var(--son)!important;color:var(--son)!important}
+/* ---------- chơi thử một mình ---------- */
+.pr-card{background-color:var(--giay)!important;background-image:var(--dg-goc),var(--dg-giay),linear-gradient(180deg,#f7ecd2,#efdfb9)!important;border:3px solid var(--son)!important;box-shadow:inset 0 0 0 1.5px #d9a53c,inset 0 0 0 6px var(--giay),inset 0 0 0 7px #c9a14a88,0 24px 60px #0008!important}
+.pr-card h1,.pr-card h2{font-family:'Udika Serif','Lora',Georgia,serif;color:var(--son)!important}
+.pr-btn:not(.alt){background:var(--vang-la)!important;color:#3a1408!important;border:1px solid #8a5a17!important;box-shadow:inset 0 1px 0 #fff6d0,inset 0 -2px 0 #a8741f,0 4px 0 #5c3a0e,0 8px 16px #0005!important}
+.pr-btn.alt{border-color:var(--son)!important;color:var(--son)!important;background:#fffaf0!important}
+.phone .choices.with-img .choice.tile{border-width:1px!important} /* lưới ảnh 2×2 trên màn 320 px: giữ ảnh ≥140 px */

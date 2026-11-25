@@ -1,0 +1,9 @@
+== Nhiều phòng đồng thời: 2000 + 500 + 500 = 3000 kết nối · 3 câu/phòng · 12 giây/câu · 1 tiến trình · máy thử 2 nhân, 8 GB RAM ==
+Ghi danh: 3000/3000 trong 3.0 giây · RAM 130 MB
+Câu 1: 3000 bài được xác nhận · phản hồi p50 9 ms, p95 19 ms, tối đa 94 ms · RAM 147 MB
+Câu 2: 3000 bài được xác nhận · phản hồi p50 9 ms, p95 20 ms, tối đa 70 ms · RAM 148 MB
+Câu 3: 3000 bài được xác nhận · phản hồi p50 9 ms, p95 27 ms, tối đa 158 ms · RAM 155 MB
+Tổng: gửi 9000 bài, máy chủ xác nhận đã lưu 9000, từ chối vì quá giờ 0 · 1866 lượt mất mạng – nối lại
+Độ chính xác: 3000/3000 người có số câu đúng khớp tuyệt đối với bài đã xác nhận · 0 sai lệch
+Đóng kết nối: 3000 đúng chuẩn · 0 lỗi
+Máy chủ vẫn hoạt động: CÓ
